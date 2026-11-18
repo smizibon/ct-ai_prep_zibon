@@ -25,10 +25,26 @@ does the same.
 4. **Revise with the Cheatsheets.** Every bullet carries a small `src` chip (e.g. `6.1.7 L1279-L1280`)
    pointing at the exact syllabus lines it compresses — click through whenever a claim surprises you.
    The formula block in Chapter 3 (accuracy/precision/recall/F1) is the exam's only calculation LO.
-5. **Drill the Glossary.** For Specialist exams every syllabus keyword is examinable at definition
+5. **Watch the Videos library** when reading isn't sticking. `#/videos` (or `g` then `v`) holds a
+   curated YouTube companion library: 87 videos from 62 channels covering **all 51 syllabus
+   sections**, plus a CT-AI-specific exam-prep group (official ISTQB/iSQI/A4Q material, full
+   courses, an all-40 sample-exam walkthrough, a Nov-2026 real-exam report). Channels are tiered —
+   official / educator (3Blue1Brown, StatQuest, IBM…) / trainer / community — every card shows the
+   tier, duration, and why it's worth your time; section chips jump straight into the Study page.
+   Every video id was live-verified before shipping; v1.0-era material is flagged so you don't
+   study removed topics.
+   **Play in-app:** the **Play** button streams the video inside the site (a 16:9 player opens in
+   a dialog — nothing loads from the internet until you click it, and closing the dialog stops
+   playback). **YouTube** next to it opens the video in a new tab instead. After watching, the
+   button turns into a green **Replay**.
+   **Where YouTube can't help you:** the "Coverage notes & gaps" panel (and the warning-marked
+   section chips) list the 26 topics where no video exists or coverage is only partial/thin/uses
+   industry synonyms instead of the ISTQB term — those are your self-study backstops; each note
+   names the best available pick and links the syllabus section.
+6. **Drill the Glossary.** For Specialist exams every syllabus keyword is examinable at definition
    level — the cheapest points on the test. Filter box + A–Z rail; "must-know" badges mark chapter
    keywords.
-6. **Check the Exam Intel tab** before booking: past-examinee advice (labeled official / reddit /
+7. **Check the Exam Intel tab** before booking: past-examinee advice (labeled official / reddit /
    provider / v1.0-era), the v1.0→v2.0 delta (don't study removed topics!), and the timing arithmetic.
 
 ## The mock exam — four modes
@@ -62,7 +78,7 @@ official answer highlighted, per-option rationale bullets, and Q29's LO discrepa
 | Keys | Action |
 |---|---|
 | `/` or `⌘K` | Search everything (glossary, LOs, cheatsheets, intel) |
-| `g` then `d/s/c/g/e/i/r` | Go to Dashboard / Study / Cheatsheets / Glossary / Exam / Intel / Results |
+| `g` then `d/s/c/v/g/e/i/r` | Go to Dashboard / Study / Cheatsheets / Videos / Glossary / Exam / Intel / Results |
 | `t` | Toggle dark/light · `?` all shortcuts |
 | **In an exam** | `a b c d e` select option · `f` flag · `←`/`→` or `p`/`n` navigate · digits + `⏎` jump · `s` submit/finish |
 | **In review** | `j`/`k` next/prev · `1–4` switch filters |
@@ -70,7 +86,8 @@ official answer highlighted, per-option rationale bullets, and Q29's LO discrepa
 ## Printing
 
 Cheatsheet and study pages print cleanly (browser print → save as PDF): chrome hidden, light theme
-forced, each cheatsheet block kept together.
+forced, each cheatsheet block kept together. The videos page prints as a reading list (watch
+buttons hidden, cards kept together).
 
 ## Honest small print
 
@@ -84,8 +101,10 @@ forced, each cheatsheet block kept together.
 ## Self-test (for maintainers)
 
 Open `#/selftest` (or run `node tools/tests/ui.test.mjs` from `site/` with the dev server up) to run
-the scripted UI suite — 24 scenarios covering reveals, widgets, the full simulation, review filters,
-resume, the mobile sheet, layout invariants (no gap above the header, exam shell flush), and a
+the scripted UI suite — 29 scenarios covering reveals, widgets, the full simulation, review filters,
+resume, the mobile sheet, the videos library (filtering, coverage notes, card containment, the
+in-app player's open/teardown/sweep), layout
+invariants (no gap above the header, exam shell flush), and a
 `data-testid` coverage walk over every interactive element. It backs up and restores your progress
 automatically. The same command with `file://$(pwd)` proves the site works when opened directly from
 disk, and `node tools/probe_layout.mjs` prints per-route geometry (page heights, paddings) with

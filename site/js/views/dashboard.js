@@ -139,7 +139,9 @@
           V.el("div", { class: "advice__body", text: s.text })));
       });
       page.appendChild(teaser);
-      page.appendChild(V.el("a", { href: "#/intel", class: "t-small", "data-testid": "dash-intel-link" }, "All examinee advice & exam patterns →"));
+      page.appendChild(V.el("div", { style: "display:flex;gap:var(--sp-5);flex-wrap:wrap" },
+        V.el("a", { href: "#/intel", class: "t-small", "data-testid": "dash-intel-link" }, "All examinee advice & exam patterns →"),
+        V.el("a", { href: "#/videos", class: "t-small", "data-testid": "dash-videos-link" }, "Curated YouTube companion library →")));
 
       return page;
     }

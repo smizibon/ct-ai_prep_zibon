@@ -30,6 +30,7 @@ re-running it while the server is up is a no-op. Plain `python3 tools/serve.py [
 | **Mock Exam** | The official Sample Exam set A v2.2, delivered "as it is" with the real exam's parameters: **Full Simulation** (40 Q, 60:00 countdown, pass 29/44, auto-submit, question palette, flagging, no feedback until submit), **Learning mode** (instant verdicts + official rationales), **Appendix set** (interactive A1/A4/A5 new-type questions), **Quick Quiz** builder. |
 | **Results & Review** | Score ring with the pass threshold drawn on it, per-chapter and per-K-level breakdowns, verdict grid, and per-question review with the full official rationale (plus clearly-marked derived explanations where ISTQB gives none). |
 | **Exam Intel** | Past-examinee advice (source-labeled, version-tagged v1.0/v2.0) and exam-pattern analysis — official mechanics, chapter weighting, timing arithmetic, the v1.0→v2.0 delta table, and known third-party errors. |
+| **Videos** | A curated YouTube companion library — 87 videos from 62 channels (official ISTQB/accredited providers, recognized educators like 3Blue1Brown/StatQuest/IBM, reputed testing trainers) covering **all 51 syllabus sections**, plus a CT-AI-specific exam-prep group. Every video id was live-verified (oEmbed) before shipping; section chips deep-link into Study; v1.0-era material is flagged. **Play in-app** (click-to-stream in a dialog — zero network until you click, playback stops on close) or open on YouTube. A "Coverage notes & gaps" panel honestly flags the 26 topics where no video exists or coverage is thin/partial/uses industry synonyms — your self-study backstops. Rebuild: `python3 tools/build_videos.py` from curated `tools/videos.json`. |
 
 All progress (study, attempts, weak areas, settings) is stored in your browser's localStorage.
 System/Light/Dark theme with a sidebar picker (the sun/moon button is a quick flip), full keyboard
@@ -55,7 +56,7 @@ The content, logic, and UI are all machine-verified (run from `site/`):
 ```
 python3 tools/verify_content.py        # Gate A — verbatim syllabus/exam text, cheatsheet traceability (0 errors)
 node tools/tests/engine.test.mjs       # Gate B — scoring/threshold/timer logic (49 tests)
-node tools/tests/ui.test.mjs           # Gate C — 24 scripted UI scenarios (headless Chrome via raw CDP, zero deps)
+node tools/tests/ui.test.mjs           # Gate C — 29 scripted UI scenarios (headless Chrome via raw CDP, zero deps)
 node tools/tests/ui.test.mjs "file://$(pwd)"   # Gate C against file:// — the deployment constraint
 node tools/probe_layout.mjs            # layout/testid audit: geometry JSON + screenshots to tools/shots/
 ```

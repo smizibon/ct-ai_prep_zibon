@@ -76,7 +76,7 @@
   /* modal — returns {close, root}; body may be node/string */
   UI.modal = function (opts) {
     var scrim = el("div", { class: "modal-scrim", "data-testid": "modal" });
-    var m = el("div", { class: "modal" + (opts.wide ? " modal--wide" : opts.fig ? " modal--fig" : ""), role: "dialog", "aria-modal": "true", "aria-labelledby": opts.titleId || null, "data-testid": opts.testid || null },
+    var m = el("div", { class: "modal" + (opts.wide ? " modal--wide" : opts.fig ? " modal--fig" : "") + (opts.cls ? " " + opts.cls : ""), role: "dialog", "aria-modal": "true", "aria-labelledby": opts.titleId || null, "data-testid": opts.testid || null },
       el("h3", { class: "t-h3", id: opts.titleId || null, text: opts.title || "" }),
       el("div", { class: "modal__body" }, opts.body || ""),
       opts.footer ? el("div", { class: "modal__foot" }, opts.footer) : null);

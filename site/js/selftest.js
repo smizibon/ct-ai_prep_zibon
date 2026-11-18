@@ -121,7 +121,7 @@
   });
 
   test("testids: every interactive element is anchored on main routes", function () {
-    var routes = ["#/", "#/study", "#/study/ch2", "#/cheatsheets", "#/cheatsheets/ch1", "#/glossary", "#/exam", "#/intel"];
+    var routes = ["#/", "#/study", "#/study/ch2", "#/cheatsheets", "#/cheatsheets/ch1", "#/videos", "#/glossary", "#/exam", "#/intel"];
     var missing = [];
     var chain = Promise.resolve();
     routes.forEach(function (r) {
@@ -208,6 +208,137 @@
       inp.value = "";
       inp.dispatchEvent(new Event("input", { bubbles: true }));
       eq(qsa(".term-card, .gloss-row, .term").length, all, "clear filter restores list");
+    });
+  });
+
+  test("videos: tabs, tier chips and search filter the library", function () {
+    return nav("#/videos").then(function () {
+      var D = window.CTAI_VIDEOS;
+      assert(tryTid("vid-tab-all"), "vid-tab-all missing");
+      for (var n = 1; n <= 7; n++) assert(tryTid("vid-tab-ch" + n), "vid-tab-ch" + n + " missing");
+      assert(tryTid("vid-search"), "vid-search missing");
+      assert(tryTid("vid-tier-all"), "vid-tier-all missing");
+      if (!D || !D.videos || !D.videos.length) { /* scaffold: empty state is the page */
+        assert(qsa(".vid-card").length === 0 && tryTid("vid-fallback-study"), "empty library must render the curation empty state");
+        return;
+      }
+      var all = qsa(".vid-card").length;
+      assert(all > 5, "video library too small to test (" + all + ")");
+      return nav("#/videos/ch6").then(function () {
+        var ch6 = qsa(".vid-card").length;
+        assert(ch6 > 0 && ch6 < all, "chapter tab did not filter (" + ch6 + " vs " + all + ")");
+        tid("vid-tier-educator").click();
+        assert(qsa(".vid-card").length <= ch6, "tier chip must not add cards");
+        tid("vid-tier-all").click();
+        return nav("#/videos");
+      }).then(function () {
+        var inp = tid("vid-search");
+        inp.value = "the";
+        inp.dispatchEvent(new Event("input", { bubbles: true }));
+        var hit = qsa(".vid-card").length;
+        assert(hit > 0 && hit < all, "search must narrow but not empty the library (" + hit + " vs " + all + ")");
+        inp.value = "zzzznope";
+        inp.dispatchEvent(new Event("input", { bubbles: true }));
+        eq(qsa(".vid-card").length, 0, "no-match search must show zero cards");
+        inp.value = "";
+        inp.dispatchEvent(new Event("input", { bubbles: true }));
+        eq(qsa(".vid-card").length, all, "clearing search restores full list");
+      });
+    });
+  });
+
+  test("videos: every card links out canonically", function () {
+    return nav("#/videos").then(function () {
+      var D = window.CTAI_VIDEOS;
+      if (!D || !D.videos || !D.videos.length) return;
+      var links = qsa('.vid-card a[href^="https://www.youtube.com/watch?v="]');
+      assert(links.length >= D.videos.length / 2, "expected external watch links on cards");
+      links.forEach(function (a) {
+        eq(a.getAttribute("target"), "_blank", "external link must open a new tab");
+        eq(a.getAttribute("rel"), "noopener", "external link must carry rel=noopener");
+      });
+      /* data integrity mirrors build_videos.py: ids unique, 11-char video ids */
+      var seen = {};
+      D.videos.forEach(function (v) {
+        assert(!seen[v.videoId], "duplicate videoId in shipped data: " + v.videoId);
+        seen[v.videoId] = 1;
+        assert(/^[A-Za-z0-9_-]{11}$/.test(v.videoId), "bad YouTube id: " + v.videoId);
+      });
+    });
+  });
+
+  test("videos: coverage notes & gaps render and scope to the chapter tab", function () {
+    return nav("#/videos").then(function () {
+      var D = window.CTAI_VIDEOS;
+      if (!D || !D.coverageNotes || !D.coverageNotes.length) return;
+      assert(tryTid("cov-panel"), "cov-panel missing");
+      assert(qsa(".cov-row").length === D.coverageNotes.length, "all coverage rows must render on the All tab");
+      D.coverageNotes.forEach(function (n, i) {
+        var rowId = n.section === "EXAM" ? "cov-note-EXAM-" + i : "cov-note-" + n.section;
+        var row = tryTid(rowId);
+        assert(row, "missing row " + rowId);
+        assert(row.textContent.indexOf(n.note.slice(0, 30)) >= 0, "note text missing for " + rowId);
+        assert(row.querySelector('[data-testid^="cov-near-"]'), "nearest-pick link missing for " + rowId);
+      });
+      /* warn-marked section chips on cards */
+      assert(qsa(".vid-sec-dot").length > 10, "section chips should carry coverage-warning markers");
+      return nav("#/videos/ch3").then(function () {
+        qsa(".cov-row").forEach(function (r) {
+          var id = r.getAttribute("data-testid").replace("cov-note-", "");
+          assert(id === "EXAM" || id.indexOf("3.") === 0, "ch3 tab leaked note " + id);
+        });
+        assert(qsa(".cov-row").length > 0, "ch3 has coverage notes (3.2.1 etc.) — expected rows");
+      });
+    });
+  });
+
+  test("videos: card text is contained — no unclipped horizontal overflow", function () {
+    return nav("#/videos").then(function () {
+      var bad = [];
+      qsa(".vid-card").forEach(function (card) {
+        var cid = card.getAttribute("data-testid") || "card";
+        if (card.scrollWidth > card.clientWidth + 1) bad.push(cid + " (card box)");
+        qsa("*", card).forEach(function (el) {
+          if (!el.clientWidth || el.clientWidth < 20) return;
+          var cs = getComputedStyle(el);
+          if (cs.overflow === "visible" && el.scrollWidth > el.clientWidth + 1) {
+            bad.push(cid + " → ." + String(el.className).split(" ")[0] + " sw:" + el.scrollWidth + " cw:" + el.clientWidth);
+          }
+        });
+      });
+      assert(bad.length === 0, "overflowing card content (vid-card-V1-01 regression): " + bad.slice(0, 4).join(" | "));
+    });
+  });
+
+  test("videos: play-in-modal opens, tears down, and the router sweep closes it", function () {
+    return nav("#/videos").then(function () {
+      var D = window.CTAI_VIDEOS;
+      if (!D || !D.videos || !D.videos.length) return;
+      eq(document.querySelectorAll("iframe").length, 0, "no iframe must exist before play (click-to-load)");
+      var btn = qsa('[data-testid^="vid-play-"]')[0];
+      var vid = D.videos.filter(function (v) { return "vid-play-" + v.id === btn.getAttribute("data-testid"); })[0];
+      assert(vid, "play button maps to a shipped video");
+      btn.click();
+      assert(tryTid("vid-modal"), "vid-modal missing after play click");
+      var frame = document.querySelector('[data-testid="vid-modal"] .vid-embed');
+      assert(frame, "embed iframe missing");
+      eq(frame.getAttribute("src"),
+        vid.url.replace("www.youtube.com/watch?v=", "www.youtube-nocookie.com/embed/") + "?autoplay=1&rel=0&playsinline=1",
+        "embed src must derive from v.url (no new URL literal)");
+      assert(frame.getAttribute("allowfullscreen"), "iframe must allow fullscreen");
+      eq(tryTid("vid-open-yt-" + vid.id).getAttribute("href"), vid.url, "modal open-on-YouTube link must be canonical");
+      tid("vid-modal-close").click();
+      eq(document.querySelectorAll("iframe").length, 0, "close must remove the iframe (playback stops)");
+      eq(document.querySelectorAll(".modal-scrim").length, 0, "close must remove the scrim");
+      var after = tid("vid-play-" + vid.id);
+      assert(after.classList.contains("is-played"), "played marker missing after close");
+      assert(after.textContent.indexOf("Replay") >= 0, "button must relabel to Replay");
+      after.click(); /* reopen, then leave the route — sweep must kill it (orphaned-audio guard) */
+      assert(tryTid("vid-modal"), "reopen failed");
+      return nav("#/study").then(function () {
+        eq(document.querySelectorAll(".modal-scrim").length, 0, "router sweep must close an open player on route change");
+        eq(document.querySelectorAll("iframe").length, 0, "no iframe may survive a route change");
+      });
     });
   });
 

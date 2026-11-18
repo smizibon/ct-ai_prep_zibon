@@ -9,7 +9,7 @@
   function go(hash) { location.hash = hash; }
   function showHelp() {
     var rows = [
-      ["/ or ⌘K", "Search"], ["g then d/s/c/g/e/i/r", "Go: Dashboard/Study/Cheatsheets/Glossary/Exam/Intel/Results"],
+      ["/ or ⌘K", "Search"], ["g then d/s/c/v/g/e/i/r", "Go: Dashboard/Study/Cheatsheets/Videos/Glossary/Exam/Intel/Results"],
       ["t", "Toggle theme"], ["?", "This help"], ["Esc", "Close overlay/drawer"],
       ["— in exam —", ""], ["a b c d e", "Select option"], ["f", "Flag question"],
       ["→/n · ←/p", "Next / previous question"], ["0–9 then ⏎", "Jump to question"], ["s", "Submit / finish"],
@@ -39,7 +39,7 @@
     if (e.key === "?" || (e.key === "/" && e.shiftKey)) { showHelp(); return; }
     if (e.key === "t") { document.getElementById("themeBtn").click(); return; }
     if (!running && !e.metaKey && !e.ctrlKey && !e.altKey) {
-      var map = { d: "#/", s: "#/study", c: "#/cheatsheets", g: "#/glossary", e: "#/exam", i: "#/intel", r: "#/results" };
+      var map = { d: "#/", s: "#/study", c: "#/cheatsheets", v: "#/videos", g: "#/glossary", e: "#/exam", i: "#/intel", r: "#/results" };
       if (chord === "g" && map[e.key]) {
         clearTimeout(chordTimer); chord = null; go(map[e.key]); e.preventDefault(); return;
       }

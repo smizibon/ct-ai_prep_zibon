@@ -21,9 +21,14 @@
 │  tools/qbank/  (46 extraction records, byte-exact raw_* substrings,       │
 │                 merged.json chapter grouping, derived.json why-not bullets)│
 │  docs/plans/research-{advice,patterns}.md     (web research, source-labeled)│
-└──────────────┬────────────────────────────────────────────────────────────┘
+│  tools/videos.json  (curated YouTube registry — channel tiers + oEmbed-     │
+│                      verified video ids + section mappings; docs/plans/     │
+│                      plan-videos.md is the pipeline spec)                   │
+└──────────────┬──────────────────────────────────────────────────────────────┘
                │  build tools (Python, re-runnable)
                │  build_chapters.py  build_questions.py  build_intel.py
+               │  build_videos.py (validates schema + section mappings vs
+               │                   the syllabus TOC, then emits data/videos.js)
                ▼
 ┌───────────────────────────────────────────────────────────────────────────┐
 │ DATA (data/*.js — globals, eager <script> loading)                        │
@@ -34,6 +39,9 @@
 │  CTAI_QUESTIONS         46 UI-facing question objects (stem/options split,  │
 │                         rationale units, interaction structs for A1/A4/A5) │
 │  CTAI_INTEL             advice items + pattern analysis (url/version-labeled)│
+│  CTAI_VIDEOS            curated YouTube library: tiered channels + videos   │
+│                         with syllabus section mappings + coverageNotes      │
+│                         (87 videos, 62 channels, 51/51 units, 26 notes)     │
 └──────────────┬────────────────────────────────────────────────────────────┘
                │  GATE A: tools/verify_content.py (exit≠0 fails the build)
                ▼
@@ -48,15 +56,15 @@
 │  ui.js        DOM factory + rings/pbars/toasts/modals/figures              │
 │  router.js    hash routes, app-shell vs exam-shell, sim leave-guard        │
 │  selftest.js  #/selftest: in-page UI suite (16 scenarios, state-safe)      │
-│  views/       dashboard · study · cheatsheets · glossary · examhub ·        │
-│               runner · results · review · intel · notfound                 │
+│  views/       dashboard · study · cheatsheets · videos · glossary ·         │
+│               examhub · runner · results · review · intel · notfound        │
 └──────────────┬────────────────────────────────────────────────────────────┘
                │  GATE B: node tests (49) + syntax + no-external-URL scan
                ▼
         Browser (file:// or any static server)
 
 GATE C: tools/tests/ui.test.mjs — headless Chrome via raw CDP drives the
-#/selftest suite on http:// and file:// (16/16). SPEC Amendment K.
+#/selftest suite on http:// and file:// (29/29). SPEC Amendment K.
 ```
 
 ## Key decisions (why)
@@ -81,6 +89,16 @@ GATE C: tools/tests/ui.test.mjs — headless Chrome via raw CDP drives the
   line/path… through `createElementNS` and sets `class` via `setAttribute` (SVG `className` is
   read-only). `createElement("svg")` silently yields HTMLUnknownElement — this bug once made every
   ring and icon invisible; the selftest suite now guards it.
+- **Videos embed only on explicit click, and honestly report coverage.** The YouTube library
+  (docs/plans/plan-videos.md §9–10) is metadata at rest: cards carry title/channel/duration/
+  section mappings; zero network until a deliberate Play click creates a lazy
+  `youtube-nocookie.com/embed` iframe (src derived from `v.url` — no URL literal in js/) inside
+  the site's modal system; closing or route-changing removes it (router sweeps testid-bearing
+  modals on navigation — never orphaned audio), and every card keeps a secondary open-on-YouTube
+  link. Where no video covers a syllabus unit — or only thin/partial/synonym coverage exists —
+  `coverageNotes` says so on the page (build-validated), because a study aid that hides its gaps
+  is a liability. Every shipped video id was verified live via `youtube.com/oembed` during
+  curation; `build_videos.py` re-checks schema + section mappings on every build.
 - **UI verification is scripted, not manual.** Every interactive element carries a `data-testid`;
   the in-page suite (`#/selftest`) exercises real handlers with real DOM events — no synthetic-input
   flakiness, no browser-automation dependency — and a zero-dependency CDP driver runs it in headless
@@ -96,9 +114,10 @@ GATE C: tools/tests/ui.test.mjs — headless Chrome via raw CDP drives the
 | Gate | Command | What it proves |
 |---|---|---|
 | A — data | `python3 tools/verify_content.py` | 51 verbatim LO slices, LO/question joins equal merged.json, 46Q/50pts, cheatsheet src+digit traceability + word caps, glossary integrity (118/31), questions.js structural invariants, intel counts |
+| A — videos | `python3 tools/build_videos.py --check` | videos.json schema (unique ids, valid 11-char YouTube ids, url/videoId match), channel tiers, section mappings exist in the syllabus TOC, coverage completeness (every x.y.z unit covered or explicitly listed in `uncovered`), coverageNotes validity (unit exists, level vocabulary, `nearest` video covers the section) |
 | B — logic | `node tools/tests/engine.test.mjs` | scoring for all 5 question types, all-or-nothing multis, thresholds, timer math + drift clamp, shuffle determinism, attempt archival |
 | B — renderer | `node js/md.js --selftest` | markdown subset golden cases |
-| C — UI | `node tools/tests/ui.test.mjs [base]` | 24 in-page scenarios (js/selftest.js, `#/selftest` route) driven through headless Chrome over raw CDP: reveals, widgets, sim flow + PASS math, review filters, resume, leave-guard, mobile sheet, plus layout assertions (topbar flush, content padding tokens, exam-shell seam-free) and a testid walk that fails if any interactive element lacks a `data-testid`. Runs against `http://127.0.0.1:8765` and, with `file://$(pwd)` as base, the file:// deployment constraint. Anchors on the site-wide `data-testid` contract (see AGENTS.md) |
+| C — UI | `node tools/tests/ui.test.mjs [base]` | 29 in-page scenarios (js/selftest.js, `#/selftest` route) driven through headless Chrome over raw CDP: reveals, widgets, sim flow + PASS math, review filters, resume, leave-guard, mobile sheet, videos library filtering, external-link integrity, coverage-notes rendering + chapter scoping, card-containment (no unclipped overflow), play-in-modal open/teardown + router sweep, plus layout assertions (topbar flush, content padding tokens, exam-shell seam-free) and a testid walk that fails if any interactive element lacks a `data-testid`. Runs against `http://127.0.0.1:8765` and, with `file://$(pwd)` as base, the file:// deployment constraint. Anchors on the site-wide `data-testid` contract (see AGENTS.md) |
 | C — layout audit | `node tools/probe_layout.mjs` | per-route geometry (topbar offset, content paddings, page height vs viewport) + missing-testid report + JPEG screenshots to `tools/shots/` — numbers first, images on demand |
 | C — visual | screenshot pass (headless capture, vision-checked) | dashboard light/dark, learning reveal, A4 connectors, sim results ring/PASS/grid |
 

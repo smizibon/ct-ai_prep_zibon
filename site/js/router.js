@@ -19,6 +19,7 @@
     { href: "#/", label: "Dashboard", icon: "home", key: "d" },
     { href: "#/study", label: "Study", icon: "book", key: "s" },
     { href: "#/cheatsheets", label: "Cheatsheets", icon: "layers", key: "c" },
+    { href: "#/videos", label: "Videos", icon: "play", key: "v" },
     { href: "#/glossary", label: "Glossary", icon: "grid", key: "g" },
     { href: "#/exam", label: "Mock Exam", icon: "timer", key: "e" },
     { href: "#/results", label: "Results", icon: "star", key: "r" },
@@ -100,6 +101,12 @@
       return { view: V.cheatsheets, params: { ch: Number(s[1].replace("ch", "")) },
         crumbs: [{ label: "Cheatsheets", href: "#/cheatsheets" }, { label: "Chapter " + s[1].replace("ch", "") }] };
     }
+    if (s[0] === "videos") {
+      var vch = s[1] ? Number(s[1].replace("ch", "")) : null;
+      return { view: V.videos, params: { ch: isNaN(vch) ? null : vch, q: route.query.q || "" },
+        crumbs: [{ label: "Videos", href: "#/videos" }].concat(vch !== null && !isNaN(vch)
+          ? [{ label: vch === 0 ? "Exam prep" : "Chapter " + vch }] : []) };
+    }
     if (s[0] === "glossary") return { view: V.glossary, params: { q: route.query.q || "" }, crumbs: [{ label: "Glossary" }] };
     if (s[0] === "exam") {
       if (s[1] === "run") return { view: V.runner, params: { sessionId: s[2] }, exam: true, crumbs: [{ label: "Exam" }] };
@@ -142,6 +149,14 @@
     } else {
       app.dataset.shell = "exam";
     }
+    /* normal route change closes any open modal — a playing video must never become orphaned
+       audio (plan-videos §10). UI.confirm dialogs (e.g. the sim leave-guard, which re-renders
+       onto the exam route after its hash revert) carry no modal testid and are mid-decision —
+       those are spared. Runs AFTER the sim leave-guard block for the same reason. */
+    document.querySelectorAll(".modal-scrim").forEach(function (s) {
+      var m = s.querySelector(".modal");
+      if (!m || m.getAttribute("data-testid")) s.remove();
+    });
     if (lastRoute && scrollMap[lastRoute] != null) {
       try { scrollMap[lastRoute] = window.scrollY; } catch (e) {}
     }

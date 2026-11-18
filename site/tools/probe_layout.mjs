@@ -115,6 +115,7 @@ const ROUTES = [
   { name: "dashboard", hash: "#/" },
   { name: "study", hash: "#/study" },
   { name: "cheatsheets", hash: "#/cheatsheets" },
+  { name: "videos", hash: "#/videos" },
   { name: "glossary", hash: "#/glossary" },
   { name: "examhub", hash: "#/exam" },
   { name: "intel", hash: "#/intel" },
