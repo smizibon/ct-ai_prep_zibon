@@ -1,0 +1,77 @@
+{
+ "id": "A2",
+ "set": "appendix",
+ "heading_verbatim": "### Question A2 (1 Point)",
+ "points": 1,
+ "selection_mode": "single",
+ "select_instruction_verbatim": "*Select ONE answer.*",
+ "stem_markdown": "Which of the following options BEST describes an advantage of using ML development frameworks when building and training machine learning models?\n\n- a) They provide support for specifying the ML model architecture design, such as the structure of a decision tree\n- b) They eliminate the need for data preprocessing by automatically optimizing the data before the training\n- c) They require the data scientists who use them to be advanced programmers with in-depth coding skills\n- d) They make model development highly efficient, but lock in any developed ML models to the ML development framework\n\n*Select ONE answer.*",
+ "item_sets": [],
+ "options": [
+  {
+   "key": "a",
+   "text": "They provide support for specifying the ML model architecture design, such as the structure of a decision tree"
+  },
+  {
+   "key": "b",
+   "text": "They eliminate the need for data preprocessing by automatically optimizing the data before the training"
+  },
+  {
+   "key": "c",
+   "text": "They require the data scientists who use them to be advanced programmers with in-depth coding skills"
+  },
+  {
+   "key": "d",
+   "text": "They make model development highly efficient, but lock in any developed ML models to the ML development framework"
+  }
+ ],
+ "figures": [],
+ "quirks": [],
+ "answer": {
+  "heading_verbatim": "#### Question A2 \u2014 Correct answer: a",
+  "key_correct": "a",
+  "correct_keys": [
+   "a"
+  ],
+  "lo_key": "AI-1.1.7",
+  "lo_section": "AI-1.1.7",
+  "lo_conflict": false,
+  "k_level": "K2",
+  "points": 1,
+  "rationale_style": "per_option",
+  "preamble_markdown": null,
+  "rationale_units": [
+   {
+    "key": "a",
+    "verdict": "correct",
+    "verdict_phrase": "Is correct.",
+    "text": "Model building is a key function, and ML development frameworks provide \"tools for defining the architecture of the ML model,\" including the ability to specify the structure of the ML model, such as a decision tree."
+   },
+   {
+    "key": "b",
+    "verdict": "incorrect",
+    "verdict_phrase": "Is not correct.",
+    "text": "The word \"eliminate\" is an overstatement. ML development frameworks assist with, but do not remove the need for data preprocessing. Data handling is a support function that does not perform complete automation, eliminating the task."
+   },
+   {
+    "key": "c",
+    "verdict": "incorrect",
+    "verdict_phrase": "Is not correct.",
+    "text": "ML development frameworks exist at different abstraction levels, including \"a higher-level API, simplifying model creation\". This suggests that programming is not a universal requirement, with the selection of the framework depending on the \"expertise of the users.\""
+   },
+   {
+    "key": "d",
+    "verdict": "incorrect",
+    "verdict_phrase": "Is not correct.",
+    "text": "It is not correct that ML development frameworks lock in developed ML models to that framework. Generally, any developed ML models can be deployed anywhere (within reason)."
+   }
+  ],
+  "conclusion_markdown": null,
+  "answer_figures": [],
+  "new_type_answer": null,
+  "restatement_drift": [],
+  "quirks": []
+ },
+ "raw_question_markdown": "### Question A2 (1 Point)\n\nWhich of the following options BEST describes an advantage of using ML development frameworks when building and training machine learning models?\n\n- a) They provide support for specifying the ML model architecture design, such as the structure of a decision tree\n- b) They eliminate the need for data preprocessing by automatically optimizing the data before the training\n- c) They require the data scientists who use them to be advanced programmers with in-depth coding skills\n- d) They make model development highly efficient, but lock in any developed ML models to the ML development framework\n\n*Select ONE answer.*",
+ "raw_answer_markdown": "#### Question A2 \u2014 Correct answer: a\n\n**LO:** AI-1.1.7 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is correct.** Model building is a key function, and ML development frameworks provide \"tools for defining the architecture of the ML model,\" including the ability to specify the structure of the ML model, such as a decision tree.\n- **b) Is not correct.** The word \"eliminate\" is an overstatement. ML development frameworks assist with, but do not remove the need for data preprocessing. Data handling is a support function that does not perform complete automation, eliminating the task.\n- **c) Is not correct.** ML development frameworks exist at different abstraction levels, including \"a higher-level API, simplifying model creation\". This suggests that programming is not a universal requirement, with the selection of the framework depending on the \"expertise of the users.\"\n- **d) Is not correct.** It is not correct that ML development frameworks lock in developed ML models to that framework. Generally, any developed ML models can be deployed anywhere (within reason)."
+}

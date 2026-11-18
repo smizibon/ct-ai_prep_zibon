@@ -1,0 +1,42 @@
+{
+  "id": "Q21",
+  "set": "main",
+  "heading_verbatim": "### Question 21 (2 Points)",
+  "points": 2,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "Your organization plans to deploy a GenAI-powered legal document generator. During implementation planning, the security team argues for focusing red teaming efforts on preventing prompt injection attacks, while the compliance team wants to prioritize bias detection in legal advice generation. The development team suggests running red teaming after the system goes live to save time.\n\nWhich of the following is the MOST effective red teaming implementation strategy for this scenario?\n\n- a) Prioritize security vulnerabilities first, then address bias issues in a separate phase after deployment\n- b) Focus on bias detection since legal advice accuracy is more critical than security concerns\n- c) Deploy immediately and conduct red teaming reactively based on incidents and user feedback\n- d) Use attack scenarios covering both security and bias vulnerabilities before deployment\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {"key": "a", "text": "Prioritize security vulnerabilities first, then address bias issues in a separate phase after deployment"},
+    {"key": "b", "text": "Focus on bias detection since legal advice accuracy is more critical than security concerns"},
+    {"key": "c", "text": "Deploy immediately and conduct red teaming reactively based on incidents and user feedback"},
+    {"key": "d", "text": "Use attack scenarios covering both security and bias vulnerabilities before deployment"}
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 21 — Correct answer: d",
+    "key_correct": "d",
+    "correct_keys": ["d"],
+    "lo_key": "AI-4.2.2",
+    "lo_section": "AI-4.2.2",
+    "lo_conflict": false,
+    "k_level": "K3",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {"key": "a", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "Red teaming is typically performed before deployment."},
+      {"key": "b", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "There is no guidance given in the question that security is more or less important than testing for bias."},
+      {"key": "c", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "Red teaming is done proactively before deployment."},
+      {"key": "d", "verdict": "correct", "verdict_phrase": "Is correct.", "text": "Red teaming should be conducted before deployment, not after and multiple vulnerability types (security and bias) should be tested together."}
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 21 (2 Points)\n\nYour organization plans to deploy a GenAI-powered legal document generator. During implementation planning, the security team argues for focusing red teaming efforts on preventing prompt injection attacks, while the compliance team wants to prioritize bias detection in legal advice generation. The development team suggests running red teaming after the system goes live to save time.\n\nWhich of the following is the MOST effective red teaming implementation strategy for this scenario?\n\n- a) Prioritize security vulnerabilities first, then address bias issues in a separate phase after deployment\n- b) Focus on bias detection since legal advice accuracy is more critical than security concerns\n- c) Deploy immediately and conduct red teaming reactively based on incidents and user feedback\n- d) Use attack scenarios covering both security and bias vulnerabilities before deployment\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 21 — Correct answer: d\n\n**LO:** AI-4.2.2 | **K-Level:** K3 | **Points:** 2\n\n- **a) Is not correct.** Red teaming is typically performed before deployment.\n- **b) Is not correct.** There is no guidance given in the question that security is more or less important than testing for bias.\n- **c) Is not correct.** Red teaming is done proactively before deployment.\n- **d) Is correct.** Red teaming should be conducted before deployment, not after and multiple vulnerability types (security and bias) should be tested together."
+}

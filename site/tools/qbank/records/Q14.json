@@ -1,0 +1,76 @@
+{
+  "id": "Q14",
+  "set": "main",
+  "heading_verbatim": "### Question 14 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "Which of the following statements BEST contrasts the roles of training, validation, and test datasets in ML model development?\n\n- a) The training dataset is used to optimize hyperparameters, the validation dataset is used to tune predictions, and the test dataset is used to generate training data\n- b) The training dataset is used to create the model, the validation dataset is used to tune the model, and the test dataset evaluates its performance on unseen data\n- c) The training dataset is used for final model evaluation, the validation dataset ensures the model does not overfit, and the test dataset is used for tuning hyperparameters\n- d) The training dataset ensures the model generalizes well, the validation dataset is used to deploy the model, and the test dataset is used for initial evaluation\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {
+      "key": "a",
+      "text": "The training dataset is used to optimize hyperparameters, the validation dataset is used to tune predictions, and the test dataset is used to generate training data"
+    },
+    {
+      "key": "b",
+      "text": "The training dataset is used to create the model, the validation dataset is used to tune the model, and the test dataset evaluates its performance on unseen data"
+    },
+    {
+      "key": "c",
+      "text": "The training dataset is used for final model evaluation, the validation dataset ensures the model does not overfit, and the test dataset is used for tuning hyperparameters"
+    },
+    {
+      "key": "d",
+      "text": "The training dataset ensures the model generalizes well, the validation dataset is used to deploy the model, and the test dataset is used for initial evaluation"
+    }
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 14 — Correct answer: b",
+    "key_correct": "b",
+    "correct_keys": [
+      "b"
+    ],
+    "lo_key": "AI-3.2.3",
+    "lo_section": "AI-3.2.3",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {
+        "key": "a",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "The training dataset is primarily used to fit the model's parameters, not to optimize hyperparameters. The validation dataset is typically used to tune hyperparameters, and the test dataset is never used to generate training data."
+      },
+      {
+        "key": "b",
+        "verdict": "correct",
+        "verdict_phrase": "Is correct.",
+        "text": "The training dataset is used to fit or create the model, the validation dataset is used to tune the model's hyperparameters and prevent overfitting, and the test dataset is reserved for evaluating the model's performance on unseen data. It accurately describes the distinct and sequential roles of each dataset in the ML workflow."
+      },
+      {
+        "key": "c",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "The training dataset is not used for final model evaluation - that is the role of the test dataset. Additionally, the test dataset is not used for tuning hyperparameters, as that would risk overfitting to the test dataset."
+      },
+      {
+        "key": "d",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "The training dataset's primary role is not to ensure generalization but to fit the model. The validation dataset is not used for deployment, and the test dataset is not used for initial evaluation but for final assessment after model development."
+      }
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 14 (1 Point)\n\nWhich of the following statements BEST contrasts the roles of training, validation, and test datasets in ML model development?\n\n- a) The training dataset is used to optimize hyperparameters, the validation dataset is used to tune predictions, and the test dataset is used to generate training data\n- b) The training dataset is used to create the model, the validation dataset is used to tune the model, and the test dataset evaluates its performance on unseen data\n- c) The training dataset is used for final model evaluation, the validation dataset ensures the model does not overfit, and the test dataset is used for tuning hyperparameters\n- d) The training dataset ensures the model generalizes well, the validation dataset is used to deploy the model, and the test dataset is used for initial evaluation\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 14 — Correct answer: b\n\n**LO:** AI-3.2.3 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is not correct.** The training dataset is primarily used to fit the model's parameters, not to optimize hyperparameters. The validation dataset is typically used to tune hyperparameters, and the test dataset is never used to generate training data.\n- **b) Is correct.** The training dataset is used to fit or create the model, the validation dataset is used to tune the model's hyperparameters and prevent overfitting, and the test dataset is reserved for evaluating the model's performance on unseen data. It accurately describes the distinct and sequential roles of each dataset in the ML workflow.\n- **c) Is not correct.** The training dataset is not used for final model evaluation - that is the role of the test dataset. Additionally, the test dataset is not used for tuning hyperparameters, as that would risk overfitting to the test dataset.\n- **d) Is not correct.** The training dataset's primary role is not to ensure generalization but to fit the model. The validation dataset is not used for deployment, and the test dataset is not used for initial evaluation but for final assessment after model development."
+}

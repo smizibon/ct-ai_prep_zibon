@@ -1,0 +1,76 @@
+{
+  "id": "Q38",
+  "set": "main",
+  "heading_verbatim": "### Question 38 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "Which of the following descriptions of the creation of a pseudo-oracle used to support the back-to-back testing of an ML model is MOST likely to be CORRECT?\n\n- a) By varying the hyperparameters used for training the ML model that is being tested\n- b) By fine-tuning the ML model that is being tested\n- c) By supplementing the ML model that is being tested with retrieval-augmented generation\n- d) By using a different ML development framework than the ML model that is being tested\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {
+      "key": "a",
+      "text": "By varying the hyperparameters used for training the ML model that is being tested"
+    },
+    {
+      "key": "b",
+      "text": "By fine-tuning the ML model that is being tested"
+    },
+    {
+      "key": "c",
+      "text": "By supplementing the ML model that is being tested with retrieval-augmented generation"
+    },
+    {
+      "key": "d",
+      "text": "By using a different ML development framework than the ML model that is being tested"
+    }
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 38 — Correct answer: d",
+    "key_correct": "d",
+    "correct_keys": [
+      "d"
+    ],
+    "lo_key": "AI-6.1.10",
+    "lo_section": "AI-6.1.10",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {
+        "key": "a",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "Varying hyperparameters is a minor adjustment to the same ML model. It doesn't fundamentally change the model. A pseudo-oracle should ideally be significantly different to detect defects effectively. This option is too similar to the SUT."
+      },
+      {
+        "key": "b",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "Fine-tuning is a modification of the same ML model, typically involving further training on a specific dataset. It's not a substantial enough change to create a truly independent pseudo-oracle. It still relies on the same core model and framework, increasing the risk of shared defects."
+      },
+      {
+        "key": "c",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "Retrieval-augmented generation (RAG) enhances a language model by integrating it with a retrieval mechanism. While RAG adds complexity, it still builds upon the core ML model being tested. The fundamental architecture and training process of the base model will be the same. While RAG introduces a difference, it is still an augmentation of the original model rather than an independent alternative."
+      },
+      {
+        "key": "d",
+        "verdict": "correct",
+        "verdict_phrase": "Is correct.",
+        "text": "Using a different ML development framework means using different libraries, potentially different underlying algorithms or implementations of algorithms, and a different ML development environment. This option maximizes the independence of the pseudo-oracle from the SUT, reducing the risk of shared defects and increasing the potential effectiveness of back-to-back testing."
+      }
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 38 (1 Point)\n\nWhich of the following descriptions of the creation of a pseudo-oracle used to support the back-to-back testing of an ML model is MOST likely to be CORRECT?\n\n- a) By varying the hyperparameters used for training the ML model that is being tested\n- b) By fine-tuning the ML model that is being tested\n- c) By supplementing the ML model that is being tested with retrieval-augmented generation\n- d) By using a different ML development framework than the ML model that is being tested\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 38 — Correct answer: d\n\n**LO:** AI-6.1.10 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is not correct.** Varying hyperparameters is a minor adjustment to the same ML model. It doesn't fundamentally change the model. A pseudo-oracle should ideally be significantly different to detect defects effectively. This option is too similar to the SUT.\n- **b) Is not correct.** Fine-tuning is a modification of the same ML model, typically involving further training on a specific dataset. It's not a substantial enough change to create a truly independent pseudo-oracle. It still relies on the same core model and framework, increasing the risk of shared defects.\n- **c) Is not correct.** Retrieval-augmented generation (RAG) enhances a language model by integrating it with a retrieval mechanism. While RAG adds complexity, it still builds upon the core ML model being tested. The fundamental architecture and training process of the base model will be the same. While RAG introduces a difference, it is still an augmentation of the original model rather than an independent alternative.\n- **d) Is correct.** Using a different ML development framework means using different libraries, potentially different underlying algorithms or implementations of algorithms, and a different ML development environment. This option maximizes the independence of the pseudo-oracle from the SUT, reducing the risk of shared defects and increasing the potential effectiveness of back-to-back testing."
+}

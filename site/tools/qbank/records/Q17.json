@@ -1,0 +1,58 @@
+{
+  "id": "Q17",
+  "set": "main",
+  "heading_verbatim": "### Question 17 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "Given the following examples of AI-based systems:\n\n- i. A system that learns from real-time data to improve its failure predictions and automatically updates maintenance schedules\n- ii. A spam filter for an email app, which identifies spam based on predefined rules\n- iii. A recommendation engine on a streaming service that updates its suggestions based on a user's changing viewing habits and preferences\n- iv. A personal assistant that learns continuously from its user\n- v. A rule-based system for medical diagnosis\n\nWhich of the following BEST describes the systems which can be considered to be locked AI-based systems?\n\n- a) ii and v\n- b) i, iii, and iv\n- c) i, and iii\n- d) ii, iv, and v\n\n*Select ONE answer.*",
+  "item_sets": [
+    {
+      "role": "examples",
+      "key_style": "roman_lower",
+      "items": [
+        {"key": "i", "text": "A system that learns from real-time data to improve its failure predictions and automatically updates maintenance schedules"},
+        {"key": "ii", "text": "A spam filter for an email app, which identifies spam based on predefined rules"},
+        {"key": "iii", "text": "A recommendation engine on a streaming service that updates its suggestions based on a user's changing viewing habits and preferences"},
+        {"key": "iv", "text": "A personal assistant that learns continuously from its user"},
+        {"key": "v", "text": "A rule-based system for medical diagnosis"}
+      ]
+    }
+  ],
+  "options": [
+    {"key": "a", "text": "ii and v"},
+    {"key": "b", "text": "i, iii, and iv"},
+    {"key": "c", "text": "i, and iii"},
+    {"key": "d", "text": "ii, iv, and v"}
+  ],
+  "figures": [],
+  "quirks": ["option-text-comma-i-and-iii"],
+  "answer": {
+    "heading_verbatim": "### Question 17 — Correct answer: a",
+    "key_correct": "a",
+    "correct_keys": ["a"],
+    "lo_key": "AI-4.1.1",
+    "lo_section": "AI-4.1.1",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_statement",
+    "preamble_markdown": "Considering the provided example AI-based systems:",
+    "rationale_units": [
+      {"key": "i", "verdict": "neutral", "verdict_phrase": null, "text": "A system that learns from real-time data to improve its failure predictions and automatically updates maintenance schedules.\n  This is a form of adaptive AI-based system that changes the schedules based on real-time data."},
+      {"key": "ii", "verdict": "neutral", "verdict_phrase": null, "text": "A spam filter in an email app, which identifies spam based on predefined rules.\n  This is a form of locked AI-based system, which generates predictable test results, as it is based on following predefined spam identification rules that will not be changed until the rule-based model is rebuilt."},
+      {"key": "iii", "verdict": "neutral", "verdict_phrase": null, "text": "A recommendation engine on a streaming service that updates its suggestions based on a user's changing viewing habits and preferences.\n  This is a form of adaptive system that adapts based on the user's viewing habits and preferences."},
+      {"key": "iv", "verdict": "neutral", "verdict_phrase": null, "text": "A personal assistant that learns from its user.\n  This is an adaptive AI-based system because it adapts its parameters based on users' interactions with the system."},
+      {"key": "v", "verdict": "neutral", "verdict_phrase": null, "text": "A rule-based system for medical diagnosis.\n  This is a form of a locked AI-based system, which will not change the domain rules until the rule-based model is rebuilt."}
+    ],
+    "conclusion_markdown": "Thus, the spam filter and medical diagnosis systems would be more straightforward to test because they are both forms of locked systems and generate predictable test results.\n\nAnd, so, option a) is correct.",
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [
+      "Answer bullet ii restates the example as 'A spam filter in an email app' whereas Question 17 says 'A spam filter for an email app' ('in' vs 'for').",
+      "Answer bullet iv restates the example as 'A personal assistant that learns from its user.' whereas Question 17 says 'A personal assistant that learns continuously from its user' (drops 'continuously')."
+    ],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 17 (1 Point)\n\nGiven the following examples of AI-based systems:\n\n- i. A system that learns from real-time data to improve its failure predictions and automatically updates maintenance schedules\n- ii. A spam filter for an email app, which identifies spam based on predefined rules\n- iii. A recommendation engine on a streaming service that updates its suggestions based on a user's changing viewing habits and preferences\n- iv. A personal assistant that learns continuously from its user\n- v. A rule-based system for medical diagnosis\n\nWhich of the following BEST describes the systems which can be considered to be locked AI-based systems?\n\n- a) ii and v\n- b) i, iii, and iv\n- c) i, and iii\n- d) ii, iv, and v\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 17 — Correct answer: a\n\n**LO:** AI-4.1.1 | **K-Level:** K2 | **Points:** 1\n\nConsidering the provided example AI-based systems:\n\n- **i.** A system that learns from real-time data to improve its failure predictions and automatically updates maintenance schedules.\n  This is a form of adaptive AI-based system that changes the schedules based on real-time data.\n- **ii.** A spam filter in an email app, which identifies spam based on predefined rules.\n  This is a form of locked AI-based system, which generates predictable test results, as it is based on following predefined spam identification rules that will not be changed until the rule-based model is rebuilt.\n- **iii.** A recommendation engine on a streaming service that updates its suggestions based on a user's changing viewing habits and preferences.\n  This is a form of adaptive system that adapts based on the user's viewing habits and preferences.\n- **iv.** A personal assistant that learns from its user.\n  This is an adaptive AI-based system because it adapts its parameters based on users' interactions with the system.\n- **v.** A rule-based system for medical diagnosis.\n  This is a form of a locked AI-based system, which will not change the domain rules until the rule-based model is rebuilt.\n\nThus, the spam filter and medical diagnosis systems would be more straightforward to test because they are both forms of locked systems and generate predictable test results.\n\nAnd, so, option a) is correct."
+}

@@ -1,0 +1,76 @@
+{
+  "id": "Q13",
+  "set": "main",
+  "heading_verbatim": "### Question 13 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "Which of the following statements BEST describes a key activity in data preparation for machine learning?\n\n- a) Data preparation comprises the identification and gathering of data from various sources, providing the algorithm with raw data to learn from\n- b) Feature engineering of the data is performed after an ML model has been trained to optimize its performance for real-world deployment\n- c) Data pre-processing includes augmentation and sampling, which either add or reduce the number of examples in the training data respectively\n- d) Exploratory data analysis (EDA) is a form of exploratory testing applied to the data preparation activities of acquisition, pre-processing and labelling\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {
+      "key": "a",
+      "text": "Data preparation comprises the identification and gathering of data from various sources, providing the algorithm with raw data to learn from"
+    },
+    {
+      "key": "b",
+      "text": "Feature engineering of the data is performed after an ML model has been trained to optimize its performance for real-world deployment"
+    },
+    {
+      "key": "c",
+      "text": "Data pre-processing includes augmentation and sampling, which either add or reduce the number of examples in the training data respectively"
+    },
+    {
+      "key": "d",
+      "text": "Exploratory data analysis (EDA) is a form of exploratory testing applied to the data preparation activities of acquisition, pre-processing and labelling"
+    }
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 13 — Correct answer: c",
+    "key_correct": "c",
+    "correct_keys": [
+      "c"
+    ],
+    "lo_key": "AI-3.2.1",
+    "lo_section": "AI-3.2.1",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {
+        "key": "a",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "This statement highlights a fundamental step in data preparation: collecting and consolidating data from different sources before any processing or analysis begins. However, data preparation typically also involves cleaning, transforming, and organizing data, in addition to gathering raw data."
+      },
+      {
+        "key": "b",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "This statement is inaccurate because feature engineering is generally performed before (or during) model training, not after. The purpose of feature engineering is to create or modify features to improve ML model performance during the training phase."
+      },
+      {
+        "key": "c",
+        "verdict": "correct",
+        "verdict_phrase": "Is correct.",
+        "text": "This correctly identifies two common data pre-processing techniques: augmentation (increasing data by creating modified versions) and sampling (reducing data by selecting subsets)."
+      },
+      {
+        "key": "d",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "This statement partially captures the purpose of EDA, which is to understand data characteristics and detect issues through visualization and summary statistics. However, EDA is not \"exploratory testing\" but rather is an analytical process that informs subsequent data preparation steps."
+      }
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 13 (1 Point)\n\nWhich of the following statements BEST describes a key activity in data preparation for machine learning?\n\n- a) Data preparation comprises the identification and gathering of data from various sources, providing the algorithm with raw data to learn from\n- b) Feature engineering of the data is performed after an ML model has been trained to optimize its performance for real-world deployment\n- c) Data pre-processing includes augmentation and sampling, which either add or reduce the number of examples in the training data respectively\n- d) Exploratory data analysis (EDA) is a form of exploratory testing applied to the data preparation activities of acquisition, pre-processing and labelling\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 13 — Correct answer: c\n\n**LO:** AI-3.2.1 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is not correct.** This statement highlights a fundamental step in data preparation: collecting and consolidating data from different sources before any processing or analysis begins. However, data preparation typically also involves cleaning, transforming, and organizing data, in addition to gathering raw data.\n- **b) Is not correct.** This statement is inaccurate because feature engineering is generally performed before (or during) model training, not after. The purpose of feature engineering is to create or modify features to improve ML model performance during the training phase.\n- **c) Is correct.** This correctly identifies two common data pre-processing techniques: augmentation (increasing data by creating modified versions) and sampling (reducing data by selecting subsets).\n- **d) Is not correct.** This statement partially captures the purpose of EDA, which is to understand data characteristics and detect issues through visualization and summary statistics. However, EDA is not \"exploratory testing\" but rather is an analytical process that informs subsequent data preparation steps."
+}

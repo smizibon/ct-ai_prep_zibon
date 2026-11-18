@@ -1,0 +1,76 @@
+{
+  "id": "Q4",
+  "set": "main",
+  "heading_verbatim": "### Question 4 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "Which of the following statements BEST explains generative AI?\n\n- a) It is designed to analyze and understand existing data, such as text or images, allowing machines to categorize information and extract key insights\n- b) It creates new content, such as text, images, or audio, by learning patterns from training data and generating outputs similar in nature\n- c) It focuses mainly on improving existing content, such as text, images, or audio, by optimizing it for classification or prediction tasks\n- d) It creates models that are limited to generating text and images and cannot be used for creative tasks like drug discovery or data simulation\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {
+      "key": "a",
+      "text": "It is designed to analyze and understand existing data, such as text or images, allowing machines to categorize information and extract key insights"
+    },
+    {
+      "key": "b",
+      "text": "It creates new content, such as text, images, or audio, by learning patterns from training data and generating outputs similar in nature"
+    },
+    {
+      "key": "c",
+      "text": "It focuses mainly on improving existing content, such as text, images, or audio, by optimizing it for classification or prediction tasks"
+    },
+    {
+      "key": "d",
+      "text": "It creates models that are limited to generating text and images and cannot be used for creative tasks like drug discovery or data simulation"
+    }
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 4 — Correct answer: b",
+    "key_correct": "b",
+    "correct_keys": [
+      "b"
+    ],
+    "lo_key": "AI-1.1.4",
+    "lo_section": "AI-1.1.4",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {
+        "key": "a",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "It describes analysis and understanding, which are not capabilities of GenAI, and does not focus on the generative aspect of generative AI."
+      },
+      {
+        "key": "b",
+        "verdict": "correct",
+        "verdict_phrase": "Is correct.",
+        "text": "This accurately describes generative AI, highlighting its ability to create new content based on learned patterns in training data."
+      },
+      {
+        "key": "c",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "Generative AI focuses on creating new content rather than improving existing content as a precursor to more traditional AI tasks, such as classification and prediction tasks."
+      },
+      {
+        "key": "d",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "Generative AI is not limited to text and images; it has applications in healthcare, drug discovery, data simulation, and other fields."
+      }
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 4 (1 Point)\n\nWhich of the following statements BEST explains generative AI?\n\n- a) It is designed to analyze and understand existing data, such as text or images, allowing machines to categorize information and extract key insights\n- b) It creates new content, such as text, images, or audio, by learning patterns from training data and generating outputs similar in nature\n- c) It focuses mainly on improving existing content, such as text, images, or audio, by optimizing it for classification or prediction tasks\n- d) It creates models that are limited to generating text and images and cannot be used for creative tasks like drug discovery or data simulation\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 4 — Correct answer: b\n\n**LO:** AI-1.1.4 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is not correct.** It describes analysis and understanding, which are not capabilities of GenAI, and does not focus on the generative aspect of generative AI.\n- **b) Is correct.** This accurately describes generative AI, highlighting its ability to create new content based on learned patterns in training data.\n- **c) Is not correct.** Generative AI focuses on creating new content rather than improving existing content as a precursor to more traditional AI tasks, such as classification and prediction tasks.\n- **d) Is not correct.** Generative AI is not limited to text and images; it has applications in healthcare, drug discovery, data simulation, and other fields."
+}

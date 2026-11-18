@@ -1,0 +1,87 @@
+{
+  "id": "Q2",
+  "set": "main",
+  "heading_verbatim": "### Question 2 (1 Point)",
+  "points": 1,
+  "selection_mode": "two",
+  "select_instruction_verbatim": "*Select TWO answers.*",
+  "stem_markdown": "Which TWO of the following statements BEST distinguish between narrow AI, general AI, and super AI?\n\n- a) Narrow AI is self-learning, general AI focuses on solving specialized problems, and super AI is limited to tasks defined during its development\n- b) Narrow AI operates independently of human input, general AI is used only in advanced robotics, and super AI improves human decision-making in specialized fields\n- c) Narrow AI performs specific tasks efficiently, general AI can handle a wide range of intellectual tasks like a human, and super AI surpasses human intelligence\n- d) Narrow AI is task-specific, general AI is a concept with limited real-world applications, and super AI describes cutting-edge generative AI models\n- e) Narrow AI is the current state of AI, achievement of general AI is uncertain, but once general AI is achieved, super AI is likely to happen\n\n*Select TWO answers.*",
+  "item_sets": [],
+  "options": [
+    {
+      "key": "a",
+      "text": "Narrow AI is self-learning, general AI focuses on solving specialized problems, and super AI is limited to tasks defined during its development"
+    },
+    {
+      "key": "b",
+      "text": "Narrow AI operates independently of human input, general AI is used only in advanced robotics, and super AI improves human decision-making in specialized fields"
+    },
+    {
+      "key": "c",
+      "text": "Narrow AI performs specific tasks efficiently, general AI can handle a wide range of intellectual tasks like a human, and super AI surpasses human intelligence"
+    },
+    {
+      "key": "d",
+      "text": "Narrow AI is task-specific, general AI is a concept with limited real-world applications, and super AI describes cutting-edge generative AI models"
+    },
+    {
+      "key": "e",
+      "text": "Narrow AI is the current state of AI, achievement of general AI is uncertain, but once general AI is achieved, super AI is likely to happen"
+    }
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 2 — Correct answer: c, e",
+    "key_correct": "c, e",
+    "correct_keys": [
+      "c",
+      "e"
+    ],
+    "lo_key": "AI-1.1.2",
+    "lo_section": "AI-1.1.2",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {
+        "key": "a",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "Narrow AI is not self-learning in all cases; it is task specific. General AI is not limited to specialized problems, and super AI is not limited to pre-defined tasks."
+      },
+      {
+        "key": "b",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "Narrow AI does not operate independently of human input, general AI is not exclusive to robotics, and super AI does not merely enhance human decision-making but hypothetically surpasses human intelligence entirely."
+      },
+      {
+        "key": "c",
+        "verdict": "correct",
+        "verdict_phrase": "Is correct.",
+        "text": "This accurately differentiates the three types of AI, highlighting narrow AI's task-specific nature, general AI's human-like versatility, and super AI's hypothetical nature and superior capabilities."
+      },
+      {
+        "key": "d",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "While narrow AI is correctly identified as task specific, general AI, if achieved, would have many real-world applications. Additionally, it is unclear what relationship super AI would have with generative AI models."
+      },
+      {
+        "key": "e",
+        "verdict": "correct",
+        "verdict_phrase": "Is correct.",
+        "text": "All AI today is narrow AI. When general AI will be achieved is not clear. Once we have general AI then given the availability of knowledge on the internet, it is almost certain that super AI will be achieved."
+      }
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 2 (1 Point)\n\nWhich TWO of the following statements BEST distinguish between narrow AI, general AI, and super AI?\n\n- a) Narrow AI is self-learning, general AI focuses on solving specialized problems, and super AI is limited to tasks defined during its development\n- b) Narrow AI operates independently of human input, general AI is used only in advanced robotics, and super AI improves human decision-making in specialized fields\n- c) Narrow AI performs specific tasks efficiently, general AI can handle a wide range of intellectual tasks like a human, and super AI surpasses human intelligence\n- d) Narrow AI is task-specific, general AI is a concept with limited real-world applications, and super AI describes cutting-edge generative AI models\n- e) Narrow AI is the current state of AI, achievement of general AI is uncertain, but once general AI is achieved, super AI is likely to happen\n\n*Select TWO answers.*",
+  "raw_answer_markdown": "### Question 2 — Correct answer: c, e\n\n**LO:** AI-1.1.2 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is not correct.** Narrow AI is not self-learning in all cases; it is task specific. General AI is not limited to specialized problems, and super AI is not limited to pre-defined tasks.\n- **b) Is not correct.** Narrow AI does not operate independently of human input, general AI is not exclusive to robotics, and super AI does not merely enhance human decision-making but hypothetically surpasses human intelligence entirely.\n- **c) Is correct.** This accurately differentiates the three types of AI, highlighting narrow AI's task-specific nature, general AI's human-like versatility, and super AI's hypothetical nature and superior capabilities.\n- **d) Is not correct.** While narrow AI is correctly identified as task specific, general AI, if achieved, would have many real-world applications. Additionally, it is unclear what relationship super AI would have with generative AI models.\n- **e) Is correct.** All AI today is narrow AI. When general AI will be achieved is not clear. Once we have general AI then given the availability of knowledge on the internet, it is almost certain that super AI will be achieved."
+}

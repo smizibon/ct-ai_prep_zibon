@@ -1,0 +1,37 @@
+/* chips.css — badges, chips, tooltips */
+.k-chip {
+  display: inline-flex; align-items: center; height: 22px; padding: 0 9px;
+  border-radius: var(--r-full); font-family: var(--font-mono); font-size: 0.6875rem;
+  font-weight: 600; letter-spacing: 0.02em;
+}
+.k-chip--k1 { background: var(--bg-2); color: var(--ink-2); }
+.k-chip--k2 { background: var(--accent-soft); color: var(--accent); }
+.k-chip--k3 { background: var(--primary-soft); color: var(--primary-soft-ink); }
+.k-chip--h { background: var(--accent-soft); color: var(--accent); }
+.meta-chip {
+  display: inline-flex; align-items: center; gap: 5px; height: 24px; padding: 0 10px;
+  border-radius: var(--r-full); background: var(--bg-2); color: var(--ink-2);
+  font-size: 0.75rem; font-weight: 500; white-space: nowrap;
+}
+.meta-chip--mono { font-family: var(--font-mono); font-size: 0.6875rem; }
+.meta-chip--accent { background: var(--accent-soft); color: var(--accent); }
+.meta-chip--success { background: var(--success-soft); color: var(--success); }
+.meta-chip--warn { background: var(--warn-soft); color: var(--warn); }
+.meta-chip--danger { background: var(--danger-soft); color: var(--danger); }
+.chiprow { display: flex; flex-wrap: wrap; gap: var(--sp-2); align-items: center; }
+.src-chip {
+  display: inline-block; font-family: var(--font-mono); font-size: 0.6875rem;
+  color: var(--ink-3); background: var(--bg-2); border-radius: var(--r-xs); padding: 1px 6px;
+}
+.src-chip:hover { color: var(--primary-soft-ink); background: var(--primary-soft); }
+
+[data-tip] { position: relative; }
+[data-tip]::after {
+  content: attr(data-tip); position: absolute; left: 50%; bottom: calc(100% + 8px);
+  transform: translateX(-50%) scale(.96); opacity: 0; pointer-events: none;
+  background: var(--bg-inverse); color: var(--ink-inverse); font-size: 0.75rem; font-weight: 400;
+  padding: var(--sp-2) var(--sp-3); border-radius: var(--r-md); max-width: 280px; width: max-content;
+  box-shadow: var(--shadow-3); z-index: var(--z-tooltip); white-space: normal; text-align: left;
+  transition: opacity 160ms var(--ease-out), transform 160ms var(--ease-out);
+}
+[data-tip]:hover::after, [data-tip]:focus-visible::after { opacity: 1; transform: translateX(-50%); }

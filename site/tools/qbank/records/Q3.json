@@ -1,0 +1,76 @@
+{
+  "id": "Q3",
+  "set": "main",
+  "heading_verbatim": "### Question 3 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "Which of the following statements BEST describes the relationship between AI, ML, and DL?\n\n- a) ML is a subset of AI, and DL is a further subset of ML, representing a hierarchy of specialized technologies\n- b) DL is the foundational technology, and both ML and AI are specialized applications built upon its principles.\n- c) DL and ML are essentially interchangeable terms, while AI represents a separate approach to problem-solving\n- d) AI encompasses both ML and DL as distinct but important methodologies, working in parallel to solve complex problems\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {
+      "key": "a",
+      "text": "ML is a subset of AI, and DL is a further subset of ML, representing a hierarchy of specialized technologies"
+    },
+    {
+      "key": "b",
+      "text": "DL is the foundational technology, and both ML and AI are specialized applications built upon its principles."
+    },
+    {
+      "key": "c",
+      "text": "DL and ML are essentially interchangeable terms, while AI represents a separate approach to problem-solving"
+    },
+    {
+      "key": "d",
+      "text": "AI encompasses both ML and DL as distinct but important methodologies, working in parallel to solve complex problems"
+    }
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 3 — Correct answer: a",
+    "key_correct": "a",
+    "correct_keys": [
+      "a"
+    ],
+    "lo_key": "AI-1.1.3",
+    "lo_section": "AI-1.1.3",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {
+        "key": "a",
+        "verdict": "correct",
+        "verdict_phrase": "Is correct.",
+        "text": "AI is the broadest term. It refers to the general concept of creating machines that can perform tasks that typically require human intelligence. This includes a wide range of approaches and techniques, not just machine learning. ML is a subset of AI. It's a specific approach to achieving AI where machines are given the ability to learn from data without being explicitly programmed. Instead of writing specific rules for every situation, ML algorithms learn patterns and make predictions based on the data. DL is a subset of machine learning. It's a specialized type of ML that utilizes artificial neural networks with multiple layers (hence \"deep\")."
+      },
+      {
+        "key": "b",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "AI and ML existed as concepts and fields of study long before deep learning became prominent. Deep learning is a relatively recent advancement within the broader fields of machine learning and AI."
+      },
+      {
+        "key": "c",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "DL and ML are not interchangeable. DL is a specific type of ML. Also, AI doesn't represent a \"separate approach\" - ML and DL are approaches to implementing AI."
+      },
+      {
+        "key": "d",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "While it's true AI encompasses ML and DL, \"working in parallel\" is not a valid way to describe their relationship. DL is a type of ML, not a parallel methodology at the same level that can run in parallel."
+      }
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 3 (1 Point)\n\nWhich of the following statements BEST describes the relationship between AI, ML, and DL?\n\n- a) ML is a subset of AI, and DL is a further subset of ML, representing a hierarchy of specialized technologies\n- b) DL is the foundational technology, and both ML and AI are specialized applications built upon its principles.\n- c) DL and ML are essentially interchangeable terms, while AI represents a separate approach to problem-solving\n- d) AI encompasses both ML and DL as distinct but important methodologies, working in parallel to solve complex problems\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 3 — Correct answer: a\n\n**LO:** AI-1.1.3 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is correct.** AI is the broadest term. It refers to the general concept of creating machines that can perform tasks that typically require human intelligence. This includes a wide range of approaches and techniques, not just machine learning. ML is a subset of AI. It's a specific approach to achieving AI where machines are given the ability to learn from data without being explicitly programmed. Instead of writing specific rules for every situation, ML algorithms learn patterns and make predictions based on the data. DL is a subset of machine learning. It's a specialized type of ML that utilizes artificial neural networks with multiple layers (hence \"deep\").\n- **b) Is not correct.** AI and ML existed as concepts and fields of study long before deep learning became prominent. Deep learning is a relatively recent advancement within the broader fields of machine learning and AI.\n- **c) Is not correct.** DL and ML are not interchangeable. DL is a specific type of ML. Also, AI doesn't represent a \"separate approach\" - ML and DL are approaches to implementing AI.\n- **d) Is not correct.** While it's true AI encompasses ML and DL, \"working in parallel\" is not a valid way to describe their relationship. DL is a type of ML, not a parallel methodology at the same level that can run in parallel."
+}

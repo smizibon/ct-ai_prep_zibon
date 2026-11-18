@@ -1,0 +1,146 @@
+{
+  "id": "A4",
+  "set": "appendix",
+  "heading_verbatim": "### Question A4 (1 Point)",
+  "points": 1,
+  "selection_mode": "drag_pair",
+  "select_instruction_verbatim": null,
+  "stem_markdown": "Given the following forms of machine learning, and example machine learning systems:\n\nForms of machine learning *(from figure on PDF page 27)*:\n\n![Question A4 figure: four forms of machine learning (Association, Classification, Reinforcement Learning, Regression) to be paired by drag-and-drop with four example ML systems](figures/questions_p27_A4.png)\n\n- Association\n- Classification\n- Reinforcement Learning\n- Regression\n\nExample machine learning systems:\n\n- An energy company uses historical weather data and corresponding daily power consumption figures to predict the total amount of electricity a city will need tomorrow\n- A robotic arm learns by trial and error to move objects from a conveyor belt into a bin, improving with each attempt\n- A factory aims to discover patterns that commonly occur together in its equipment fault logs to improve maintenance procedures\n- A bank categorizes each incoming transaction as either legitimate or suspicious\n\nDrag to pair each form of machine learning with an example machine learning system.",
+  "item_sets": [
+    {
+      "role": "match_left",
+      "key_style": "none",
+      "items": [
+        {
+          "key": "",
+          "text": "Association"
+        },
+        {
+          "key": "",
+          "text": "Classification"
+        },
+        {
+          "key": "",
+          "text": "Reinforcement Learning"
+        },
+        {
+          "key": "",
+          "text": "Regression"
+        }
+      ]
+    },
+    {
+      "role": "match_right",
+      "key_style": "none",
+      "items": [
+        {
+          "key": "",
+          "text": "An energy company uses historical weather data and corresponding daily power consumption figures to predict the total amount of electricity a city will need tomorrow"
+        },
+        {
+          "key": "",
+          "text": "A robotic arm learns by trial and error to move objects from a conveyor belt into a bin, improving with each attempt"
+        },
+        {
+          "key": "",
+          "text": "A factory aims to discover patterns that commonly occur together in its equipment fault logs to improve maintenance procedures"
+        },
+        {
+          "key": "",
+          "text": "A bank categorizes each incoming transaction as either legitimate or suspicious"
+        }
+      ]
+    }
+  ],
+  "options": null,
+  "figures": [
+    {
+      "path": "figures/questions_p27_A4.png",
+      "alt": "Question A4 figure: four forms of machine learning (Association, Classification, Reinforcement Learning, Regression) to be paired by drag-and-drop with four example ML systems",
+      "note": "(from figure on PDF page 27)",
+      "transcription": "- Association\n- Classification\n- Reinforcement Learning\n- Regression\n\nExample machine learning systems:\n\n- An energy company uses historical weather data and corresponding daily power consumption figures to predict the total amount of electricity a city will need tomorrow\n- A robotic arm learns by trial and error to move objects from a conveyor belt into a bin, improving with each attempt\n- A factory aims to discover patterns that commonly occur together in its equipment fault logs to improve maintenance procedures\n- A bank categorizes each incoming transaction as either legitimate or suspicious"
+    }
+  ],
+  "quirks": [
+    "New question type: correct answer given only as a figure in the answers document (PDF page 35), with a text transcription",
+    "Answer figure uses different examples than the question figure (patient-records and satellite-crops vs factory-fault-logs and bank-transaction); the mismatch is recorded in the transcription's own embedded Note",
+    "LO AI-3.1.1 is shared with Q10 in the answer key"
+  ],
+  "answer": {
+    "heading_verbatim": "#### Question A4 — New question type",
+    "key_correct": "New question type",
+    "correct_keys": [],
+    "lo_key": "AI-3.1.1",
+    "lo_section": "AI-3.1.1",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "points": 1,
+    "rationale_style": "figure_transcription_items",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {
+        "key": "association",
+        "verdict": "neutral",
+        "verdict_phrase": null,
+        "text": "**Association** - This system uses association by mining unlabeled patient records to identify dependencies between different attributes, such as a gene and a disease. It does not predict a class but instead reveals the strength of the relationship between variables within the data."
+      },
+      {
+        "key": "classification",
+        "verdict": "neutral",
+        "verdict_phrase": null,
+        "text": "**Classification** - It learns from a dataset of images that have been pre-labeled with discrete categories ('healthy' or 'diseased'). Its purpose is to categorize new images into one of these specific, non-numerical classes, distinguishing it from regression."
+      },
+      {
+        "key": "reinforcement-learning",
+        "verdict": "neutral",
+        "verdict_phrase": null,
+        "text": "**Reinforcement learning** - The system learns through direct interaction with its physical environment, not from a preexisting dataset. The robot's behavior is shaped over time by a system of rewards (for correct placement) and penalties (for incorrect placement)."
+      },
+      {
+        "key": "regression",
+        "verdict": "neutral",
+        "verdict_phrase": null,
+        "text": "**Regression** - The ML model is trained on labeled data to predict a specific, continuous numerical value: the amount of electricity. The model's output is not a category but a quantity on a scale, which is the key characteristic of regression."
+      }
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [
+      {
+        "kind": "answer",
+        "path": "figures/answers_p35.png",
+        "alt": "Question A4 answer figure: matching key connecting each form of machine learning to an example system",
+        "context_note": "Correct answer *(given as a figure in the source document, PDF page 35)*:",
+        "transcription": "*(Transcription of the answer figure — Association is connected to the medical patient-records example (\"A medical research system analyzes patient records and identifies a genetic marker of a disease…\"); Classification is connected to the agricultural satellite example (\"An agricultural AI system analyzes satellite images of crops, which have been pre-labeled as healthy or diseased…\"); Reinforcement Learning is connected to the robotic-arm example (\"A robotic arm learns to correctly sort various objects into bins by trial and error, improving through rewards and penalties…\"); Regression is connected to the energy example (\"An energy company uses historical weather data and corresponding daily power consumption figures to predict the total amount of electricity a city will need tomorrow…\"). Note: the answer figure uses the patient-records and satellite-crops examples, whereas question A4's own figure uses the factory-fault-logs and bank-transaction examples — two of the four examples differ between question and answer. The form-of-learning pairings are analogous either way: Association → fault logs / patient records, Classification → bank transactions / crop images.)*"
+      }
+    ],
+    "new_type_answer": {
+      "type": "drag_pair",
+      "pairs": [
+        {
+          "form": "Association",
+          "example": "A medical research system analyzes patient records and identifies a genetic marker of a disease…"
+        },
+        {
+          "form": "Classification",
+          "example": "An agricultural AI system analyzes satellite images of crops, which have been pre-labeled as healthy or diseased…"
+        },
+        {
+          "form": "Reinforcement Learning",
+          "example": "A robotic arm learns to correctly sort various objects into bins by trial and error, improving through rewards and penalties…"
+        },
+        {
+          "form": "Regression",
+          "example": "An energy company uses historical weather data and corresponding daily power consumption figures to predict the total amount of electricity a city will need tomorrow…"
+        }
+      ]
+    },
+    "restatement_drift": [],
+    "quirks": [
+      "key_correct cell in the appendix answer-key table reads 'New question type' rather than a letter",
+      "Rationale bullet says 'Reinforcement learning' (lowercase 'l') whereas the question lists 'Reinforcement Learning'",
+      "Rationale discusses the answer figure's examples (patient records, satellite images of crops), not the question figure's examples (factory fault logs, bank transactions)"
+    ]
+  },
+  "raw_question_markdown": "### Question A4 (1 Point)\n\nGiven the following forms of machine learning, and example machine learning systems:\n\nForms of machine learning *(from figure on PDF page 27)*:\n\n![Question A4 figure: four forms of machine learning (Association, Classification, Reinforcement Learning, Regression) to be paired by drag-and-drop with four example ML systems](figures/questions_p27_A4.png)\n\n- Association\n- Classification\n- Reinforcement Learning\n- Regression\n\nExample machine learning systems:\n\n- An energy company uses historical weather data and corresponding daily power consumption figures to predict the total amount of electricity a city will need tomorrow\n- A robotic arm learns by trial and error to move objects from a conveyor belt into a bin, improving with each attempt\n- A factory aims to discover patterns that commonly occur together in its equipment fault logs to improve maintenance procedures\n- A bank categorizes each incoming transaction as either legitimate or suspicious\n\nDrag to pair each form of machine learning with an example machine learning system.",
+  "raw_answer_markdown": "#### Question A4 — New question type\n\n**LO:** AI-3.1.1 | **K-Level:** K2 | **Points:** 1\n\nCorrect answer *(given as a figure in the source document, PDF page 35)*:\n\n![Question A4 answer figure: matching key connecting each form of machine learning to an example system](figures/answers_p35.png)\n\n*(Transcription of the answer figure — Association is connected to the medical patient-records example (\"A medical research system analyzes patient records and identifies a genetic marker of a disease…\"); Classification is connected to the agricultural satellite example (\"An agricultural AI system analyzes satellite images of crops, which have been pre-labeled as healthy or diseased…\"); Reinforcement Learning is connected to the robotic-arm example (\"A robotic arm learns to correctly sort various objects into bins by trial and error, improving through rewards and penalties…\"); Regression is connected to the energy example (\"An energy company uses historical weather data and corresponding daily power consumption figures to predict the total amount of electricity a city will need tomorrow…\"). Note: the answer figure uses the patient-records and satellite-crops examples, whereas question A4's own figure uses the factory-fault-logs and bank-transaction examples — two of the four examples differ between question and answer. The form-of-learning pairings are analogous either way: Association → fault logs / patient records, Classification → bank transactions / crop images.)*\n\nExplanation / Rationale:\n\nConsidering each of the descriptions of example systems from top to bottom:\n\n- **Association** - This system uses association by mining unlabeled patient records to identify dependencies between different attributes, such as a gene and a disease. It does not predict a class but instead reveals the strength of the relationship between variables within the data.\n- **Classification** - It learns from a dataset of images that have been pre-labeled with discrete categories ('healthy' or 'diseased'). Its purpose is to categorize new images into one of these specific, non-numerical classes, distinguishing it from regression.\n- **Reinforcement learning** - The system learns through direct interaction with its physical environment, not from a preexisting dataset. The robot's behavior is shaped over time by a system of rewards (for correct placement) and penalties (for incorrect placement).\n- **Regression** - The ML model is trained on labeled data to predict a specific, continuous numerical value: the amount of electricity. The model's output is not a category but a quantity on a scale, which is the key characteristic of regression."
+}

@@ -1,0 +1,42 @@
+{
+  "id": "Q20",
+  "set": "main",
+  "heading_verbatim": "### Question 20 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "Which of the following statements BEST describes a common approach to testing GenAI models?\n\n- a) GenAI models are tested by verifying that their outputs exactly match predefined expected results\n- b) It involves manipulating diverse inputs and parameters and then assessing the output's adherence to rules, because a direct input-to-output match is not feasible\n- c) Since GenAI models are probabilistic, formal testing is unnecessary because outputs will always vary and cannot be evaluated effectively\n- d) GenAI models are mainly tested through manual review, as automated testing does not apply to creative AI outputs\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {"key": "a", "text": "GenAI models are tested by verifying that their outputs exactly match predefined expected results"},
+    {"key": "b", "text": "It involves manipulating diverse inputs and parameters and then assessing the output's adherence to rules, because a direct input-to-output match is not feasible"},
+    {"key": "c", "text": "Since GenAI models are probabilistic, formal testing is unnecessary because outputs will always vary and cannot be evaluated effectively"},
+    {"key": "d", "text": "GenAI models are mainly tested through manual review, as automated testing does not apply to creative AI outputs"}
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 20 — Correct answer: b",
+    "key_correct": "b",
+    "correct_keys": ["b"],
+    "lo_key": "AI-4.2.1",
+    "lo_section": "AI-4.2.1",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {"key": "a", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "Generative AI models do not produce deterministic outputs, so exact matching with predefined expected results is not a suitable approach for this testing."},
+      {"key": "b", "verdict": "correct", "verdict_phrase": "Is correct.", "text": "Because of the variability and complexity in GenAI outputs, testing focuses on coherence, rules compliance, and plausibility, rather than matching fixed expected outputs. Diverse inputs, optional prompts, and parameters all influence the test results."},
+      {"key": "c", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "While generative AI models are probabilistic, testing (e.g., exploratory testing, metamorphic testing and adversarial testing) can still be used."},
+      {"key": "d", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "Manual review is possible, but automated methods, including other GenAI tools or image recognition systems, can also effectively evaluate generated content. Therefore, asserting that automated testing 'does not apply' is inaccurate."}
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 20 (1 Point)\n\nWhich of the following statements BEST describes a common approach to testing GenAI models?\n\n- a) GenAI models are tested by verifying that their outputs exactly match predefined expected results\n- b) It involves manipulating diverse inputs and parameters and then assessing the output's adherence to rules, because a direct input-to-output match is not feasible\n- c) Since GenAI models are probabilistic, formal testing is unnecessary because outputs will always vary and cannot be evaluated effectively\n- d) GenAI models are mainly tested through manual review, as automated testing does not apply to creative AI outputs\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 20 — Correct answer: b\n\n**LO:** AI-4.2.1 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is not correct.** Generative AI models do not produce deterministic outputs, so exact matching with predefined expected results is not a suitable approach for this testing.\n- **b) Is correct.** Because of the variability and complexity in GenAI outputs, testing focuses on coherence, rules compliance, and plausibility, rather than matching fixed expected outputs. Diverse inputs, optional prompts, and parameters all influence the test results.\n- **c) Is not correct.** While generative AI models are probabilistic, testing (e.g., exploratory testing, metamorphic testing and adversarial testing) can still be used.\n- **d) Is not correct.** Manual review is possible, but automated methods, including other GenAI tools or image recognition systems, can also effectively evaluate generated content. Therefore, asserting that automated testing 'does not apply' is inaccurate."
+}

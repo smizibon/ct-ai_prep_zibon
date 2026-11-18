@@ -1,0 +1,76 @@
+{
+  "id": "Q37",
+  "set": "main",
+  "heading_verbatim": "### Question 37 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "Which of the following statements BEST describes how A/B testing is used in the context of a machine learning system (MLS)?\n\n- a) A/B testing is primarily used to generate diverse test cases that cover all possible inputs for an MLS\n- b) A/B testing is used to verify that all components within an MLS interact correctly with each other\n- c) A/B testing determines if an updated version of an MLS performs better than the previous version\n- d) A/B testing focuses on analyzing the internal algorithm structure of an MLS to identify potential defects\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {
+      "key": "a",
+      "text": "A/B testing is primarily used to generate diverse test cases that cover all possible inputs for an MLS"
+    },
+    {
+      "key": "b",
+      "text": "A/B testing is used to verify that all components within an MLS interact correctly with each other"
+    },
+    {
+      "key": "c",
+      "text": "A/B testing determines if an updated version of an MLS performs better than the previous version"
+    },
+    {
+      "key": "d",
+      "text": "A/B testing focuses on analyzing the internal algorithm structure of an MLS to identify potential defects"
+    }
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 37 — Correct answer: c",
+    "key_correct": "c",
+    "correct_keys": [
+      "c"
+    ],
+    "lo_key": "AI-6.1.9",
+    "lo_section": "AI-6.1.9",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {
+        "key": "a",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "According to the syllabus, \"A/B testing does not generate test cases and provides no guidance on how the tests should be designed, although operational inputs are often used in tests.\" A/B testing compares responses of two variants rather than generating test cases."
+      },
+      {
+        "key": "b",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "A/B testing is not focused on component interactions within a system. It compares two different versions of a system, not components within a single system."
+      },
+      {
+        "key": "c",
+        "verdict": "correct",
+        "verdict_phrase": "Is correct.",
+        "text": "As stated in the syllabus, \"Whenever the system is updated, A/B testing is used to test that the updated variant performs as well as, or better than, the previous variant.\" This accurately describes how A/B testing is used in the context of ML systems."
+      },
+      {
+        "key": "d",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "A/B testing does not analyze the internal algorithm structure. It is a \"statistical testing approach that typically requires comparing test results from several test runs to determine the difference between the programs.\" It focuses on comparing the outputs of two variants, not examining their internal structures."
+      }
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 37 (1 Point)\n\nWhich of the following statements BEST describes how A/B testing is used in the context of a machine learning system (MLS)?\n\n- a) A/B testing is primarily used to generate diverse test cases that cover all possible inputs for an MLS\n- b) A/B testing is used to verify that all components within an MLS interact correctly with each other\n- c) A/B testing determines if an updated version of an MLS performs better than the previous version\n- d) A/B testing focuses on analyzing the internal algorithm structure of an MLS to identify potential defects\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 37 — Correct answer: c\n\n**LO:** AI-6.1.9 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is not correct.** According to the syllabus, \"A/B testing does not generate test cases and provides no guidance on how the tests should be designed, although operational inputs are often used in tests.\" A/B testing compares responses of two variants rather than generating test cases.\n- **b) Is not correct.** A/B testing is not focused on component interactions within a system. It compares two different versions of a system, not components within a single system.\n- **c) Is correct.** As stated in the syllabus, \"Whenever the system is updated, A/B testing is used to test that the updated variant performs as well as, or better than, the previous variant.\" This accurately describes how A/B testing is used in the context of ML systems.\n- **d) Is not correct.** A/B testing does not analyze the internal algorithm structure. It is a \"statistical testing approach that typically requires comparing test results from several test runs to determine the difference between the programs.\" It focuses on comparing the outputs of two variants, not examining their internal structures."
+}

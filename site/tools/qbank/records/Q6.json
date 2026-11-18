@@ -1,0 +1,109 @@
+{
+  "id": "Q6",
+  "set": "main",
+  "heading_verbatim": "### Question 6 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "Given the following statements about AI model development and hosting:\n\n- i. It achieves lower development costs by using public cloud resources, eliminating the need for local hardware investment\n- ii. It uses local development of data preparation components for sensitive data for increased security before moving to the cloud for training of the full system\n- iii. It results in lower costs because laptops are used for local development and there are low upfront hardware costs by hosting AI models on public clouds\n- iv. It simplifies development and hosting by standardizing processes on local servers, removing the need for complex cloud-based configurations\n- v. It guarantees the highest security by hosting AI models on private clouds, thereby avoiding the risks associated with local hardware vulnerabilities\n\nWhich of the following BEST reflects advantages of using a hybrid approach for this development and hosting?\n\n- a) i, ii and v\n- b) ii and iii\n- c) iii and iv\n- d) i, iv and v\n\n*Select ONE answer.*",
+  "item_sets": [
+    {
+      "role": "statements",
+      "key_style": "roman_lower",
+      "items": [
+        {
+          "key": "i",
+          "text": "It achieves lower development costs by using public cloud resources, eliminating the need for local hardware investment"
+        },
+        {
+          "key": "ii",
+          "text": "It uses local development of data preparation components for sensitive data for increased security before moving to the cloud for training of the full system"
+        },
+        {
+          "key": "iii",
+          "text": "It results in lower costs because laptops are used for local development and there are low upfront hardware costs by hosting AI models on public clouds"
+        },
+        {
+          "key": "iv",
+          "text": "It simplifies development and hosting by standardizing processes on local servers, removing the need for complex cloud-based configurations"
+        },
+        {
+          "key": "v",
+          "text": "It guarantees the highest security by hosting AI models on private clouds, thereby avoiding the risks associated with local hardware vulnerabilities"
+        }
+      ]
+    }
+  ],
+  "options": [
+    {
+      "key": "a",
+      "text": "i, ii and v"
+    },
+    {
+      "key": "b",
+      "text": "ii and iii"
+    },
+    {
+      "key": "c",
+      "text": "iii and iv"
+    },
+    {
+      "key": "d",
+      "text": "i, iv and v"
+    }
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 6 — Correct answer: b",
+    "key_correct": "b",
+    "correct_keys": [
+      "b"
+    ],
+    "lo_key": "AI-1.1.6",
+    "lo_section": "AI-1.1.6",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_statement",
+    "preamble_markdown": "Given the following statements about AI model development and hosting:",
+    "rationale_units": [
+      {
+        "key": "i",
+        "verdict": "neutral",
+        "verdict_phrase": null,
+        "text": "It achieves lower development costs by using public cloud resources, eliminating the need for local hardware investment\n  — This is not a hybrid approach as it only talks about development on the cloud."
+      },
+      {
+        "key": "ii",
+        "verdict": "neutral",
+        "verdict_phrase": null,
+        "text": "It uses local development of data preparation components for sensitive data for increased security before moving to the cloud for training of the full system\n  — This is hybrid as we have local development for data preparation and training on the cloud."
+      },
+      {
+        "key": "iii",
+        "verdict": "neutral",
+        "verdict_phrase": null,
+        "text": "It results in lower costs because laptops are used for local development and there are low upfront hardware costs by hosting AI models on public clouds\n  — This is hybrid as there is local development on laptops and hosting on public clouds."
+      },
+      {
+        "key": "iv",
+        "verdict": "neutral",
+        "verdict_phrase": null,
+        "text": "It simplifies development and hosting by standardizing processes on local servers, removing the need for complex cloud-based configurations\n  — This is not hybrid as everything is on local servers."
+      },
+      {
+        "key": "v",
+        "verdict": "neutral",
+        "verdict_phrase": null,
+        "text": "It guarantees the highest security by hosting AI models on private clouds, thereby avoiding the risks associated with local hardware vulnerabilities\n  — This is not hybrid as everything is on private clouds."
+      }
+    ],
+    "conclusion_markdown": "Hence, the correct option is b) ii and iii.",
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 6 (1 Point)\n\nGiven the following statements about AI model development and hosting:\n\n- i. It achieves lower development costs by using public cloud resources, eliminating the need for local hardware investment\n- ii. It uses local development of data preparation components for sensitive data for increased security before moving to the cloud for training of the full system\n- iii. It results in lower costs because laptops are used for local development and there are low upfront hardware costs by hosting AI models on public clouds\n- iv. It simplifies development and hosting by standardizing processes on local servers, removing the need for complex cloud-based configurations\n- v. It guarantees the highest security by hosting AI models on private clouds, thereby avoiding the risks associated with local hardware vulnerabilities\n\nWhich of the following BEST reflects advantages of using a hybrid approach for this development and hosting?\n\n- a) i, ii and v\n- b) ii and iii\n- c) iii and iv\n- d) i, iv and v\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 6 — Correct answer: b\n\n**LO:** AI-1.1.6 | **K-Level:** K2 | **Points:** 1\n\nGiven the following statements about AI model development and hosting:\n\n- **i.** It achieves lower development costs by using public cloud resources, eliminating the need for local hardware investment\n  — This is not a hybrid approach as it only talks about development on the cloud.\n- **ii.** It uses local development of data preparation components for sensitive data for increased security before moving to the cloud for training of the full system\n  — This is hybrid as we have local development for data preparation and training on the cloud.\n- **iii.** It results in lower costs because laptops are used for local development and there are low upfront hardware costs by hosting AI models on public clouds\n  — This is hybrid as there is local development on laptops and hosting on public clouds.\n- **iv.** It simplifies development and hosting by standardizing processes on local servers, removing the need for complex cloud-based configurations\n  — This is not hybrid as everything is on local servers.\n- **v.** It guarantees the highest security by hosting AI models on private clouds, thereby avoiding the risks associated with local hardware vulnerabilities\n  — This is not hybrid as everything is on private clouds.\n\nHence, the correct option is b) ii and iii."
+}

@@ -1,0 +1,36 @@
+/* charts.css — results bars, verdict grid, donut */
+.rbar { display: flex; align-items: center; gap: var(--sp-4); margin-bottom: var(--sp-4); }
+.rbar__label { width: 220px; flex: none; }
+.rbar__label .t-caption { color: var(--ink-3); display: block; margin-bottom: 2px; }
+.rbar__label .t-small { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rbar__track { flex: 1; height: 12px; border-radius: var(--r-full); background: var(--bg-3); overflow: hidden; }
+.rbar__fill { height: 100%; border-radius: inherit; background: var(--success); width: 0; transition: width var(--dur-4) var(--ease-out); }
+.rbar__fill.is-low { background: var(--danger); }
+.rbar__fill.is-empty { background: var(--line-3); }
+.rbar__val { width: 110px; flex: none; text-align: right; font-family: var(--font-mono); font-size: 0.75rem; color: var(--ink-2); }
+@media (max-width: 767px) {
+  .rbar { flex-wrap: wrap; }
+  .rbar__label { width: 100%; }
+  .rbar__val { width: auto; text-align: left; }
+}
+
+.verdict-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(52px, 1fr)); gap: var(--sp-2); }
+.vchip {
+  position: relative; height: 40px; border-radius: var(--r-sm); font-family: var(--font-mono);
+  font-size: 0.75rem; font-weight: 600; border: 1px solid var(--line-2); background: var(--bg-2);
+  color: var(--ink-2); display: grid; place-items: center;
+}
+.vchip.is-correct { background: var(--success-soft); border-color: var(--success); color: var(--success); }
+.vchip.is-incorrect { background: var(--danger-soft); border-color: var(--danger); color: var(--danger); }
+.vchip.is-unanswered { color: var(--ink-3); font-style: italic; }
+.vchip.is-flagged::after { content: ""; position: absolute; top: 3px; right: 3px; width: 6px; height: 6px; border-radius: 50%; background: var(--warn); }
+.vchip:hover { border-color: var(--line-3); }
+
+.donut-wrap { display: flex; align-items: center; gap: var(--sp-8); flex-wrap: wrap; }
+.donut-legend { font-size: 0.875rem; }
+.donut-legend .legend-dot { border-radius: 50%; }
+.confetti-bit { position: fixed; z-index: var(--z-toast); pointer-events: none; animation: confetti 1400ms var(--ease-in-out) forwards; }
+@keyframes confetti {
+  0% { transform: translate(0, 0) rotate(0); opacity: 1; }
+  100% { transform: translate(var(--cx), var(--cy)) rotate(var(--cr)); opacity: 0; }
+}

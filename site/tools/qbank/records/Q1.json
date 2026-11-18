@@ -1,0 +1,76 @@
+{
+  "id": "Q1",
+  "set": "main",
+  "heading_verbatim": "### Question 1 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "Which of the following statements BEST highlights the difference between conventional and AI-based systems?\n\n- a) AI-based systems tend to learn from patterns in data and can adapt to new scenarios, while conventional systems follow predefined rules and produce consistent outputs for the same inputs\n- b) AI-based systems tend to be faster than conventional systems because they do not rely on explicit programming, while conventional systems are slower due to rigid rule-based processing\n- c) AI-based systems tend to be deterministic and explainable, while conventional systems are probabilistic and often difficult to interpret\n- d) AI-based systems tend to be more suitable for critical tasks where explainability is crucial, while conventional systems are better at handling complex tasks in unregulated areas\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {
+      "key": "a",
+      "text": "AI-based systems tend to learn from patterns in data and can adapt to new scenarios, while conventional systems follow predefined rules and produce consistent outputs for the same inputs"
+    },
+    {
+      "key": "b",
+      "text": "AI-based systems tend to be faster than conventional systems because they do not rely on explicit programming, while conventional systems are slower due to rigid rule-based processing"
+    },
+    {
+      "key": "c",
+      "text": "AI-based systems tend to be deterministic and explainable, while conventional systems are probabilistic and often difficult to interpret"
+    },
+    {
+      "key": "d",
+      "text": "AI-based systems tend to be more suitable for critical tasks where explainability is crucial, while conventional systems are better at handling complex tasks in unregulated areas"
+    }
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 1 — Correct answer: a",
+    "key_correct": "a",
+    "correct_keys": [
+      "a"
+    ],
+    "lo_key": "AI-1.1.1",
+    "lo_section": "AI-1.1.1",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {
+        "key": "a",
+        "verdict": "correct",
+        "verdict_phrase": "Is correct.",
+        "text": "This correctly differentiates AI-based systems from conventional systems. AI-based/ML systems learn patterns in the data, and many can adapt through self-learning, while conventional systems use predefined logic and produce predictable outputs. Note: this does not apply to rule-based expert systems."
+      },
+      {
+        "key": "b",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "While AI-based systems can sometimes process data faster, this is not always the case, and their advantage lies more in adaptability and handling complexity than in speed."
+      },
+      {
+        "key": "c",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "This reverses the characteristics of the two types of systems. AI-based systems are probabilistic and less explainable, while conventional systems are deterministic and more straightforward to interpret."
+      },
+      {
+        "key": "d",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "Conventional systems are more suitable for critical tasks where being able to explain results is important, AI-based systems typically have poor transparency and explainability and so are more appropriate for use in unregulated areas. Also, AI-based systems are often more appropriate for more complex problems."
+      }
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 1 (1 Point)\n\nWhich of the following statements BEST highlights the difference between conventional and AI-based systems?\n\n- a) AI-based systems tend to learn from patterns in data and can adapt to new scenarios, while conventional systems follow predefined rules and produce consistent outputs for the same inputs\n- b) AI-based systems tend to be faster than conventional systems because they do not rely on explicit programming, while conventional systems are slower due to rigid rule-based processing\n- c) AI-based systems tend to be deterministic and explainable, while conventional systems are probabilistic and often difficult to interpret\n- d) AI-based systems tend to be more suitable for critical tasks where explainability is crucial, while conventional systems are better at handling complex tasks in unregulated areas\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 1 — Correct answer: a\n\n**LO:** AI-1.1.1 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is correct.** This correctly differentiates AI-based systems from conventional systems. AI-based/ML systems learn patterns in the data, and many can adapt through self-learning, while conventional systems use predefined logic and produce predictable outputs. Note: this does not apply to rule-based expert systems.\n- **b) Is not correct.** While AI-based systems can sometimes process data faster, this is not always the case, and their advantage lies more in adaptability and handling complexity than in speed.\n- **c) Is not correct.** This reverses the characteristics of the two types of systems. AI-based systems are probabilistic and less explainable, while conventional systems are deterministic and more straightforward to interpret.\n- **d) Is not correct.** Conventional systems are more suitable for critical tasks where being able to explain results is important, AI-based systems typically have poor transparency and explainability and so are more appropriate for use in unregulated areas. Also, AI-based systems are often more appropriate for more complex problems."
+}

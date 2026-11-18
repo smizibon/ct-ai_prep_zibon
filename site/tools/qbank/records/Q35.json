@@ -1,0 +1,76 @@
+{
+  "id": "Q35",
+  "set": "main",
+  "heading_verbatim": "### Question 35 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "An organization uses an ML model to predict customer churn but has no mechanism to get direct user feedback or track when customers leave. They want to test for drift by analyzing the data being fed into the live ML model.\n\nWhich test type would be MOST appropriate in this situation and why?\n\n- a) Dynamic drift testing, because it can infer the current ground truth by analyzing the input data's statistical properties\n- b) Static drift testing, because it identifies drift by detecting changes in the data distributions without requiring ground truth\n- c) Dynamic drift testing, because comparing ML model predictions to actual results is the most direct way to measure performance degradation\n- d) Static drift testing, because it compares the ML model's live performance metrics against a predefined acceptance threshold\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {
+      "key": "a",
+      "text": "Dynamic drift testing, because it can infer the current ground truth by analyzing the input data's statistical properties"
+    },
+    {
+      "key": "b",
+      "text": "Static drift testing, because it identifies drift by detecting changes in the data distributions without requiring ground truth"
+    },
+    {
+      "key": "c",
+      "text": "Dynamic drift testing, because comparing ML model predictions to actual results is the most direct way to measure performance degradation"
+    },
+    {
+      "key": "d",
+      "text": "Static drift testing, because it compares the ML model's live performance metrics against a predefined acceptance threshold"
+    }
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 35 — Correct answer: b",
+    "key_correct": "b",
+    "correct_keys": [
+      "b"
+    ],
+    "lo_key": "AI-6.1.7",
+    "lo_section": "AI-6.1.7",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {
+        "key": "a",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "While dynamic testing is appropriate for when ground truth is available, it does not analyze the input data's statistical properties."
+      },
+      {
+        "key": "b",
+        "verdict": "correct",
+        "verdict_phrase": "Is correct.",
+        "text": "Because ground truth is unavailable, static drift testing, which doesn't require it, is the only viable option."
+      },
+      {
+        "key": "c",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "The organization \"has no mechanism to track if a customer actually leaves.\" Therefore, they have no actual results to compare against, making dynamic testing impossible to perform."
+      },
+      {
+        "key": "d",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "Static testing looks at data distributions, whereas comparing performance metrics against ground truth is the mechanism of dynamic testing."
+      }
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 35 (1 Point)\n\nAn organization uses an ML model to predict customer churn but has no mechanism to get direct user feedback or track when customers leave. They want to test for drift by analyzing the data being fed into the live ML model.\n\nWhich test type would be MOST appropriate in this situation and why?\n\n- a) Dynamic drift testing, because it can infer the current ground truth by analyzing the input data's statistical properties\n- b) Static drift testing, because it identifies drift by detecting changes in the data distributions without requiring ground truth\n- c) Dynamic drift testing, because comparing ML model predictions to actual results is the most direct way to measure performance degradation\n- d) Static drift testing, because it compares the ML model's live performance metrics against a predefined acceptance threshold\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 35 — Correct answer: b\n\n**LO:** AI-6.1.7 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is not correct.** While dynamic testing is appropriate for when ground truth is available, it does not analyze the input data's statistical properties.\n- **b) Is correct.** Because ground truth is unavailable, static drift testing, which doesn't require it, is the only viable option.\n- **c) Is not correct.** The organization \"has no mechanism to track if a customer actually leaves.\" Therefore, they have no actual results to compare against, making dynamic testing impossible to perform.\n- **d) Is not correct.** Static testing looks at data distributions, whereas comparing performance metrics against ground truth is the mechanism of dynamic testing."
+}

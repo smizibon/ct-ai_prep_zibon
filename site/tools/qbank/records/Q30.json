@@ -1,0 +1,63 @@
+{
+  "id": "Q30",
+  "set": "main",
+  "heading_verbatim": "### Question 30 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "Given the following test techniques and test types:\n\n1. ML functional performance testing\n2. Testing for bias\n3. Adversarial testing\n4. Drift testing\n\nAnd the following risks:\n\n- A. The ML model might perform differently for different demographic groups\n- B. Slightly modified inputs to the ML model might cause quite different and unexpected responses\n- C. Predictions made by the ML model might be inaccurate in some cases\n- D. ML model accuracy might have significantly decreased since it was deployed\n\nWhich of the following options BEST matches the test techniques and test types with the risks?\n\n- a) 1A – 2D – 3C – 4B\n- b) 1C – 2A – 3B – 4D\n- c) 1B – 2A – 3C – 4D\n- d) 1A – 2C – 3D – 4B\n\n*Select ONE answer.*",
+  "item_sets": [
+    {
+      "role": "numbered_list",
+      "key_style": "integer",
+      "items": [
+        {"key": "1", "text": "ML functional performance testing"},
+        {"key": "2", "text": "Testing for bias"},
+        {"key": "3", "text": "Adversarial testing"},
+        {"key": "4", "text": "Drift testing"}
+      ]
+    },
+    {
+      "role": "examples",
+      "key_style": "upper_letter",
+      "items": [
+        {"key": "A", "text": "The ML model might perform differently for different demographic groups"},
+        {"key": "B", "text": "Slightly modified inputs to the ML model might cause quite different and unexpected responses"},
+        {"key": "C", "text": "Predictions made by the ML model might be inaccurate in some cases"},
+        {"key": "D", "text": "ML model accuracy might have significantly decreased since it was deployed"}
+      ]
+    }
+  ],
+  "options": [
+    {"key": "a", "text": "1A – 2D – 3C – 4B"},
+    {"key": "b", "text": "1C – 2A – 3B – 4D"},
+    {"key": "c", "text": "1B – 2A – 3C – 4D"},
+    {"key": "d", "text": "1A – 2C – 3D – 4B"}
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 30 — Correct answer: b",
+    "key_correct": "b",
+    "correct_keys": ["b"],
+    "lo_key": "AI-6.1.1",
+    "lo_section": "AI-6.1.1",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_letter",
+    "preamble_markdown": "Considering each of the risks in turn:",
+    "rationale_units": [
+      {"key": "A", "verdict": "neutral", "verdict_phrase": null, "text": "The ML model might perform differently for different demographic groups.\n  This is best matched with Testing for Bias, which explicitly examines fairness across different populations. (2)"},
+      {"key": "B", "verdict": "neutral", "verdict_phrase": null, "text": "Slightly modified inputs to the ML model might cause quite different and unexpected responses.\n  This pairs correctly with Adversarial Testing, which deliberately tests an ML model's ability to handle small input perturbations. (3)"},
+      {"key": "C", "verdict": "neutral", "verdict_phrase": null, "text": "Predictions made by the ML model might be inaccurate in some cases.\n  This is best addressed by ML Functional Performance Testing, which directly evaluates whether the ML model produces accurate outputs. (1)"},
+      {"key": "D", "verdict": "neutral", "verdict_phrase": null, "text": "ML model accuracy might have significantly decreased since it was deployed.\n  This is appropriately matched with Drift Testing, which monitors performance changes over time in production. (4)"}
+    ],
+    "conclusion_markdown": "Thus, the correct match between risks and test approaches is: 1C – 2A – 3B – 4D, and so b) is the correct option.",
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": ["answer bullets A–D restate the risks verbatim but add trailing periods not present in the question's risk list"],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 30 (1 Point)\n\nGiven the following test techniques and test types:\n\n1. ML functional performance testing\n2. Testing for bias\n3. Adversarial testing\n4. Drift testing\n\nAnd the following risks:\n\n- A. The ML model might perform differently for different demographic groups\n- B. Slightly modified inputs to the ML model might cause quite different and unexpected responses\n- C. Predictions made by the ML model might be inaccurate in some cases\n- D. ML model accuracy might have significantly decreased since it was deployed\n\nWhich of the following options BEST matches the test techniques and test types with the risks?\n\n- a) 1A – 2D – 3C – 4B\n- b) 1C – 2A – 3B – 4D\n- c) 1B – 2A – 3C – 4D\n- d) 1A – 2C – 3D – 4B\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 30 — Correct answer: b\n\n**LO:** AI-6.1.1 | **K-Level:** K2 | **Points:** 1\n\nConsidering each of the risks in turn:\n\n- **A.** The ML model might perform differently for different demographic groups.\n  This is best matched with Testing for Bias, which explicitly examines fairness across different populations. (2)\n- **B.** Slightly modified inputs to the ML model might cause quite different and unexpected responses.\n  This pairs correctly with Adversarial Testing, which deliberately tests an ML model's ability to handle small input perturbations. (3)\n- **C.** Predictions made by the ML model might be inaccurate in some cases.\n  This is best addressed by ML Functional Performance Testing, which directly evaluates whether the ML model produces accurate outputs. (1)\n- **D.** ML model accuracy might have significantly decreased since it was deployed.\n  This is appropriately matched with Drift Testing, which monitors performance changes over time in production. (4)\n\nThus, the correct match between risks and test approaches is: 1C – 2A – 3B – 4D, and so b) is the correct option."
+}

@@ -1,0 +1,23 @@
+/* search.css — ⌘K overlay */
+.search-scrim {
+  position: fixed; inset: 0; z-index: var(--z-modal); background: var(--scrim);
+  backdrop-filter: blur(4px); display: flex; justify-content: center; align-items: flex-start;
+  padding: 15vh var(--sp-4) var(--sp-4); animation: fade var(--dur-2) var(--ease-out);
+}
+.search {
+  width: min(640px, 100%); background: var(--bg-1); border: 1px solid var(--line-1);
+  border-radius: var(--r-xl); box-shadow: var(--shadow-4); overflow: hidden;
+  animation: modalIn var(--dur-2) var(--ease-out); display: flex; flex-direction: column; max-height: 65vh;
+}
+.search__row { display: flex; align-items: center; gap: var(--sp-3); padding: var(--sp-4) var(--sp-5); border-bottom: 1px solid var(--line-1); color: var(--ink-3); }
+.search__input { flex: 1; border: 0; background: none; font-size: 1rem; color: var(--ink-1); outline: none; }
+.search__input::placeholder { color: var(--ink-3); }
+.search__results { overflow-y: auto; padding: var(--sp-2); }
+.search__group-label { padding: var(--sp-3) var(--sp-3) var(--sp-1); color: var(--ink-3); }
+.search__item {
+  display: flex; align-items: baseline; gap: var(--sp-3); width: 100%; text-align: left;
+  padding: var(--sp-2) var(--sp-3); border-radius: var(--r-md); font-size: 0.9375rem;
+}
+.search__item:hover, .search__item.is-active { background: var(--primary-soft); color: var(--primary-soft-ink); }
+.search__item small { color: var(--ink-3); font-size: 0.75rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.search__foot { display: flex; gap: var(--sp-4); padding: var(--sp-3) var(--sp-5); border-top: 1px solid var(--line-1); color: var(--ink-3); font-size: 0.75rem; }

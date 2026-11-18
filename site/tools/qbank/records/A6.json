@@ -1,0 +1,77 @@
+{
+ "id": "A6",
+ "set": "appendix",
+ "heading_verbatim": "### Question A6 (1 Point)",
+ "points": 1,
+ "selection_mode": "single",
+ "select_instruction_verbatim": "*Select ONE answer.*",
+ "stem_markdown": "What is a key reason that structural coverage alone is NOT SUFFICIENT as the basis for testing neural networks?\n\n- a) It tends to overestimate performance on tasks involving human feedback\n- b) It cannot account for differences in model size when comparing test results\n- c) It does not reveal whether the network relies on misleading or irrelevant features\n- d) It replaces the need to assess the usefulness of individual model outputs\n\n*Select ONE answer.*",
+ "item_sets": [],
+ "options": [
+  {
+   "key": "a",
+   "text": "It tends to overestimate performance on tasks involving human feedback"
+  },
+  {
+   "key": "b",
+   "text": "It cannot account for differences in model size when comparing test results"
+  },
+  {
+   "key": "c",
+   "text": "It does not reveal whether the network relies on misleading or irrelevant features"
+  },
+  {
+   "key": "d",
+   "text": "It replaces the need to assess the usefulness of individual model outputs"
+  }
+ ],
+ "figures": [],
+ "quirks": [],
+ "answer": {
+  "heading_verbatim": "#### Question A6 \u2014 Correct answer: c",
+  "key_correct": "c",
+  "correct_keys": [
+   "c"
+  ],
+  "lo_key": "AI-3.4.3",
+  "lo_section": "AI-3.4.3",
+  "lo_conflict": false,
+  "k_level": "K2",
+  "points": 1,
+  "rationale_style": "per_option",
+  "preamble_markdown": null,
+  "rationale_units": [
+   {
+    "key": "a",
+    "verdict": "incorrect",
+    "verdict_phrase": "Is not correct.",
+    "text": "The core limitation is the model's internal reasoning, a general problem applicable to many tasks, not specifically those involving human feedback."
+   },
+   {
+    "key": "b",
+    "verdict": "incorrect",
+    "verdict_phrase": "Is not correct.",
+    "text": "Structural coverage is a method for evaluating the test thoroughness of a single model, not for comparing different models. While model size may affect the raw coverage numbers, calculated values are typically presented as percentages, and therefore, this is not a limitation for its intended purpose."
+   },
+   {
+    "key": "c",
+    "verdict": "correct",
+    "verdict_phrase": "Is correct.",
+    "text": "It directly addresses the key limitations of coverage measures used in isolation. Neural networks can learn spurious correlations, leading to correct activations for incorrect reasons, meaning the model could achieve high structural coverage while making decisions based on irrelevant features."
+   },
+   {
+    "key": "d",
+    "verdict": "incorrect",
+    "verdict_phrase": "Is not correct.",
+    "text": "Structural coverage is a valuable supplement that should be combined with other methods. It is intended to enhance, not replace, other test activities, such as evaluating the functional correctness and usefulness of the model's outputs."
+   }
+  ],
+  "conclusion_markdown": null,
+  "answer_figures": [],
+  "new_type_answer": null,
+  "restatement_drift": [],
+  "quirks": []
+ },
+ "raw_question_markdown": "### Question A6 (1 Point)\n\nWhat is a key reason that structural coverage alone is NOT SUFFICIENT as the basis for testing neural networks?\n\n- a) It tends to overestimate performance on tasks involving human feedback\n- b) It cannot account for differences in model size when comparing test results\n- c) It does not reveal whether the network relies on misleading or irrelevant features\n- d) It replaces the need to assess the usefulness of individual model outputs\n\n*Select ONE answer.*",
+ "raw_answer_markdown": "#### Question A6 \u2014 Correct answer: c\n\n**LO:** AI-3.4.3 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is not correct.** The core limitation is the model's internal reasoning, a general problem applicable to many tasks, not specifically those involving human feedback.\n- **b) Is not correct.** Structural coverage is a method for evaluating the test thoroughness of a single model, not for comparing different models. While model size may affect the raw coverage numbers, calculated values are typically presented as percentages, and therefore, this is not a limitation for its intended purpose.\n- **c) Is correct.** It directly addresses the key limitations of coverage measures used in isolation. Neural networks can learn spurious correlations, leading to correct activations for incorrect reasons, meaning the model could achieve high structural coverage while making decisions based on irrelevant features.\n- **d) Is not correct.** Structural coverage is a valuable supplement that should be combined with other methods. It is intended to enhance, not replace, other test activities, such as evaluating the functional correctness and usefulness of the model's outputs."
+}

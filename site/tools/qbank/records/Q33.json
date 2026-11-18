@@ -1,0 +1,76 @@
+{
+  "id": "Q33",
+  "set": "main",
+  "heading_verbatim": "### Question 33 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "Which of the following statements BEST summarizes adversarial testing of machine learning systems?\n\n- a) It is a form of black-box testing, ignoring knowledge of the internals of the machine learning system to create adversarial examples\n- b) It focuses on generating manual adversarial examples, without automation, to test the vulnerability of machine learning systems\n- c) It identifies model vulnerabilities through adversarial examples, which are minimally perturbed inputs that induce misclassification\n- d) It verifies the machine learning system's functionality by using previously working tests to avoid ML model failures during evaluation and tuning\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {
+      "key": "a",
+      "text": "It is a form of black-box testing, ignoring knowledge of the internals of the machine learning system to create adversarial examples"
+    },
+    {
+      "key": "b",
+      "text": "It focuses on generating manual adversarial examples, without automation, to test the vulnerability of machine learning systems"
+    },
+    {
+      "key": "c",
+      "text": "It identifies model vulnerabilities through adversarial examples, which are minimally perturbed inputs that induce misclassification"
+    },
+    {
+      "key": "d",
+      "text": "It verifies the machine learning system's functionality by using previously working tests to avoid ML model failures during evaluation and tuning"
+    }
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 33 — Correct answer: c",
+    "key_correct": "c",
+    "correct_keys": [
+      "c"
+    ],
+    "lo_key": "AI-6.1.4",
+    "lo_section": "AI-6.1.4",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {
+        "key": "a",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "It incorrectly implies that internal knowledge of the ML model is irrelevant, whereas such knowledge can enhance the testing process by crafting more targeted adversarial examples."
+      },
+      {
+        "key": "b",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "It incorrectly suggests that manual methods are the only approach, ignoring automated techniques, which are also crucial in adversarial testing."
+      },
+      {
+        "key": "c",
+        "verdict": "correct",
+        "verdict_phrase": "Is correct.",
+        "text": "In adversarial testing, the adversarial examples are often created to identify vulnerabilities by perturbing working inputs."
+      },
+      {
+        "key": "d",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "This misses the point of adversarial testing, which deliberately uses updated input values (i.e. tests) to create adversarial examples."
+      }
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 33 (1 Point)\n\nWhich of the following statements BEST summarizes adversarial testing of machine learning systems?\n\n- a) It is a form of black-box testing, ignoring knowledge of the internals of the machine learning system to create adversarial examples\n- b) It focuses on generating manual adversarial examples, without automation, to test the vulnerability of machine learning systems\n- c) It identifies model vulnerabilities through adversarial examples, which are minimally perturbed inputs that induce misclassification\n- d) It verifies the machine learning system's functionality by using previously working tests to avoid ML model failures during evaluation and tuning\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 33 — Correct answer: c\n\n**LO:** AI-6.1.4 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is not correct.** It incorrectly implies that internal knowledge of the ML model is irrelevant, whereas such knowledge can enhance the testing process by crafting more targeted adversarial examples.\n- **b) Is not correct.** It incorrectly suggests that manual methods are the only approach, ignoring automated techniques, which are also crucial in adversarial testing.\n- **c) Is correct.** In adversarial testing, the adversarial examples are often created to identify vulnerabilities by perturbing working inputs.\n- **d) Is not correct.** This misses the point of adversarial testing, which deliberately uses updated input values (i.e. tests) to create adversarial examples."
+}

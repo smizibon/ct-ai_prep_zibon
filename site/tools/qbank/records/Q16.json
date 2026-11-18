@@ -1,0 +1,42 @@
+{
+  "id": "Q16",
+  "set": "main",
+  "heading_verbatim": "### Question 16 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "During the training of a deep neural network, the network produces an output, and the loss is calculated.\n\nWhich of the following CORRECTLY describes the next step in the training process?\n\n- a) The weights and biases across the network are adjusted to reduce the calculated loss\n- b) The same training data is passed through the network again to confirm the loss value\n- c) The activation functions are altered to different non-linear formulas to find a better fit\n- d) The network's hidden layers are reset with new random weight values\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {"key": "a", "text": "The weights and biases across the network are adjusted to reduce the calculated loss"},
+    {"key": "b", "text": "The same training data is passed through the network again to confirm the loss value"},
+    {"key": "c", "text": "The activation functions are altered to different non-linear formulas to find a better fit"},
+    {"key": "d", "text": "The network's hidden layers are reset with new random weight values"}
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 16 — Correct answer: a",
+    "key_correct": "a",
+    "correct_keys": ["a"],
+    "lo_key": "AI-3.4.1",
+    "lo_section": "AI-3.4.1",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {"key": "a", "verdict": "correct", "verdict_phrase": "Is correct.", "text": "This is the next step in the ML training loop. The loss is fed back through the network to adjust the values of the weights and biases."},
+      {"key": "b", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "The training proceeds to the next batch of data or completes the epoch. It doesn't rerun the same data just to confirm the loss value."},
+      {"key": "c", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "Activation functions are chosen during model design and are not usually changed during a training run."},
+      {"key": "d", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "Resetting the weights happens at the start of training (initialization), not after calculating the loss value for a batch of data."}
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 16 (1 Point)\n\nDuring the training of a deep neural network, the network produces an output, and the loss is calculated.\n\nWhich of the following CORRECTLY describes the next step in the training process?\n\n- a) The weights and biases across the network are adjusted to reduce the calculated loss\n- b) The same training data is passed through the network again to confirm the loss value\n- c) The activation functions are altered to different non-linear formulas to find a better fit\n- d) The network's hidden layers are reset with new random weight values\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 16 — Correct answer: a\n\n**LO:** AI-3.4.1 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is correct.** This is the next step in the ML training loop. The loss is fed back through the network to adjust the values of the weights and biases.\n- **b) Is not correct.** The training proceeds to the next batch of data or completes the epoch. It doesn't rerun the same data just to confirm the loss value.\n- **c) Is not correct.** Activation functions are chosen during model design and are not usually changed during a training run.\n- **d) Is not correct.** Resetting the weights happens at the start of training (initialization), not after calculating the loss value for a batch of data."
+}

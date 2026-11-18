@@ -1,0 +1,179 @@
+{
+ "chapter": 5,
+ "blocks": [
+  {
+   "type": "keyTerms",
+   "items": [
+    {
+     "term": "input data testing",
+     "def": "Confirms that the data used by the MLS for training, testing, and prediction is of sufficient quality — includes reviews, statistical techniques (e.g., testing data for bias), EDA of training data, and static and dynamic testing of the data pipeline.",
+     "src": "5.1 L1000"
+    },
+    {
+     "term": "bias (in an MLS)",
+     "def": "Non-random, unfair differences in treatment based on sensitive attributes like gender, age, or race, which is often unlawful and renders the system discriminatory.",
+     "src": "5.1.2 L1019"
+    },
+    {
+     "term": "data vs algorithmic bias",
+     "def": "Data bias: defects in the training data (unrepresentativeness, historical skews, deliberate poisoning). Algorithmic bias: defects within the algorithm, model, or development framework that introduce systemic unfairness (e.g., a decision threshold for credit scores in loan approval).",
+     "src": "5.1.2 L1023-L1024"
+    },
+    {
+     "term": "disparate impact analysis",
+     "def": "Bias test that generates counterfactuals for sensitive attributes, feeds them to the model, and analyzes whether changing a sensitive attribute changes the results — signaling bias. Also applicable to combinations of sensitive attributes (beware unrealistic counterfactuals).",
+     "src": "5.1.2 L1034-L1040"
+    },
+    {
+     "term": "data representativeness testing",
+     "def": "Determines how closely the characteristics of the datasets used for training, validation, and testing match the real-world data the model will encounter in operation (addresses skewed datasets, missing data, disproportionate feature distributions, inadequate scenario coverage, imbalanced classes).",
+     "src": "5.1.4 L1062"
+    },
+    {
+     "term": "dataset constraint testing",
+     "def": "Verifies whether the data in a dataset adheres to predefined rules or constraints (a logical model of the data that should be satisfied if the data are correct); typically automated as part of the data pipeline.",
+     "src": "5.1.5 L1090-L1092"
+    },
+    {
+     "term": "multiple annotation / IAA",
+     "def": "Data points independently labelled by multiple annotators and compared (a form of back-to-back testing); inter-annotator agreement measured with Cohen's Kappa or simple percentage agreement — low IAA indicates defects in guidelines, ambiguous data, or poor annotation.",
+     "src": "5.1.6 L1120"
+    }
+   ]
+  },
+  {
+   "type": "mustKnow",
+   "title": "Bias testing, pipelines, constraints, labels",
+   "items": [
+    {
+     "text": "Bias test approaches: reviews of the ML workflow/data preparation; reviews of dataset documentation (collection, annotation, populations represented); static analysis of data-prep and model code (anti-patterns, mishandled sensitive attributes); EDA with visualization/clustering (imbalanced data, skewed distributions, anomalous groupings); dynamic testing with a known unbiased representative dataset (statistically significant outcome differences across sensitive groups — catches bias regardless of origin); label correctness testing; disparate impact analysis.",
+     "src": "5.1.2 L1028-L1038"
+    },
+    {
+     "text": "Data pipeline testing layers: design reviews; component testing (ingestion, transformation scripts, sensor interfaces — code reviews, static analysis, hardware tests; validation rules, error handling, malware/poisoning vulnerabilities); component integration (flow across internal interfaces); system testing (smoke, functional, non-functional load/scalability/security, fault injection with defective data, back-to-back vs training pipeline); system integration (external sources, storage, monitoring, downstream models); testing in production (back-to-back vs previous versions, A/B vs baselines, continuous monitoring); configuration management reviews (correct code versions/configs/datasets across training, testing, production).",
+     "src": "5.1.3 L1044-L1058"
+    },
+    {
+     "text": "Representativeness testing runs BEFORE model training; after deployment, continuously monitor operational input data to detect data drift from training distributions (see 6.1.7).",
+     "src": "5.1.4 L1086"
+    },
+    {
+     "text": "Dataset constraint types — single-value: Missing, Range, Type. Multi-value: Sum, Count, Duplicate, Useful (an attribute with all-unique values like IDs/timestamps provides no learnable patterns), Outlier. Comparison (across attributes): Greater Than, Correlate.",
+     "src": "5.1.5 L1092-L1109"
+    },
+    {
+     "text": "Label correctness approaches: expert review; multiple annotation with IAA (Cohen's Kappa); risk-based prioritization (ambiguous points, boundary cases, safety-critical data); data distribution analysis vs comparable datasets; automated rule-based tests (e.g., bounding boxes within image boundaries); model loss analysis (high loss → possible mislabeling); model confidence score analysis (low confidence → possibly mislabeled/ambiguous/out-of-distribution). Combine approaches for best results.",
+     "src": "5.1.6 L1119-L1127"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "Input data risks → mitigations (abbreviated)",
+   "columns": [
+    "Potential risk",
+    "Mitigation"
+   ],
+   "rows": [
+    [
+     "Bias from training data defects; systemic unfairness in algorithm/model/framework",
+     "Testing for bias (5.1.2)"
+    ],
+    [
+     "Untrustworthy data sources; poorly managed data",
+     "Data provenance testing"
+    ],
+    [
+     "Poisoned training data",
+     "A/B testing; Data provenance testing; EDA; red-teaming attacks"
+    ],
+    [
+     "Internally inconsistent dataset; out-of-range data; wrong types",
+     "Dataset constraint testing (5.1.5)"
+    ],
+    [
+     "Sub-optimal feature selection",
+     "Feature testing"
+    ],
+    [
+     "Imbalanced/skewed/missing data; subset of use cases; range not covered",
+     "Data representativeness testing (5.1.4)"
+    ],
+    [
+     "Poor labelling guidelines; ambiguous data; poor annotation",
+     "Label correctness testing (5.1.6)"
+    ],
+    [
+     "Pipeline design/integration failures; quality defects; performance degradation; security breaches",
+     "Data pipeline testing (5.1.3)"
+    ]
+   ],
+   "src": "5.1.1 L1006-L1015"
+  },
+  {
+   "type": "steps",
+   "title": "Data representativeness testing (5.1.4)",
+   "items": [
+    {
+     "text": "Define the target population: understand use cases/operational context; analyze end users and environments; identify expected operational distributions and edge cases (domain experts, data from existing systems, benchmark datasets e.g. NIST); apply stratified sampling to reference data to cover all relevant subgroups.",
+     "src": "5.1.4 L1066-L1073"
+    },
+    {
+     "text": "Analyze data characteristics: apply EDA to the datasets under test and the reference dataset (histograms, scatter plots); examine feature relationships and correlations; identify anomalies, gaps, unusual concentrations.",
+     "src": "5.1.4 L1074-L1080"
+    },
+    {
+     "text": "Apply statistical assessment techniques: formal tests such as Chi-squared and Kolmogorov-Smirnov to compare distributions; check class imbalances; verify coverage of typical and edge/boundary cases.",
+     "src": "5.1.4 L1081-L1084"
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Disparate impact analysis (5.1.2)",
+   "items": [
+    {
+     "text": "Identify sensitive attributes for the model.",
+     "src": "5.1.2 L1035"
+    },
+    {
+     "text": "Generate counterfactuals for the sensitive attributes (e.g., gender changed from male to female in a loan application).",
+     "src": "5.1.2 L1036"
+    },
+    {
+     "text": "Generate model output by presenting it with the counterfactuals.",
+     "src": "5.1.2 L1037"
+    },
+    {
+     "text": "Analyze results of multiple tests for statistical significance — a change in results when a sensitive attribute changes signals bias.",
+     "src": "5.1.2 L1038"
+    }
+   ]
+  },
+  {
+   "type": "traps",
+   "items": [
+    {
+     "confusion": "Data bias vs algorithmic bias",
+     "text": "Data bias originates in the training data (unrepresentative, historically skewed, poisoned); algorithmic bias originates in the algorithm/model/framework (e.g., an unfair decision threshold) — dynamic testing detects output bias regardless of source.",
+     "src": "5.1.2 L1023-L1032"
+    },
+    {
+     "confusion": "The five input-data testing types",
+     "text": "Bias (5.1.2, unfair treatment), pipeline (5.1.3, data flow machinery), representativeness (5.1.4, does data match operational reality), constraints (5.1.5, rule/consistency checks), label correctness (5.1.6, supervision quality); anchor risk→test-type on the 5.1.1 table.",
+     "src": "5.1.1 L1006-L1015"
+    },
+    {
+     "confusion": "Single-value vs multi-value vs comparison constraints",
+     "text": "Single-value checks one attribute value in one instance (Missing/Range/Type); multi-value checks values across instances (Sum/Count/Duplicate/Useful/Outlier); comparison checks one attribute against another (Greater Than/Correlate).",
+     "src": "5.1.5 L1092-L1109"
+    },
+    {
+     "confusion": "Chi-squared / Kolmogorov-Smirnov belong to representativeness, not drift testing",
+     "text": "They are the named statistical tests for comparing data distributions in representativeness testing (5.1.4); drift detection is discussed in 6.1.7 — don't mix them in exam answers.",
+     "src": "5.1.4 L1082"
+    }
+   ]
+  }
+ ]
+}

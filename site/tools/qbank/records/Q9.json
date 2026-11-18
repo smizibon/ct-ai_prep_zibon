@@ -1,0 +1,76 @@
+{
+  "id": "Q9",
+  "set": "main",
+  "heading_verbatim": "### Question 9 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "Which of the following examples is LEAST likely to be a valid acceptance criterion for AI-specific quality characteristics defined in the ISO 25059 standard for an AI-based system?\n\n- a) The security guard in the museum control room can trigger an immediate 'all-stop' command that causes the patrol robot to cease all motion within 0.5 seconds to prevent collision with a sculpture\n- b) A greenhouse control system reacts within 20 minutes when the measured humidity is greater than 10% from the optimum humidity\n- c) The spam alert control system is easy for the user to set up and requires minimal technical expertise to maintain\n- d) When the analysis tool flags a retinal scan for severe diabetic retinopathy, it shall display a visual heatmap overlay on the image, highlighting the key features\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {
+      "key": "a",
+      "text": "The security guard in the museum control room can trigger an immediate 'all-stop' command that causes the patrol robot to cease all motion within 0.5 seconds to prevent collision with a sculpture"
+    },
+    {
+      "key": "b",
+      "text": "A greenhouse control system reacts within 20 minutes when the measured humidity is greater than 10% from the optimum humidity"
+    },
+    {
+      "key": "c",
+      "text": "The spam alert control system is easy for the user to set up and requires minimal technical expertise to maintain"
+    },
+    {
+      "key": "d",
+      "text": "When the analysis tool flags a retinal scan for severe diabetic retinopathy, it shall display a visual heatmap overlay on the image, highlighting the key features"
+    }
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 9 — Correct answer: c",
+    "key_correct": "c",
+    "correct_keys": [
+      "c"
+    ],
+    "lo_key": "AI-2.2.1",
+    "lo_section": "AI-2.2.1",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {
+        "key": "a",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "This relates to intervenability, as defined in ISO 25059, which describes the user's ability to control the autonomous patrol robot when they notice it might run into a sculpture. It also provides a specific, measurable timeframe for the intervention."
+      },
+      {
+        "key": "b",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "This relates to functional correctness, which is defined in ISO 25059. It describes how the system adapts to changes in humidity to maintain the desired environment. It provides specific, measurable humidity and a timeframe for the control system to react."
+      },
+      {
+        "key": "c",
+        "verdict": "correct",
+        "verdict_phrase": "Is correct.",
+        "text": "It is the LEAST likely option because it focuses on some of the sub-characteristics of usability, such as learnability and operability, which are generic quality characteristics applicable to most systems, and are not directly associated with the AI-specific characteristics in ISO 25059 (i.e. user controllability and transparency, which are sub-characteristics of usability for AI-based systems). The acceptance criterion is also more subjective than the other options and so more challenging to test."
+      },
+      {
+        "key": "d",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "This relates to transparency, which is defined in ISO 25059. It describes the system's provision of extra information to explain its decision-making."
+      }
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 9 (1 Point)\n\nWhich of the following examples is LEAST likely to be a valid acceptance criterion for AI-specific quality characteristics defined in the ISO 25059 standard for an AI-based system?\n\n- a) The security guard in the museum control room can trigger an immediate 'all-stop' command that causes the patrol robot to cease all motion within 0.5 seconds to prevent collision with a sculpture\n- b) A greenhouse control system reacts within 20 minutes when the measured humidity is greater than 10% from the optimum humidity\n- c) The spam alert control system is easy for the user to set up and requires minimal technical expertise to maintain\n- d) When the analysis tool flags a retinal scan for severe diabetic retinopathy, it shall display a visual heatmap overlay on the image, highlighting the key features\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 9 — Correct answer: c\n\n**LO:** AI-2.2.1 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is not correct.** This relates to intervenability, as defined in ISO 25059, which describes the user's ability to control the autonomous patrol robot when they notice it might run into a sculpture. It also provides a specific, measurable timeframe for the intervention.\n- **b) Is not correct.** This relates to functional correctness, which is defined in ISO 25059. It describes how the system adapts to changes in humidity to maintain the desired environment. It provides specific, measurable humidity and a timeframe for the control system to react.\n- **c) Is correct.** It is the LEAST likely option because it focuses on some of the sub-characteristics of usability, such as learnability and operability, which are generic quality characteristics applicable to most systems, and are not directly associated with the AI-specific characteristics in ISO 25059 (i.e. user controllability and transparency, which are sub-characteristics of usability for AI-based systems). The acceptance criterion is also more subjective than the other options and so more challenging to test.\n- **d) Is not correct.** This relates to transparency, which is defined in ISO 25059. It describes the system's provision of extra information to explain its decision-making."
+}

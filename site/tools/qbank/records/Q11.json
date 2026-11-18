@@ -1,0 +1,125 @@
+{
+  "id": "Q11",
+  "set": "main",
+  "heading_verbatim": "### Question 11 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "Given the following activities from the ML workflow:\n\n1. Deploy the Model\n2. Prepare & Test Data\n3. Test the Model\n4. Evaluate the Model\n\nAnd, given the following descriptions:\n\n- A. Model performance is tested using validation data\n- B. The origin of the test data used to test the model is identified\n- C. Test data are used to verify the agreed performance criteria are met\n- D. The model is tested on the target platform\n\nWhich of the following BEST matches the descriptions with the activities in the ML workflow?\n\n- a) 1A – 2C – 3B – 4D\n- b) 1C – 2D – 3B – 4A\n- c) 1D – 2B – 3A – 4C\n- d) 1D – 2B – 3C – 4A\n\n*Select ONE answer.*",
+  "item_sets": [
+    {
+      "role": "match_left",
+      "key_style": "integer",
+      "items": [
+        {
+          "key": "1",
+          "text": "Deploy the Model"
+        },
+        {
+          "key": "2",
+          "text": "Prepare & Test Data"
+        },
+        {
+          "key": "3",
+          "text": "Test the Model"
+        },
+        {
+          "key": "4",
+          "text": "Evaluate the Model"
+        }
+      ]
+    },
+    {
+      "role": "match_right",
+      "key_style": "upper_letter",
+      "items": [
+        {
+          "key": "A",
+          "text": "Model performance is tested using validation data"
+        },
+        {
+          "key": "B",
+          "text": "The origin of the test data used to test the model is identified"
+        },
+        {
+          "key": "C",
+          "text": "Test data are used to verify the agreed performance criteria are met"
+        },
+        {
+          "key": "D",
+          "text": "The model is tested on the target platform"
+        }
+      ]
+    }
+  ],
+  "options": [
+    {
+      "key": "a",
+      "text": "1A – 2C – 3B – 4D"
+    },
+    {
+      "key": "b",
+      "text": "1C – 2D – 3B – 4A"
+    },
+    {
+      "key": "c",
+      "text": "1D – 2B – 3A – 4C"
+    },
+    {
+      "key": "d",
+      "text": "1D – 2B – 3C – 4A"
+    }
+  ],
+  "figures": [],
+  "quirks": [
+    "Options are mapping codes with spaced en-dashes (e.g. '1A – 2C – 3B – 4D')"
+  ],
+  "answer": {
+    "heading_verbatim": "### Question 11 — Correct answer: d",
+    "key_correct": "d",
+    "correct_keys": [
+      "d"
+    ],
+    "lo_key": "AI-3.1.2",
+    "lo_section": "AI-3.1.2",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_number",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {
+        "key": "1",
+        "verdict": "neutral",
+        "verdict_phrase": null,
+        "text": "Model performance is tested using validation data\nThis is part of the 'Evaluate the Model' activity. (D)"
+      },
+      {
+        "key": "2",
+        "verdict": "neutral",
+        "verdict_phrase": null,
+        "text": "The origin of the test data used to test the model is identified\nThis is part of the 'Prepare & Test Data' activity. (B)"
+      },
+      {
+        "key": "3",
+        "verdict": "neutral",
+        "verdict_phrase": null,
+        "text": "Test data are used to determine that the agreed performance criteria are met\nThis is part of the 'Test the Model' activity. (C)"
+      },
+      {
+        "key": "4",
+        "verdict": "neutral",
+        "verdict_phrase": null,
+        "text": "The model is tested on the target platform\nThis is part of the 'Deploy the Model' activity. (A)"
+      }
+    ],
+    "conclusion_markdown": "Hence, the correct option is: 1D – 2B – 3C – 4A, and so d) is correct.",
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [
+      "Answer rationale item 3 says 'Test data are used to determine that the agreed performance criteria are met' whereas the question's description C says 'Test data are used to verify the agreed performance criteria are met' (verify -> determine; answer wording kept verbatim)"
+    ],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 11 (1 Point)\n\nGiven the following activities from the ML workflow:\n\n1. Deploy the Model\n2. Prepare & Test Data\n3. Test the Model\n4. Evaluate the Model\n\nAnd, given the following descriptions:\n\n- A. Model performance is tested using validation data\n- B. The origin of the test data used to test the model is identified\n- C. Test data are used to verify the agreed performance criteria are met\n- D. The model is tested on the target platform\n\nWhich of the following BEST matches the descriptions with the activities in the ML workflow?\n\n- a) 1A – 2C – 3B – 4D\n- b) 1C – 2D – 3B – 4A\n- c) 1D – 2B – 3A – 4C\n- d) 1D – 2B – 3C – 4A\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 11 — Correct answer: d\n\n**LO:** AI-3.1.2 | **K-Level:** K2 | **Points:** 1\n\n- **1.** Model performance is tested using validation data\n  This is part of the 'Evaluate the Model' activity. (D)\n- **2.** The origin of the test data used to test the model is identified\n  This is part of the 'Prepare & Test Data' activity. (B)\n- **3.** Test data are used to determine that the agreed performance criteria are met\n  This is part of the 'Test the Model' activity. (C)\n- **4.** The model is tested on the target platform\n  This is part of the 'Deploy the Model' activity. (A)\n\nHence, the correct option is: 1D – 2B – 3C – 4A, and so d) is correct."
+}

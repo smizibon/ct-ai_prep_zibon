@@ -1,0 +1,164 @@
+{
+  "chapter": 3,
+  "blocks": [
+    {
+      "type": "keyTerms",
+      "items": [
+        {
+          "term": "supervised learning",
+          "def": "Algorithms train models using labeled data (each input set has a corresponding output label); divided into classification (assign inputs to predefined classes) and ML regression (predict continuous numerical values). Note: ML regression differs from 'regression' in other ISTQB syllabi (change-related defects).",
+          "src": "3.1.1 L549-L554"
+        },
+        {
+          "term": "unsupervised learning",
+          "def": "Trains models on unlabeled data, inferring patterns or structures; categorized into clustering (grouping by similarities, e.g., customer segments) and association (identifying relationships/dependencies among attributes, e.g., purchasing patterns for recommendations).",
+          "src": "3.1.1 L556-L559"
+        },
+        {
+          "term": "reinforcement learning",
+          "def": "An intelligent agent learns by interacting with its environment, receiving rewards or penalties based on action outcomes — learning from experience rather than a dataset. Challenges: setting up the environment, designing the reward function, selecting the best strategy.",
+          "src": "3.1.1 L561"
+        },
+        {
+          "term": "exploratory data analysis (EDA)",
+          "def": "Carried out alongside data preparation to discover trends, patterns, and anomalies and to visualize data using plots and charts.",
+          "src": "3.2.1 L683-L686"
+        },
+        {
+          "term": "training / validation / test datasets",
+          "def": "Training: used to train the model. Validation: used for evaluating and subsequently tuning the model. Test (holdout): used to test the tuned model — independent of training and validation.",
+          "src": "3.2.3 L704-L708"
+        },
+        {
+          "term": "k-fold cross-validation",
+          "def": "For limited data: divide the combined training+validation pool into k folds (commonly 5 or 10, typically random, often stratified); train on k-1 folds, validate on the held-out fold, repeat k times; average the fold metrics, then train the final model on the whole pool and evaluate once on the hold-out test set.",
+          "src": "3.2.3 L717-L721"
+        },
+        {
+          "term": "pretrained model / fine-tuning",
+          "def": "Fine-tuning adapts a pretrained neural network to a new task with much less training data/effort than building from scratch; tuning may apply to the entire network, specific layers (typically near the output end), or additional layers. Success depends on similarity between original and new tasks.",
+          "src": "3.1.4 L645-L649"
+        },
+        {
+          "term": "retrieval-augmented generation (RAG)",
+          "def": "Provides task-specific data sources to the LLM: transformed into a searchable format, relevant documents are incorporated into an enhanced prompt — more precise responses with NO change to the pretrained model.",
+          "src": "3.1.4 L651"
+        },
+        {
+          "term": "activation value / epoch",
+          "def": "Activation value: the output of an activation function of a neuron (computed from a weighted sum of previous-layer activations plus the neuron's bias). Epoch: an iteration of ML training on the whole training dataset.",
+          "src": "3.4.1 L783 + glossary"
+        },
+        {
+          "term": "hyperparameters (model vs algorithm)",
+          "def": "Model hyperparameters define the model structure (e.g., number of neural-network layers, decision-tree depth); algorithm hyperparameters control the training (e.g., number of training iterations).",
+          "src": "3.1.2 L595-L597"
+        }
+      ]
+    },
+    {
+      "type": "mustKnow",
+      "title": "Workflow, data, neural networks",
+      "items": [
+        {
+          "text": "ML workflow activities (Figure 1 order): Understand the Objectives (agree purpose + acceptance criteria incl. ML functional performance metrics) → Select a Framework → Select & Build the Algorithm → Prepare & Test Data (acquisition, preprocessing, feature engineering + EDA; data must be representative of operational data) → Train → Evaluate (on validation dataset; several models/algorithms typically compared) → Tune (adjust model + algorithm hyperparameters, retrain) — Train/Evaluate/Tune = 'model generation' cycle → Test the Model (independent test dataset; significantly lower performance than evaluation → return to model generation or data prep) → Deploy (re-engineered with data pipeline; re-tested) → Use (batch or real-time) → Monitor & Tune. Failures often originate in earlier steps such as data preparation or model selection.",
+          "src": "3.1.2 L567-L631 + 3.1 L543"
+        },
+        {
+          "text": "Pretrained/RAG: fine-tuning needs task similarity (cat→dog breeds works; images→accents doesn't); a pretrained model can use RAG, fine-tuning, or both; biases or vulnerabilities in the pretrained model carry over to the new model — testing needed for the new task.",
+          "src": "3.1.4 L649-L655"
+        },
+        {
+          "text": "Data preparation = data acquisition (identify types, gather from databases/APIs/sensors, label for supervised) + preprocessing (clean: remove defects/duplicates/outliers, impute missing values mean/median/mode, anonymize; transform/scale/normalize; augment incl. adversarial examples and synthetic data; sample subsets) + feature engineering (select relevant, extract informative non-redundant features), with EDA in parallel. Iterative, often manual, reorderable. Operational data should match training-data characteristics (distributions, feature ranges).",
+          "src": "3.2.1 L665-L688"
+        },
+        {
+          "text": "Dataset splits: amounts depend on model complexity, algorithm, resources (RAM/disk/compute/time), desired confidence. Limited data → hold-out test set + k-fold cross-validation on the rest (average metrics = generalization estimate; final model trained on full pool, evaluated once on hold-out); leave-one-out (k = number of samples) and bootstrap are other resampling options; without any hold-out, cross-validation averages are optimistically biased.",
+          "src": "3.2.3 L710-L723"
+        },
+        {
+          "text": "Deep neural network: input layer (receives inputs) → hidden layers (neurons/nodes) → output layer (results to outside world); fully connected = each neuron connects to all neurons in the next layer. Each neuron computes a weighted sum of previous-layer activations plus its own bias, passed through a non-linear activation function (this bias is unrelated to 5.1.2's fairness bias). Weights/biases initialized to small random values (biases sometimes zero); error/loss fed back to adjust them; each pass through the training dataset = an epoch; training ends when output is good enough.",
+          "src": "3.4.1 L779-L787"
+        },
+        {
+          "text": "Neural network coverage: Neuron Coverage (proportion of neurons whose output exceeds a threshold during testing); k-Multisection Neuron Coverage kMNC (each neuron's output range divided into k sections; proportion of sections activated); Neuron Boundary Coverage NBC (proportion of neurons whose output exceeds the training maximum or falls below the training minimum). Value: reveals untested areas; limits: structural coverage alone doesn't guarantee generalization (spurious correlations → correct activations for wrong reasons) — combine with adversarial and metamorphic testing.",
+          "src": "3.4.3 L805-L813"
+        }
+      ]
+    },
+    {
+      "type": "formula",
+      "items": [
+        {
+          "name": "Accuracy",
+          "formula": "Accuracy = (TP + TN) / (TP + TN + FP + FN) * 100%",
+          "note": "Percentage of all correct classifications.",
+          "src": "3.3.1 L745-L747"
+        },
+        {
+          "name": "Precision",
+          "formula": "Precision = TP / (TP + FP) * 100%",
+          "note": "Proportion of positives that were correctly predicted — how sure one can be about positive predictions.",
+          "src": "3.3.1 L749-L751"
+        },
+        {
+          "name": "Recall (sensitivity)",
+          "formula": "Recall = TP / (TP + FN) * 100%",
+          "note": "Proportion of actual positives correctly predicted — confidence that no positives will be missed.",
+          "src": "3.3.1 L753-L755"
+        },
+        {
+          "name": "F1-score",
+          "formula": "F1-score = 2 * (Precision * Recall) / (Precision + Recall)",
+          "note": "Harmonic mean of precision and recall, 0–100; close to 100 = both high (FP and FN minimal impact).",
+          "src": "3.3.1 L757-L759"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "title": "Confusion matrix (Figure 2 layout)",
+      "columns": ["Predicted \\ Actual", "Positive", "Negative"],
+      "rows": [
+        ["Positive", "True Positive (TP)", "False Positive (FP)"],
+        ["Negative", "False Negative (FN)", "True Negative (TN)"]
+      ],
+      "src": "3.3.1 L733-L739"
+    },
+    {
+      "type": "traps",
+      "items": [
+        {
+          "confusion": "Precision vs recall denominators",
+          "text": "Precision divides by predicted positives (TP+FP) — 'how sure about positive predictions'; recall divides by actual positives (TP+FN) — 'no positives missed'. Both use TP as numerator; swapping denominators is the classic exam error.",
+          "src": "3.3.1 L749-L755"
+        },
+        {
+          "confusion": "Validation vs test dataset roles",
+          "text": "Validation drives evaluation AND tuning (may be reused in iterations); test is the independent holdout used once on the tuned model to confirm criteria. Significantly lower test performance than evaluation signals overfitting-style trouble → return to model generation.",
+          "src": "3.2.3 L707-L708 + 3.1.2 L611"
+        },
+        {
+          "confusion": "Fine-tuning vs RAG",
+          "text": "Fine-tuning changes the pretrained model via additional task-specific training (needs similarity between tasks); RAG leaves the model unchanged and injects relevant retrieved documents into an enhanced prompt.",
+          "src": "3.1.4 L645-L653"
+        },
+        {
+          "confusion": "Supervised vs reinforcement learning",
+          "text": "Supervised learns from labeled datasets (input→label mapping); reinforcement learns from environment interaction via rewards/penalties — 'from experience rather than from a dataset'. Unsupervised finds structure in unlabeled data (clustering/association).",
+          "src": "3.1.1 L549-L561"
+        },
+        {
+          "confusion": "Neuron Coverage vs kMNC vs NBC",
+          "text": "NC: neuron outputs above a threshold; kMNC: k sections per neuron's output range, proportion activated; NBC: outputs beyond the training-time maximum/minimum. NBC detects inputs outside training experience; kMNC grades activation granularity.",
+          "src": "3.4.3 L807-L809"
+        },
+        {
+          "confusion": "Model vs algorithm hyperparameters",
+          "text": "Model = structure (layers, tree depth); algorithm = training controls (iteration count). Tuning (3.1.2) adjusts both.",
+          "src": "3.1.2 L595-L597"
+        }
+      ]
+    }
+  ]
+}

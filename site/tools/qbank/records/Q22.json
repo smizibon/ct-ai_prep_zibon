@@ -1,0 +1,44 @@
+{
+  "id": "Q22",
+  "set": "main",
+  "heading_verbatim": "### Question 22 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "An ML-based weather prediction system provides excellent results for most locations; however, it has been noticed that the predictions for areas in the UK with an altitude greater than 1250 meters are regularly inaccurate.\n\nWhich of the following test levels should have been performed MORE thoroughly?\n\n- a) System testing\n- b) Input data testing\n- c) Component integration testing\n- d) ML model testing\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {"key": "a", "text": "System testing"},
+    {"key": "b", "text": "Input data testing"},
+    {"key": "c", "text": "Component integration testing"},
+    {"key": "d", "text": "ML model testing"}
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 22 — Correct answer: b",
+    "key_correct": "b",
+    "correct_keys": ["b"],
+    "lo_key": "AI-4.3.1",
+    "lo_section": "AI-4.3.1",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {"key": "a", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "While system testing may have detected this defect, input data testing is the most effective test level for detecting it, as it would have been caught at an earlier phase."},
+      {"key": "b", "verdict": "correct", "verdict_phrase": "Is correct.", "text": "Input data testing focuses on data quality and on the representativeness of data. It appears that areas in the UK with an altitude greater than 1,250 meters were not adequately represented in the training data."},
+      {"key": "c", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "Component integration testing checks for defects in the interfaces and the interactions between components and is not focused on specific data values."},
+      {"key": "d", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "ML model testing may have identified this defect, but input data testing would be the most effective test level to detect it, as it would have been caught earlier."}
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [
+      "Answer bullet b restates the scenario altitude as '1,250 meters' whereas Question 22 says '1250 meters' (thousands separator added)."
+    ],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 22 (1 Point)\n\nAn ML-based weather prediction system provides excellent results for most locations; however, it has been noticed that the predictions for areas in the UK with an altitude greater than 1250 meters are regularly inaccurate.\n\nWhich of the following test levels should have been performed MORE thoroughly?\n\n- a) System testing\n- b) Input data testing\n- c) Component integration testing\n- d) ML model testing\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 22 — Correct answer: b\n\n**LO:** AI-4.3.1 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is not correct.** While system testing may have detected this defect, input data testing is the most effective test level for detecting it, as it would have been caught at an earlier phase.\n- **b) Is correct.** Input data testing focuses on data quality and on the representativeness of data. It appears that areas in the UK with an altitude greater than 1,250 meters were not adequately represented in the training data.\n- **c) Is not correct.** Component integration testing checks for defects in the interfaces and the interactions between components and is not focused on specific data values.\n- **d) Is not correct.** ML model testing may have identified this defect, but input data testing would be the most effective test level to detect it, as it would have been caught earlier."
+}

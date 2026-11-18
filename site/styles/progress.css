@@ -1,0 +1,21 @@
+/* progress.css — bars and rings */
+.pbar { height: 8px; border-radius: var(--r-full); background: var(--bg-3); overflow: hidden; }
+.pbar__fill { height: 100%; background: var(--primary); border-radius: inherit; width: 0; transition: width 400ms var(--ease-out); }
+.pbar--thin { height: 3px; border-radius: 0; }
+.pbar--success .pbar__fill { background: var(--success); }
+
+.ring { position: relative; display: inline-grid; place-items: center; }
+.ring svg { transform: rotate(-90deg); }
+.ring__track { stroke: var(--bg-3); }
+.ring__val { stroke: var(--primary); transition: stroke-dashoffset var(--dur-4) var(--ease-out); }
+.ring--success .ring__val { stroke: var(--success); }
+.ring--danger .ring__val { stroke: var(--danger); }
+.ring__center { position: absolute; inset: 0; display: grid; place-items: center; text-align: center; }
+.ring__num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; font-weight: 700; line-height: 1; }
+.ring__cap { display: block; font-size: 0.625rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--ink-3); margin-top: 4px; }
+.ring--mini .ring__num { font-size: 0.6875rem; }
+.ring--sm .ring__num { font-size: 0.875rem; }
+.ring--sm .ring__cap { display: none; } /* 64px ring: number only, label lives beside it */
+.ring--std .ring__num { font-size: 1.25rem; }
+.ring--hero .ring__num { font-size: 2.5rem; }
+.ring__tick { stroke: var(--ink-1); stroke-width: 2; }

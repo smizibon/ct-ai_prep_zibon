@@ -1,0 +1,42 @@
+{
+  "id": "Q18",
+  "set": "main",
+  "heading_verbatim": "### Question 18 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "Which of the following options BEST explains why a statistical approach is necessary when testing an AI-based system?\n\n- a) The system is typically large and complex, making test automation impractical without the use of statistical sampling\n- b) The system exhibits non-deterministic behavior, requiring large and representative test datasets to draw meaningful conclusions\n- c) A single test case is sufficient to determine if a model is well-calibrated, but only statistical methods can verify accuracy\n- d) The system is trained on real-world data and therefore does not require a separate test dataset; instead, it requires statistical validation\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {"key": "a", "text": "The system is typically large and complex, making test automation impractical without the use of statistical sampling"},
+    {"key": "b", "text": "The system exhibits non-deterministic behavior, requiring large and representative test datasets to draw meaningful conclusions"},
+    {"key": "c", "text": "A single test case is sufficient to determine if a model is well-calibrated, but only statistical methods can verify accuracy"},
+    {"key": "d", "text": "The system is trained on real-world data and therefore does not require a separate test dataset; instead, it requires statistical validation"}
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 18 — Correct answer: b",
+    "key_correct": "b",
+    "correct_keys": ["b"],
+    "lo_key": "AI-4.1.2",
+    "lo_section": "AI-4.1.2",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {"key": "a", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "While AI-based systems can be large and complex, the rationale for using a statistical approach is primarily driven by their non-deterministic nature, not the impracticality of automation or size."},
+      {"key": "b", "verdict": "correct", "verdict_phrase": "Is correct.", "text": "AI-based systems are non-deterministic and require extensive, representative test datasets to achieve statistical significance, especially in assessing functional correctness statistically."},
+      {"key": "c", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "This option misrepresents the concept. A single test case is not sufficient to assess the quality of the AI-based system. Statistical evaluation over many predictions is necessary."},
+      {"key": "d", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "This contradicts best practices. A separate test dataset (from training and validation) is essential, not optional, and is part of the statistical rigor required."}
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 18 (1 Point)\n\nWhich of the following options BEST explains why a statistical approach is necessary when testing an AI-based system?\n\n- a) The system is typically large and complex, making test automation impractical without the use of statistical sampling\n- b) The system exhibits non-deterministic behavior, requiring large and representative test datasets to draw meaningful conclusions\n- c) A single test case is sufficient to determine if a model is well-calibrated, but only statistical methods can verify accuracy\n- d) The system is trained on real-world data and therefore does not require a separate test dataset; instead, it requires statistical validation\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 18 — Correct answer: b\n\n**LO:** AI-4.1.2 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is not correct.** While AI-based systems can be large and complex, the rationale for using a statistical approach is primarily driven by their non-deterministic nature, not the impracticality of automation or size.\n- **b) Is correct.** AI-based systems are non-deterministic and require extensive, representative test datasets to achieve statistical significance, especially in assessing functional correctness statistically.\n- **c) Is not correct.** This option misrepresents the concept. A single test case is not sufficient to assess the quality of the AI-based system. Statistical evaluation over many predictions is necessary.\n- **d) Is not correct.** This contradicts best practices. A separate test dataset (from training and validation) is essential, not optional, and is part of the statistical rigor required."
+}

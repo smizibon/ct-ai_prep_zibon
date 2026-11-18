@@ -1,0 +1,80 @@
+{
+  "id": "Q40",
+  "set": "main",
+  "heading_verbatim": "### Question 40 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "Which of the following statements CORRECTLY describes how shadow testing differs from canary testing in the deployment of ML models?\n\n- a) Shadow testing affects the responses from real users, while canary testing does not involve real users\n- b) Shadow testing mirrors traffic without impacting users, while canary testing provides responses from the new ML model\n- c) Canary testing is used for performance testing, while shadow testing is mainly used for component integration testing\n- d) Canary testing compares ML models running offline, while shadow testing is based on the use of live user data\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {
+      "key": "a",
+      "text": "Shadow testing affects the responses from real users, while canary testing does not involve real users"
+    },
+    {
+      "key": "b",
+      "text": "Shadow testing mirrors traffic without impacting users, while canary testing provides responses from the new ML model"
+    },
+    {
+      "key": "c",
+      "text": "Canary testing is used for performance testing, while shadow testing is mainly used for component integration testing"
+    },
+    {
+      "key": "d",
+      "text": "Canary testing compares ML models running offline, while shadow testing is based on the use of live user data"
+    }
+  ],
+  "figures": [],
+  "quirks": [
+    "verdict-phrase-this-is-not-correct-colon"
+  ],
+  "answer": {
+    "heading_verbatim": "### Question 40 — Correct answer: b",
+    "key_correct": "b",
+    "correct_keys": [
+      "b"
+    ],
+    "lo_key": "AI-7.1.2",
+    "lo_section": "AI-7.1.2",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {
+        "key": "a",
+        "verdict": "not_correct",
+        "verdict_phrase": "This is not correct:",
+        "text": "It reverses the roles of both test types. Canary testing directly serves a small group of real users with the new ML model, while shadow testing processes live traffic in the background without ever affecting user responses."
+      },
+      {
+        "key": "b",
+        "verdict": "correct",
+        "verdict_phrase": "This is correct:",
+        "text": "Shadow testing provides a risk-free way to see how a new ML model behaves with production data, whereas canary testing deliberately exposes a small subset of users to the new model to observe its real-world performance and impact."
+      },
+      {
+        "key": "c",
+        "verdict": "not_correct",
+        "verdict_phrase": "This is not correct:",
+        "text": "Both test types are used to validate a model's performance and functional correctness on live traffic. The primary difference is the risk profile, not whether one is for performance testing and the other is for component integration testing."
+      },
+      {
+        "key": "d",
+        "verdict": "not_correct",
+        "verdict_phrase": "This is not correct:",
+        "text": "It fundamentally misrepresents canary testing as an offline activity. Both canary testing and shadow testing are online methods that use live user data. The key distinction is whether the new ML model's response is actually sent to the user or is only logged for later analysis."
+      }
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": [
+      "verdict-phrase-this-is-not-correct-colon"
+    ]
+  },
+  "raw_question_markdown": "### Question 40 (1 Point)\n\nWhich of the following statements CORRECTLY describes how shadow testing differs from canary testing in the deployment of ML models?\n\n- a) Shadow testing affects the responses from real users, while canary testing does not involve real users\n- b) Shadow testing mirrors traffic without impacting users, while canary testing provides responses from the new ML model\n- c) Canary testing is used for performance testing, while shadow testing is mainly used for component integration testing\n- d) Canary testing compares ML models running offline, while shadow testing is based on the use of live user data\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 40 — Correct answer: b\n\n**LO:** AI-7.1.2 | **K-Level:** K2 | **Points:** 1\n\n- **a) This is not correct:** It reverses the roles of both test types. Canary testing directly serves a small group of real users with the new ML model, while shadow testing processes live traffic in the background without ever affecting user responses.\n- **b) This is correct:** Shadow testing provides a risk-free way to see how a new ML model behaves with production data, whereas canary testing deliberately exposes a small subset of users to the new model to observe its real-world performance and impact.\n- **c) This is not correct:** Both test types are used to validate a model's performance and functional correctness on live traffic. The primary difference is the risk profile, not whether one is for performance testing and the other is for component integration testing.\n- **d) This is not correct:** It fundamentally misrepresents canary testing as an offline activity. Both canary testing and shadow testing are online methods that use live user data. The key distinction is whether the new ML model's response is actually sent to the user or is only logged for later analysis."
+}

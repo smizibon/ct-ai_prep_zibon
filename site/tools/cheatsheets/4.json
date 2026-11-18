@@ -1,0 +1,139 @@
+{
+ "chapter": 4,
+ "blocks": [
+  {
+   "type": "keyTerms",
+   "items": [
+    {
+     "term": "locked AI-based system",
+     "def": "A deterministic AI-based system with a fixed unchanging model which does not change its behavior once it is deployed. E.g., a deployed DNN-based model whose weights and biases are fixed after development (self-driving car lane detection / traffic sign recognition).",
+     "src": "glossary + 4.1.1 L854"
+    },
+    {
+     "term": "adaptive AI-based system",
+     "def": "An AI-based system that adjusts its behavior in response to changes in its operational environment. E.g., reinforcement learning adapting via a reward function; e-commerce recommendations based on evolving preferences.",
+     "src": "glossary + 4.1.1 L856"
+    },
+    {
+     "term": "test oracle problem",
+     "def": "The challenge of determining whether a test has passed or failed for a given set of test inputs and state.",
+     "src": "glossary"
+    },
+    {
+     "term": "ground truth",
+     "def": "The information provided by direct observation and measurement that is known to be real or true.",
+     "src": "glossary"
+    },
+    {
+     "term": "Red Teaming (RT)",
+     "def": "A systematic, often black-box form of fault attack that probes an AI-based system to identify harmful capabilities, particularly in its outputs — deliberately causing harmful or undesirable results (privacy violations, racist views, CBRN guidance), then using the findings to strengthen the system.",
+     "src": "4.2.2 L919"
+    },
+    {
+     "term": "Blue Teaming",
+     "def": "Ongoing, real-time defensive monitoring and filtering of inputs to an operational AI-based system to protect it against attacks; complements proactive, pre-deployment Red Teaming.",
+     "src": "4.2.2 L935"
+    },
+    {
+     "term": "input explosion problem",
+     "def": "The challenge of testing a GenAI model whose inputs are highly diverse and hard to control: optional system prompts plus user prompts with enormous disparate data, API access, parameters (temperature, maximum tokens), and the context window — all affecting the output.",
+     "src": "4.2.1 L909"
+    }
+   ]
+  },
+  {
+   "type": "mustKnow",
+   "title": "Locked vs adaptive, statistics, oracles, GenAI, test levels",
+   "items": [
+    {
+     "text": "Locked systems are far easier to test (largely deterministic, expected results don't change); an updated locked system is a NEW system needing fresh testing. Adaptive systems may change behavior during or because of testing; unpredictable behaviors can't be tested in advance — use automated suites re-run after significant changes plus threshold-based performance checks. Many GenAI/LLM systems sit between: locked at runtime, updated periodically. Even locked systems can show non-determinism (floating-point precision, hardware/parallel-GPU variation).",
+     "src": "4.1.1 L858-L868"
+    },
+    {
+     "text": "Why statistical testing — four reasons: Non-Determinism (single tests can't reflect overall correctness — suite must be large enough for statistical significance); Distributional Performance Evaluation (test a statistically significant sample from operational data distributions); Handling Uncertainty and Bias (quantify accuracy/fairness/robustness via confidence intervals, hypothesis testing, error analysis); Regulatory and Safety Context (demonstrate thresholds met with high confidence).",
+     "src": "4.1.2 L874-L877"
+    },
+    {
+     "text": "Test oracle problem causes: probabilistic/non-deterministic outputs (need thresholds/tolerance ranges); exploratory development with incomplete/missing specifications; task complexity beyond straightforward human verification; subjectivity of behavior (e.g., virtual assistant expectations vary); self-learning systems ('correct' evolves, initial expected results become invalid).",
+     "src": "4.1.3 L885-L889"
+    },
+    {
+     "text": "Oracle solutions: define output boundaries (acceptable ranges, distributions, limits, tolerances — e.g., car stops within max distance); define environmental boundaries (lighting, temperature, network latency for repeatability); expert consultation (opinions may differ or be fallible); specialized testing (A/B, back-to-back, metamorphic — compare behaviors/verify properties without explicit expected outputs); proxy oracles (secondary systems/models, e.g., image recognition checking generated images — beware reproducing similar biases/errors).",
+     "src": "4.1.3 L893-L897"
+    },
+    {
+     "text": "GenAI testing: black-box evaluation of correctness, coherence, creativity (clarity, originality, domain-rule adherence); manual review or a second GenAI system as judge (use carefully — may reproduce similar biases/errors); non-functional testing matters (CPU/GPU usage, memory, network bandwidth, response times for inference and training); benchmark suites give standardized, reproducible comparison across models.",
+     "src": "4.2.1 L905-L915"
+    },
+    {
+     "text": "Red teaming scope: especially critical for GenAI's vast attack space; covers security AND safety/privacy/fairness/bias/misinformation; security RT targets malicious inputs (indirect prompt injection, malicious content hidden in RAG documents) while safety RT finds harmful outputs under ordinary use (unsafe medical advice); regulatory expectation (EU AI Act); best run pre-deployment after initial quality assessments; core activity is interactive multi-turn prompting (e.g., 15-20 turns); coverage strategies: crowd-sourced prompts, automated LLM-generated attack prompts checked by another LLM, hybrid.",
+     "src": "4.2.2 L919-L935"
+    },
+    {
+     "text": "ML test levels: two ML-specific — input data testing (Ch 5: training + production data) and ML model testing (Ch 6: the models) — plus conventional levels: component (non-AI parts: UI, data pipeline, communication), component integration (data pipeline feeds model correctly; predictions exchanged/used correctly; API testing when AI-as-a-service), system (confirmation that ML functional performance survives embedding; e.g., after DNN compression;), system integration (external interfaces, representative conditions), acceptance (service suitability, ML functional performance criteria).",
+     "src": "4.3.1 L943-L960"
+    },
+    {
+     "text": "Risk-based ML testing: ML risks = project risks (development: algorithm, model development, framework — e.g., sub-optimal algorithm selection) + product risks (input data: biased/unrepresentative training data, pipeline defects; model: missed performance measures, overfitting, adversarial susceptibility). Risk areas map to the ML workflow: Development (Ch 7), Input data (Ch 5), Model (Ch 6); alternatively categorize by ISO/IEC 25059 quality characteristics.",
+     "src": "4.3.2 L964-L972"
+    }
+   ]
+  },
+  {
+   "type": "steps",
+   "title": "Red teaming approach (4.2.2)",
+   "items": [
+    {
+     "text": "Assemble a diverse team of testers to cover a wide range of perspectives and attack vectors.",
+     "src": "4.2.2 L927"
+    },
+    {
+     "text": "Provide access to the AI-based system in a safe test environment.",
+     "src": "4.2.2 L928"
+    },
+    {
+     "text": "Prompt the system to identify vulnerabilities, through open-ended exploration or using checklists.",
+     "src": "4.2.2 L929"
+    },
+    {
+     "text": "Analyze the identified failures to understand threats.",
+     "src": "4.2.2 L930"
+    },
+    {
+     "text": "Create datasets from these threats to support mitigations and system improvements.",
+     "src": "4.2.2 L931"
+    }
+   ]
+  },
+  {
+   "type": "traps",
+   "items": [
+    {
+     "confusion": "Locked vs adaptive testability",
+     "text": "Locked = fixed behavior post-deployment, mostly deterministic, expected results stable (but updates = new system + fresh testing; non-determinism possible from floating-point/GPU parallelism). Adaptive = evolves (reward function, new environments), may change during/because of testing — harder; unpredictable behaviors cannot be pre-tested.",
+     "src": "4.1.1 L854-L866"
+    },
+    {
+     "confusion": "Red teaming vs benchmarking vs blue teaming",
+     "text": "RT = adaptive, dynamic, pre-deployment attacks (prompts updated in response to outputs), complements static benchmarking by testing extreme/unexpected conditions; Blue Teaming = ongoing real-time defensive monitoring/filtering of an operational system.",
+     "src": "4.2.2 L921-L935"
+    },
+    {
+     "confusion": "Security RT vs safety RT",
+     "text": "Security RT focuses on malicious inputs (indirect prompt injection, malicious content in RAG documents); safety RT targets harmful outputs under ordinary use without adversarial intent (e.g., unsafe medical advice).",
+     "src": "4.2.2 L923"
+    },
+    {
+     "confusion": "Component integration vs system integration for MLS",
+     "text": "Component integration = internal exchanges (data pipeline → model → UI, API testing for AI-as-a-service); system integration = interfaces and data exchanges with EXTERNAL systems/services under representative operational conditions.",
+     "src": "4.3.1 L957-L959"
+    },
+    {
+     "confusion": "Project risks vs product risks in ML",
+     "text": "Project risks concern MLS development (sub-optimal algorithm selection, poor evaluation approach choice, framework security vulnerabilities); product risks concern the system itself (biased/unrepresentative training data, data-pipeline defects, overfitted model, adversarial susceptibility).",
+     "src": "4.3.2 L968-L970"
+    }
+   ]
+  }
+ ]
+}

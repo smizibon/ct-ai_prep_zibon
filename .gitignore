@@ -1,0 +1,13 @@
+# Source documents — kept local by request (not for publication)
+markdown/
+PDFs/
+
+# Local runtime & automation artifacts
+.DS_Store
+.playwright-mcp/
+site/tools/.server.pid
+site/tools/.server.log
+site/tools/shots/
+
+# OS / editor noise
+*.swp

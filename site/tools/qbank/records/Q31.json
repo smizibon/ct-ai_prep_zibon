@@ -1,0 +1,42 @@
+{
+  "id": "Q31",
+  "set": "main",
+  "heading_verbatim": "### Question 31 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "Which of the following statements about the documentation of ML models is CORRECT?\n\n- a) Information related to the speed of model prediction is a part of the documentation of an AI component\n- b) Interaction of AI and non-AI components is within the scope of the model documentation\n- c) Bias-related characteristics of input data are challenging to assess as the model documentation doesn't contain the source of the training data\n- d) Changes made by self-learning ML systems are fully documented at the time of the update to ensure up-to-date documentation\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {"key": "a", "text": "Information related to the speed of model prediction is a part of the documentation of an AI component"},
+    {"key": "b", "text": "Interaction of AI and non-AI components is within the scope of the model documentation"},
+    {"key": "c", "text": "Bias-related characteristics of input data are challenging to assess as the model documentation doesn't contain the source of the training data"},
+    {"key": "d", "text": "Changes made by self-learning ML systems are fully documented at the time of the update to ensure up-to-date documentation"}
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 31 — Correct answer: a",
+    "key_correct": "a",
+    "correct_keys": ["a"],
+    "lo_key": "AI-6.1.2",
+    "lo_section": "AI-6.1.2",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {"key": "a", "verdict": "correct", "verdict_phrase": "Is correct.", "text": "This is a part of the non-functional requirement/documentation."},
+      {"key": "b", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "It is not in the scope of model documentation."},
+      {"key": "c", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "Model documentation should contain the source of the training data."},
+      {"key": "d", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "Documentation of changes made by the self-learning system could only be made by the system itself at the time of the update."}
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 31 (1 Point)\n\nWhich of the following statements about the documentation of ML models is CORRECT?\n\n- a) Information related to the speed of model prediction is a part of the documentation of an AI component\n- b) Interaction of AI and non-AI components is within the scope of the model documentation\n- c) Bias-related characteristics of input data are challenging to assess as the model documentation doesn't contain the source of the training data\n- d) Changes made by self-learning ML systems are fully documented at the time of the update to ensure up-to-date documentation\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 31 — Correct answer: a\n\n**LO:** AI-6.1.2 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is correct.** This is a part of the non-functional requirement/documentation.\n- **b) Is not correct.** It is not in the scope of model documentation.\n- **c) Is not correct.** Model documentation should contain the source of the training data.\n- **d) Is not correct.** Documentation of changes made by the self-learning system could only be made by the system itself at the time of the update."
+}

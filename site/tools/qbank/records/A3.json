@@ -1,0 +1,77 @@
+{
+ "id": "A3",
+ "set": "appendix",
+ "heading_verbatim": "### Question A3 (1 Point)",
+ "points": 1,
+ "selection_mode": "single",
+ "select_instruction_verbatim": "*Select ONE answer.*",
+ "stem_markdown": "An organization is developing an AI-based system for unmanned autonomous driving without considering the risks associated with the system.\n\nWhich of the following standards is MOST likely being violated in this scenario, which could result in severe penalties?\n\n- a) ISO/IEC/IEEE TR 29119-11\n- b) OECD AI Principles\n- c) EU AI Act\n- d) ISO/IEC 25059\n\n*Select ONE answer.*",
+ "item_sets": [],
+ "options": [
+  {
+   "key": "a",
+   "text": "ISO/IEC/IEEE TR 29119-11"
+  },
+  {
+   "key": "b",
+   "text": "OECD AI Principles"
+  },
+  {
+   "key": "c",
+   "text": "EU AI Act"
+  },
+  {
+   "key": "d",
+   "text": "ISO/IEC 25059"
+  }
+ ],
+ "figures": [],
+ "quirks": [],
+ "answer": {
+  "heading_verbatim": "#### Question A3 \u2014 Correct answer: c",
+  "key_correct": "c",
+  "correct_keys": [
+   "c"
+  ],
+  "lo_key": "AI-1.1.8",
+  "lo_section": "AI-1.1.8",
+  "lo_conflict": false,
+  "k_level": "K2",
+  "points": 1,
+  "rationale_style": "per_option",
+  "preamble_markdown": null,
+  "rationale_units": [
+   {
+    "key": "a",
+    "verdict": "incorrect",
+    "verdict_phrase": "Is not correct.",
+    "text": "ISO/IEC/IEEE TR 29119-11 is not about testing AI, but, as with all standards, it provides guidelines and does not impose penalties for non-compliance."
+   },
+   {
+    "key": "b",
+    "verdict": "incorrect",
+    "verdict_phrase": "Is not correct.",
+    "text": "OECD is a non-mandatory set of guidelines."
+   },
+   {
+    "key": "c",
+    "verdict": "correct",
+    "verdict_phrase": "Is correct.",
+    "text": "If the system is covered by the EU AI Act (i.e., it will be used in Europe), failing to follow a risk-based approach can result in severe penalties."
+   },
+   {
+    "key": "d",
+    "verdict": "incorrect",
+    "verdict_phrase": "Is not correct.",
+    "text": "ISO/IEC 25059 describes the unique quality characteristics of AI systems, but, like all standards, it provides guidelines rather than imposing penalties for non-compliance."
+   }
+  ],
+  "conclusion_markdown": null,
+  "answer_figures": [],
+  "new_type_answer": null,
+  "restatement_drift": [],
+  "quirks": []
+ },
+ "raw_question_markdown": "### Question A3 (1 Point)\n\nAn organization is developing an AI-based system for unmanned autonomous driving without considering the risks associated with the system.\n\nWhich of the following standards is MOST likely being violated in this scenario, which could result in severe penalties?\n\n- a) ISO/IEC/IEEE TR 29119-11\n- b) OECD AI Principles\n- c) EU AI Act\n- d) ISO/IEC 25059\n\n*Select ONE answer.*",
+ "raw_answer_markdown": "#### Question A3 \u2014 Correct answer: c\n\n**LO:** AI-1.1.8 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is not correct.** ISO/IEC/IEEE TR 29119-11 is not about testing AI, but, as with all standards, it provides guidelines and does not impose penalties for non-compliance.\n- **b) Is not correct.** OECD is a non-mandatory set of guidelines.\n- **c) Is correct.** If the system is covered by the EU AI Act (i.e., it will be used in Europe), failing to follow a risk-based approach can result in severe penalties.\n- **d) Is not correct.** ISO/IEC 25059 describes the unique quality characteristics of AI systems, but, like all standards, it provides guidelines rather than imposing penalties for non-compliance."
+}

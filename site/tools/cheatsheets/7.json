@@ -1,0 +1,107 @@
+{
+ "chapter": 7,
+ "blocks": [
+  {
+   "type": "keyTerms",
+   "items": [
+    {
+     "term": "Installability testing",
+     "def": "Verifies the MLS can be successfully installed, configured, and uninstalled across all supported environments (dependencies, framework compatibility, installation scripts).",
+     "src": "7.1.2 L1384"
+    },
+    {
+     "term": "Rollback testing",
+     "def": "Verifies capability to revert to a previously stable state after a degraded or failed deployment; must be performed before deployment to confirm rollback readiness.",
+     "src": "7.1.2 L1385"
+    },
+    {
+     "term": "Canary testing",
+     "def": "Releases an updated model to a small subset of production traffic (e.g., 5% of users), monitoring real-time metrics to detect regressions before full rollout.",
+     "src": "7.1.2 L1386"
+    },
+    {
+     "term": "Shadow testing",
+     "def": "Runs a new model in parallel with the current production model in real-time, same requests to both, without affecting live responses; uncovers performance regressions and data drift pre-deployment.",
+     "src": "7.1.2 L1387"
+    },
+    {
+     "term": "Model conversion testing",
+     "def": "Verifies the model retains acceptable predictive accuracy, consistent behavior, and operational efficiency after conversion from training format to deployment format.",
+     "src": "7.1.2 L1388"
+    },
+    {
+     "term": "Cross-device testing / API testing",
+     "def": "Cross-device: correct performance across deployment targets (mobile, edge, cloud). API testing: standards-compliant interfaces, correct input/output handling, error messages.",
+     "src": "7.1.2 L1389-L1390"
+    }
+   ]
+  },
+  {
+   "type": "mustKnow",
+   "title": "Scope & key rules",
+   "items": [
+    {
+     "text": "This chapter addresses risks from ML development tools, configuration choices, and deployment mechanisms — not the ML model itself. Approaches include API testing, ML functional performance testing, A/B testing, back-to-back testing, and reviews.",
+     "src": "7.1 L1353"
+    },
+    {
+     "text": "Rollback testing must be performed before deployment to confirm rollback readiness; it may cover only the model or the complete system (e.g., including the data pipeline).",
+     "src": "7.1.2 L1385"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "ML development risks → mitigations",
+   "columns": [
+    "Potential risk",
+    "Mitigation"
+   ],
+   "rows": [
+    [
+     "Incorrect/unintended use of framework APIs (TensorFlow, PyTorch)",
+     "API testing"
+    ],
+    [
+     "Sub-optimal framework / algorithm selection",
+     "Suitability review; A/B testing"
+    ],
+    [
+     "Defective framework installation or build",
+     "Smoke testing"
+    ],
+    [
+     "Library defect; defective algorithm implementation",
+     "ML functional performance testing; Back-to-back testing"
+    ],
+    [
+     "Sub-optimal hyperparameters (network structure, learning rate)",
+     "ML functional performance testing; A/B testing"
+    ],
+    [
+     "Defective data allocation to train/val/test sets",
+     "Data allocation review"
+    ],
+    [
+     "Deployment defect; model incompatible with environment",
+     "Smoke testing; MLS deployment testing"
+    ],
+    [
+     "Deployed model no improvement over current",
+     "Shadow testing"
+    ]
+   ],
+   "src": "7.1.1 L1359-L1378"
+  },
+  {
+   "type": "traps",
+   "items": [
+    {
+     "confusion": "Canary vs Shadow testing",
+     "text": "Canary releases the new model to a small subset of real production traffic (it serves live users); shadow runs new and current models in parallel on the same requests without affecting live responses.",
+     "src": "7.1.2 L1386-L1387"
+    }
+   ]
+  }
+ ]
+}

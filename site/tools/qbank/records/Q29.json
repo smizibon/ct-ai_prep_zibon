@@ -1,0 +1,42 @@
+{
+  "id": "Q29",
+  "set": "main",
+  "heading_verbatim": "### Question 29 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "Which of the following BEST explains the role of multiple annotations in data label correctness testing?\n\n- a) Multiple annotations can be used to automate label verification to ensure consistency\n- b) Multiple annotations can point to label defects based on the comparison of annotations\n- c) Multiple annotations compare label distributions across datasets to detect potential defects\n- d) Multiple annotations point to defects in data points with high model loss\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {"key": "a", "text": "Multiple annotations can be used to automate label verification to ensure consistency"},
+    {"key": "b", "text": "Multiple annotations can point to label defects based on the comparison of annotations"},
+    {"key": "c", "text": "Multiple annotations compare label distributions across datasets to detect potential defects"},
+    {"key": "d", "text": "Multiple annotations point to defects in data points with high model loss"}
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 29 — Correct answer: b",
+    "key_correct": "b",
+    "correct_keys": ["b"],
+    "lo_key": "AI-5.1.6",
+    "lo_section": "AI-5.1.7",
+    "lo_conflict": true,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {"key": "a", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "Multiple annotations are not normally automated. Multiple annotation typically relies on human annotators and does not ensure consistency; instead, it highlights inconsistency."},
+      {"key": "b", "verdict": "correct", "verdict_phrase": "Is correct.", "text": "Multiple annotation involves data points being independently labeled by multiple annotators. Comparison of these labels leads to the discovery of disagreements among annotators, highlighting potential defects."},
+      {"key": "c", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "Comparing label distributions is a part of data distribution analysis, not multiple annotations."},
+      {"key": "d", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "Flagging high-loss data points is the role of model loss analysis, not multiple annotations."}
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": ["lo-key-table-AI-5.1.6-vs-section-metadata-AI-5.1.7"]
+  },
+  "raw_question_markdown": "### Question 29 (1 Point)\n\nWhich of the following BEST explains the role of multiple annotations in data label correctness testing?\n\n- a) Multiple annotations can be used to automate label verification to ensure consistency\n- b) Multiple annotations can point to label defects based on the comparison of annotations\n- c) Multiple annotations compare label distributions across datasets to detect potential defects\n- d) Multiple annotations point to defects in data points with high model loss\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 29 — Correct answer: b\n\n**LO:** AI-5.1.7 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is not correct.** Multiple annotations are not normally automated. Multiple annotation typically relies on human annotators and does not ensure consistency; instead, it highlights inconsistency.\n- **b) Is correct.** Multiple annotation involves data points being independently labeled by multiple annotators. Comparison of these labels leads to the discovery of disagreements among annotators, highlighting potential defects.\n- **c) Is not correct.** Comparing label distributions is a part of data distribution analysis, not multiple annotations.\n- **d) Is not correct.** Flagging high-loss data points is the role of model loss analysis, not multiple annotations."
+}

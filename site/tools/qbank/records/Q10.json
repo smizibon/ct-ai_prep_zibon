@@ -1,0 +1,124 @@
+{
+  "id": "Q10",
+  "set": "main",
+  "heading_verbatim": "### Question 10 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "Given the following forms of ML:\n\n1. Clustering\n2. Reinforcement learning\n3. Classification\n4. Regression\n\nAnd the following examples:\n\n- A. The mobile game app updates its feedback, response timing, and the number of user options it provides based on how much the players spend\n- B. The language translation app searches the internet to find text provided in multiple languages to improve its translation function\n- C. A manufacturing company predicts when equipment is likely to fail based on sensor data and historical maintenance records\n- D. A social network platform groups its users into communities based on their interactions with each other and their stated interests\n\nWhich of the following BEST matches the examples with the forms of ML?\n\n- a) 1B – 2D – 3A – 4C\n- b) 1C – 2A – 3D – 4B\n- c) 1D – 2A – 3B – 4C\n- d) 1D – 2C – 3B – 4A\n\n*Select ONE answer.*",
+  "item_sets": [
+    {
+      "role": "match_left",
+      "key_style": "integer",
+      "items": [
+        {
+          "key": "1",
+          "text": "Clustering"
+        },
+        {
+          "key": "2",
+          "text": "Reinforcement learning"
+        },
+        {
+          "key": "3",
+          "text": "Classification"
+        },
+        {
+          "key": "4",
+          "text": "Regression"
+        }
+      ]
+    },
+    {
+      "role": "match_right",
+      "key_style": "upper_letter",
+      "items": [
+        {
+          "key": "A",
+          "text": "The mobile game app updates its feedback, response timing, and the number of user options it provides based on how much the players spend"
+        },
+        {
+          "key": "B",
+          "text": "The language translation app searches the internet to find text provided in multiple languages to improve its translation function"
+        },
+        {
+          "key": "C",
+          "text": "A manufacturing company predicts when equipment is likely to fail based on sensor data and historical maintenance records"
+        },
+        {
+          "key": "D",
+          "text": "A social network platform groups its users into communities based on their interactions with each other and their stated interests"
+        }
+      ]
+    }
+  ],
+  "options": [
+    {
+      "key": "a",
+      "text": "1B – 2D – 3A – 4C"
+    },
+    {
+      "key": "b",
+      "text": "1C – 2A – 3D – 4B"
+    },
+    {
+      "key": "c",
+      "text": "1D – 2A – 3B – 4C"
+    },
+    {
+      "key": "d",
+      "text": "1D – 2C – 3B – 4A"
+    }
+  ],
+  "figures": [],
+  "quirks": [
+    "Options are mapping codes with spaced en-dashes (e.g. '1B – 2D – 3A – 4C')",
+    "Question was updated in sample exam v2.1 (Revision History: 'Update Q#10')"
+  ],
+  "answer": {
+    "heading_verbatim": "### Question 10 — Correct answer: c",
+    "key_correct": "c",
+    "correct_keys": [
+      "c"
+    ],
+    "lo_key": "AI-3.1.1",
+    "lo_section": "AI-3.1.1",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_letter",
+    "preamble_markdown": "Considering the descriptions of example systems:",
+    "rationale_units": [
+      {
+        "key": "A",
+        "verdict": "neutral",
+        "verdict_phrase": null,
+        "text": "The amount spent can be considered the reward function for this system, with the system changing its behavior to increase the amount spent. Hence, this is an example of Reinforcement Learning (2)."
+      },
+      {
+        "key": "B",
+        "verdict": "neutral",
+        "verdict_phrase": null,
+        "text": "The app utilizes text in what can be considered a source language and a corresponding 'correct' translation of this source, employing a form of supervised learning with no explicit reward function mentioned. Classification uses parallel training data—pairs of matching sentences in two languages (e.g., \"Hello\" in English and \"Bonjour\" in French)—where each pair has a label linking source to target text. The model learns mappings via supervised training, encoding input text features and predicting the correct translation output, minimizing errors across many such pairs to generalize to new sentences. Hence, this is an example of Classification (3)."
+      },
+      {
+        "key": "C",
+        "verdict": "neutral",
+        "verdict_phrase": null,
+        "text": "Regression is used in this scenario to predict a continuous outcome (in this case, the time until equipment failure) based on a set of input variables (sensor data and historical maintenance records). By analyzing the relationship between these variables, the ML model can identify patterns and trends that indicate when equipment is at risk of failure. Hence, this is an example of Regression (4)."
+      },
+      {
+        "key": "D",
+        "verdict": "neutral",
+        "verdict_phrase": null,
+        "text": "By analyzing user interactions (e.g., likes, comments, shared content) and stated interests, the social network platform can identify patterns and similarities among users. These patterns can then be used to group users into communities or \"clusters\" that share common interests and behaviors. Hence, this is an example of Clustering (1)."
+      }
+    ],
+    "conclusion_markdown": "Hence, 1D – 2A – 3B – 4C, is correct and so option c) is the correct option.",
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 10 (1 Point)\n\nGiven the following forms of ML:\n\n1. Clustering\n2. Reinforcement learning\n3. Classification\n4. Regression\n\nAnd the following examples:\n\n- A. The mobile game app updates its feedback, response timing, and the number of user options it provides based on how much the players spend\n- B. The language translation app searches the internet to find text provided in multiple languages to improve its translation function\n- C. A manufacturing company predicts when equipment is likely to fail based on sensor data and historical maintenance records\n- D. A social network platform groups its users into communities based on their interactions with each other and their stated interests\n\nWhich of the following BEST matches the examples with the forms of ML?\n\n- a) 1B – 2D – 3A – 4C\n- b) 1C – 2A – 3D – 4B\n- c) 1D – 2A – 3B – 4C\n- d) 1D – 2C – 3B – 4A\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 10 — Correct answer: c\n\n**LO:** AI-3.1.1 | **K-Level:** K2 | **Points:** 1\n\nConsidering the descriptions of example systems:\n\n- **A.** The amount spent can be considered the reward function for this system, with the system changing its behavior to increase the amount spent. Hence, this is an example of Reinforcement Learning (2).\n- **B.** The app utilizes text in what can be considered a source language and a corresponding 'correct' translation of this source, employing a form of supervised learning with no explicit reward function mentioned. Classification uses parallel training data—pairs of matching sentences in two languages (e.g., \"Hello\" in English and \"Bonjour\" in French)—where each pair has a label linking source to target text. The model learns mappings via supervised training, encoding input text features and predicting the correct translation output, minimizing errors across many such pairs to generalize to new sentences. Hence, this is an example of Classification (3).\n- **C.** Regression is used in this scenario to predict a continuous outcome (in this case, the time until equipment failure) based on a set of input variables (sensor data and historical maintenance records). By analyzing the relationship between these variables, the ML model can identify patterns and trends that indicate when equipment is at risk of failure. Hence, this is an example of Regression (4).\n- **D.** By analyzing user interactions (e.g., likes, comments, shared content) and stated interests, the social network platform can identify patterns and similarities among users. These patterns can then be used to group users into communities or \"clusters\" that share common interests and behaviors. Hence, this is an example of Clustering (1).\n\nHence, 1D – 2A – 3B – 4C, is correct and so option c) is the correct option."
+}

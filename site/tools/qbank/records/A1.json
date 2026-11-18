@@ -1,0 +1,155 @@
+{
+  "id": "A1",
+  "set": "appendix",
+  "heading_verbatim": "### Question A1 (1 Point)",
+  "points": 1,
+  "selection_mode": "assign_categories",
+  "select_instruction_verbatim": null,
+  "stem_markdown": "Given the following example AI systems on the left, and the three different forms of AI on the right:\n\nExample AI systems *(from figure on PDF page 26)*:\n\n![Question A1 figure: five example AI systems listed on the left, to be matched with the three forms of AI (Narrow AI, General AI, Super AI)](figures/questions_p26_A1.png)\n\n- An artificial mind that generates entirely new forms of art, music, and mathematics that are incomprehensible to humans.\n- A system that manages complex daily schedules, learns new recipes from a video, and holds conversations about novels it has just read.\n- A system that can independently learn any field of science and collaborate with human scientists by proposing novel hypotheses and original experiments.\n- A system that examines radiological images to detect the specific signatures of cancerous tumors.\n- A language translation model that can convert written text from French to Spanish.\n\nForms of AI:\n\n- Narrow AI\n- General AI\n- Super AI\n\nAssign each example AI system to a form of AI. No form of AI can be left empty.",
+  "item_sets": [
+    {
+      "role": "category_list",
+      "key_style": "none",
+      "items": [
+        {
+          "key": "",
+          "text": "Narrow AI"
+        },
+        {
+          "key": "",
+          "text": "General AI"
+        },
+        {
+          "key": "",
+          "text": "Super AI"
+        }
+      ]
+    },
+    {
+      "role": "statements",
+      "key_style": "none",
+      "items": [
+        {
+          "key": "",
+          "text": "An artificial mind that generates entirely new forms of art, music, and mathematics that are incomprehensible to humans."
+        },
+        {
+          "key": "",
+          "text": "A system that manages complex daily schedules, learns new recipes from a video, and holds conversations about novels it has just read."
+        },
+        {
+          "key": "",
+          "text": "A system that can independently learn any field of science and collaborate with human scientists by proposing novel hypotheses and original experiments."
+        },
+        {
+          "key": "",
+          "text": "A system that examines radiological images to detect the specific signatures of cancerous tumors."
+        },
+        {
+          "key": "",
+          "text": "A language translation model that can convert written text from French to Spanish."
+        }
+      ]
+    }
+  ],
+  "options": null,
+  "figures": [
+    {
+      "path": "figures/questions_p26_A1.png",
+      "alt": "Question A1 figure: five example AI systems listed on the left, to be matched with the three forms of AI (Narrow AI, General AI, Super AI)",
+      "note": "(from figure on PDF page 26)",
+      "transcription": "- An artificial mind that generates entirely new forms of art, music, and mathematics that are incomprehensible to humans.\n- A system that manages complex daily schedules, learns new recipes from a video, and holds conversations about novels it has just read.\n- A system that can independently learn any field of science and collaborate with human scientists by proposing novel hypotheses and original experiments.\n- A system that examines radiological images to detect the specific signatures of cancerous tumors.\n- A language translation model that can convert written text from French to Spanish.\n\nForms of AI:\n\n- Narrow AI\n- General AI\n- Super AI"
+    }
+  ],
+  "quirks": [
+    "Questions document appendix section heading has source typo '## AppendiDx: Additional Questions' (preserved deliberately)",
+    "New question type: correct answer given only as a figure in the answers document (PDF page 32), with a text transcription",
+    "LO AI-1.1.2 is shared with Q2 in the answer key"
+  ],
+  "answer": {
+    "heading_verbatim": "#### Question A1 — New question type",
+    "key_correct": "New question type",
+    "correct_keys": [],
+    "lo_key": "AI-1.1.2",
+    "lo_section": "AI-1.1.2",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "points": 1,
+    "rationale_style": "figure_transcription_items",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {
+        "key": "art-mind",
+        "verdict": "neutral",
+        "verdict_phrase": null,
+        "text": "An artificial mind that generates entirely new forms of art, music, and mathematics that are incomprehensible to humans.\n  This system demonstrates creativity and intelligence far beyond human capability, producing outputs not understandable by people. Such abilities surpass both human-level general intelligence and any current artificial general intelligence, and so this is an example of super AI."
+      },
+      {
+        "key": "daily-schedules",
+        "verdict": "neutral",
+        "verdict_phrase": null,
+        "text": "A system that manages complex daily schedules, learns new recipes from a video, and holds conversations about novels it has just read.\n  This AI performs a wide range of complex tasks that require learning, perception, planning, and language understanding, comparable to a human's versatility. It shows adaptability and competency across novel domains. Thus, it is an example of AGI."
+      },
+      {
+        "key": "science-collaboration",
+        "verdict": "neutral",
+        "verdict_phrase": null,
+        "text": "A system that can independently learn any field of science and collaborate with human scientists by proposing novel hypotheses and original experiments.\n  This system has the ability to autonomously and flexibly master multiple scientific disciplines and engage in creative research. Its competence covers learning, reasoning, and innovative thinking at a human expert's level. Thus, it is an example of AGI."
+      },
+      {
+        "key": "radiological-tumors",
+        "verdict": "neutral",
+        "verdict_phrase": null,
+        "text": "A system that examines radiological images to detect the specific signatures of cancerous tumors.\n  This AI excels at a well-defined, specialized task (medical image analysis) without broader understanding or abilities outside of its domain. Its application is confined to pattern recognition within radiological data and does not extend to generalized cognition. Thus, it is an example of narrow AI."
+      },
+      {
+        "key": "french-spanish",
+        "verdict": "neutral",
+        "verdict_phrase": null,
+        "text": "A language translation model that can convert written text from French to Spanish.\n  This model is built to perform a single function - translating between two languages. It demonstrates expertise in one bounded task and does not possess comprehensive understanding or adaptability beyond language conversion. Thus, it is an example of narrow AI."
+      }
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [
+      {
+        "kind": "answer",
+        "path": "figures/answers_p32.png",
+        "alt": "Question A1 answer figure: the five example systems placed into the three forms of AI",
+        "context_note": "Correct answer *(given as a figure in the source document, PDF page 32)*:",
+        "transcription": "*(Transcription of the answer figure — Narrow AI: \"A system that examines radiological images to detect the specific signatures of cancerous tumors.\"; \"A language translation model that can convert written text from French to Spanish.\" General AI: \"A system that manages complex daily schedules, learns new recipes from a video, and holds conversations about novels it has just read.\"; \"A system that can independently learn any field of science and collaborate with human scientists by proposing novel hypotheses and original experiments.\" Super AI: \"An artificial mind that generates entirely new forms of art, music, and mathematics that are incomprehensible to humans.\")*"
+      }
+    ],
+    "new_type_answer": {
+      "type": "assign_categories",
+      "assignments": [
+        {
+          "category": "Narrow AI",
+          "items": [
+            "A system that examines radiological images to detect the specific signatures of cancerous tumors.",
+            "A language translation model that can convert written text from French to Spanish."
+          ]
+        },
+        {
+          "category": "General AI",
+          "items": [
+            "A system that manages complex daily schedules, learns new recipes from a video, and holds conversations about novels it has just read.",
+            "A system that can independently learn any field of science and collaborate with human scientists by proposing novel hypotheses and original experiments."
+          ]
+        },
+        {
+          "category": "Super AI",
+          "items": [
+            "An artificial mind that generates entirely new forms of art, music, and mathematics that are incomprehensible to humans."
+          ]
+        }
+      ]
+    },
+    "restatement_drift": [],
+    "quirks": [
+      "key_correct cell in the appendix answer-key table reads 'New question type' rather than a letter",
+      "Rationale bullets use 'AGI' as shorthand for General AI"
+    ]
+  },
+  "raw_question_markdown": "### Question A1 (1 Point)\n\nGiven the following example AI systems on the left, and the three different forms of AI on the right:\n\nExample AI systems *(from figure on PDF page 26)*:\n\n![Question A1 figure: five example AI systems listed on the left, to be matched with the three forms of AI (Narrow AI, General AI, Super AI)](figures/questions_p26_A1.png)\n\n- An artificial mind that generates entirely new forms of art, music, and mathematics that are incomprehensible to humans.\n- A system that manages complex daily schedules, learns new recipes from a video, and holds conversations about novels it has just read.\n- A system that can independently learn any field of science and collaborate with human scientists by proposing novel hypotheses and original experiments.\n- A system that examines radiological images to detect the specific signatures of cancerous tumors.\n- A language translation model that can convert written text from French to Spanish.\n\nForms of AI:\n\n- Narrow AI\n- General AI\n- Super AI\n\nAssign each example AI system to a form of AI. No form of AI can be left empty.",
+  "raw_answer_markdown": "#### Question A1 — New question type\n\n**LO:** AI-1.1.2 | **K-Level:** K2 | **Points:** 1\n\nCorrect answer *(given as a figure in the source document, PDF page 32)*:\n\n![Question A1 answer figure: the five example systems placed into the three forms of AI](figures/answers_p32.png)\n\n*(Transcription of the answer figure — Narrow AI: \"A system that examines radiological images to detect the specific signatures of cancerous tumors.\"; \"A language translation model that can convert written text from French to Spanish.\" General AI: \"A system that manages complex daily schedules, learns new recipes from a video, and holds conversations about novels it has just read.\"; \"A system that can independently learn any field of science and collaborate with human scientists by proposing novel hypotheses and original experiments.\" Super AI: \"An artificial mind that generates entirely new forms of art, music, and mathematics that are incomprehensible to humans.\")*\n\nExplanation / Rationale:\n\nConsidering each of the example systems in turn:\n\n- An artificial mind that generates entirely new forms of art, music, and mathematics that are incomprehensible to humans.\n  This system demonstrates creativity and intelligence far beyond human capability, producing outputs not understandable by people. Such abilities surpass both human-level general intelligence and any current artificial general intelligence, and so this is an example of super AI.\n- A system that manages complex daily schedules, learns new recipes from a video, and holds conversations about novels it has just read.\n  This AI performs a wide range of complex tasks that require learning, perception, planning, and language understanding, comparable to a human's versatility. It shows adaptability and competency across novel domains. Thus, it is an example of AGI.\n- A system that can independently learn any field of science and collaborate with human scientists by proposing novel hypotheses and original experiments.\n  This system has the ability to autonomously and flexibly master multiple scientific disciplines and engage in creative research. Its competence covers learning, reasoning, and innovative thinking at a human expert's level. Thus, it is an example of AGI.\n- A system that examines radiological images to detect the specific signatures of cancerous tumors.\n  This AI excels at a well-defined, specialized task (medical image analysis) without broader understanding or abilities outside of its domain. Its application is confined to pattern recognition within radiological data and does not extend to generalized cognition. Thus, it is an example of narrow AI.\n- A language translation model that can convert written text from French to Spanish.\n  This model is built to perform a single function - translating between two languages. It demonstrates expertise in one bounded task and does not possess comprehensive understanding or adaptability beyond language conversion. Thus, it is an example of narrow AI."
+}

@@ -1,0 +1,42 @@
+{
+  "id": "Q26",
+  "set": "main",
+  "heading_verbatim": "### Question 26 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "What is a KEY difference in the test strategy for a data pipeline built for training versus one designed for an operational system?\n\n- a) Testing an operational pipeline would focus mainly on validating individual transformation scripts, whereas a training pipeline's testing would prioritize end-to-end system testing\n- b) A training pipeline would rely almost exclusively on fault injection and back-to-back tests, while an operational pipeline would be limited to unit and component integration testing\n- c) Configuration management reviews would be critical for operational pipelines but are considered unnecessary for the less formal nature of exploratory training pipelines\n- d) Testing a training pipeline would primarily focus on determining that data is handled correctly, while an operational pipeline's testing would emphasize high performance and reliability under load\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {"key": "a", "text": "Testing an operational pipeline would focus mainly on validating individual transformation scripts, whereas a training pipeline's testing would prioritize end-to-end system testing"},
+    {"key": "b", "text": "A training pipeline would rely almost exclusively on fault injection and back-to-back tests, while an operational pipeline would be limited to unit and component integration testing"},
+    {"key": "c", "text": "Configuration management reviews would be critical for operational pipelines but are considered unnecessary for the less formal nature of exploratory training pipelines"},
+    {"key": "d", "text": "Testing a training pipeline would primarily focus on determining that data is handled correctly, while an operational pipeline's testing would emphasize high performance and reliability under load"}
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 26 — Correct answer: d",
+    "key_correct": "d",
+    "correct_keys": ["d"],
+    "lo_key": "AI-5.1.3",
+    "lo_section": "AI-5.1.3",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {"key": "a", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "Both pipeline types would benefit from a full layered approach. An operational pipeline would require extensive end-to-end system testing, not just validation of individual scripts."},
+      {"key": "b", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "Both pipeline types would use a range of tests. Limiting one to only system level test approach and the other to only component and integration level test approach is not following a layered approach."},
+      {"key": "c", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "Configuration management verifies correct versions are used 'across training, testing, and production', implying it is important for both types of pipelines to provide consistency and reproducibility, not just operational ones."},
+      {"key": "d", "verdict": "correct", "verdict_phrase": "Is correct.", "text": "The purpose of the pipeline dictates the test strategy. Training pipelines prioritize generating high quality data, whereas live operational pipelines focus on non-functional aspects such as performance efficiency, scalability, and AI robustness."}
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 26 (1 Point)\n\nWhat is a KEY difference in the test strategy for a data pipeline built for training versus one designed for an operational system?\n\n- a) Testing an operational pipeline would focus mainly on validating individual transformation scripts, whereas a training pipeline's testing would prioritize end-to-end system testing\n- b) A training pipeline would rely almost exclusively on fault injection and back-to-back tests, while an operational pipeline would be limited to unit and component integration testing\n- c) Configuration management reviews would be critical for operational pipelines but are considered unnecessary for the less formal nature of exploratory training pipelines\n- d) Testing a training pipeline would primarily focus on determining that data is handled correctly, while an operational pipeline's testing would emphasize high performance and reliability under load\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 26 — Correct answer: d\n\n**LO:** AI-5.1.3 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is not correct.** Both pipeline types would benefit from a full layered approach. An operational pipeline would require extensive end-to-end system testing, not just validation of individual scripts.\n- **b) Is not correct.** Both pipeline types would use a range of tests. Limiting one to only system level test approach and the other to only component and integration level test approach is not following a layered approach.\n- **c) Is not correct.** Configuration management verifies correct versions are used 'across training, testing, and production', implying it is important for both types of pipelines to provide consistency and reproducibility, not just operational ones.\n- **d) Is correct.** The purpose of the pipeline dictates the test strategy. Training pipelines prioritize generating high quality data, whereas live operational pipelines focus on non-functional aspects such as performance efficiency, scalability, and AI robustness."
+}

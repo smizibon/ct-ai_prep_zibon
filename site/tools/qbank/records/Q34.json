@@ -1,0 +1,80 @@
+{
+  "id": "Q34",
+  "set": "main",
+  "heading_verbatim": "### Question 34 (2 Points)",
+  "points": 2,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "An AI-based mobile phone search system provides a list of phones that it believes are most suitable for the user based on its knowledge of the user's previous mobile phone usage and their specified preferences.\n\nMetamorphic testing is being used with the following source test case:\n\n**Inputs**\n\n| Input                 | Value            |\n|-----------------------|------------------|\n| Selected price range  | $200-$300        |\n| 3D camera             | Don't care       |\n| Screen size           | mid to large     |\n| OS                    | Android or iOS   |\n| Battery Life          | Don't care       |\n\n**Outputs**\n\nRecommended Phones:\n\n- SnapHappy_X1\n- SnapHappy_M2\n- SnapHappy_M3\n- ClickNow_1000x\n- ClickNow_1000xs\n\nAnd this test data for two corresponding follow-up test cases:\n\n**Input T1**\n\n| Input                 | Value            |\n|-----------------------|------------------|\n| Selected price range  | $200-$300        |\n| 3D camera             | yes              |\n| Screen size           | mid to large     |\n| OS                    | Android or iOS   |\n| Battery Life          | Don't care       |\n\n**Input T2**\n\n| Input                 | Value            |\n|-----------------------|------------------|\n| Selected price range  | $200-$300        |\n| 3D camera             | no               |\n| Screen size           | mid to large     |\n| OS                    | Android or iOS   |\n| Battery Life          | Don't care       |\n\nWhich of the following options is MOST likely to be a valid list of recommended phones for the follow-up test cases?\n\n- a) T1: SnapHappy_X1, SnapHappy_M2\n      T2: ClickNow_1000x, ClickNow_1000xs\n- b) T1: SnapHappy_M2, SnapHappy_M3, ClickNow_1000xs\n      T2: SnapHappy_X1, ClickNow_1000x\n- c) T1: SnapHappy_X1, SnapHappy_M2, SnapHappy_M3, ClickNow_1000x, ClickNow_1000xs\n      T2: SnapHappy_X1, SnapHappy_M2, SnapHappy_M3\n- d) T1: SnapHappy_X1, SnapHappy_M2, SnapHappy_M3, ClickNow_1000x, ClickNow_1000xs\n      T2: SnapHappy_X1, SnapHappy_M2, SnapHappy_M3, ClickNow_1000x, ClickNow_1000xs\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {
+      "key": "a",
+      "text": "T1: SnapHappy_X1, SnapHappy_M2\n      T2: ClickNow_1000x, ClickNow_1000xs"
+    },
+    {
+      "key": "b",
+      "text": "T1: SnapHappy_M2, SnapHappy_M3, ClickNow_1000xs\n      T2: SnapHappy_X1, ClickNow_1000x"
+    },
+    {
+      "key": "c",
+      "text": "T1: SnapHappy_X1, SnapHappy_M2, SnapHappy_M3, ClickNow_1000x, ClickNow_1000xs\n      T2: SnapHappy_X1, SnapHappy_M2, SnapHappy_M3"
+    },
+    {
+      "key": "d",
+      "text": "T1: SnapHappy_X1, SnapHappy_M2, SnapHappy_M3, ClickNow_1000x, ClickNow_1000xs\n      T2: SnapHappy_X1, SnapHappy_M2, SnapHappy_M3, ClickNow_1000x, ClickNow_1000xs"
+    }
+  ],
+  "figures": [],
+  "quirks": [
+    "options-span-two-lines-with-indent"
+  ],
+  "answer": {
+    "heading_verbatim": "### Question 34 — Correct answer: b",
+    "key_correct": "b",
+    "correct_keys": [
+      "b"
+    ],
+    "lo_key": "AI-6.1.5",
+    "lo_section": "AI-6.1.5",
+    "lo_conflict": false,
+    "k_level": "K3",
+    "rationale_style": "preamble_plus_per_option",
+    "preamble_markdown": "Given the following follow-up test cases:\n\nTest case T1 differs from the source test case by the change in requirements for a 3D camera; it is now more specific. A 3D camera must be included. So, that means the follow-up expected results can only include the original test results at most (the previously recommended phones but with a 3D camera).\n\nTest case T2 also differs from the source test case by the change in requirements for a 3D camera; it is also more specific. No 3D camera should be included. So, that means the follow-up expected results can only include the original test results at most (the previously recommended phones but without a 3D camera).\n\nAs T1 lists phones with a 3D camera, the remaining phones from the source test case must be those without a 3D camera, and therefore, they should be in T2.\n\nTherefore, T1 and T2 combined should contain all the cameras from the source test case, but with no overlap between the two.",
+    "rationale_units": [
+      {
+        "key": "a",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "The camera SnapHappy M3 is missing in the combined outputs of T1 and T2"
+      },
+      {
+        "key": "b",
+        "verdict": "correct",
+        "verdict_phrase": "Is correct.",
+        "text": "There is no overlap between the outputs of T1 and T2, and no camera is missing."
+      },
+      {
+        "key": "c",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "The SnapHappy cameras are listed for both test cases."
+      },
+      {
+        "key": "d",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "The output of the two test cases is identical, despite the differing requirements for the 3D camera."
+      }
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": [
+      "rationale-bullet-option-a-missing-trailing-period"
+    ]
+  },
+  "raw_question_markdown": "### Question 34 (2 Points)\n\nAn AI-based mobile phone search system provides a list of phones that it believes are most suitable for the user based on its knowledge of the user's previous mobile phone usage and their specified preferences.\n\nMetamorphic testing is being used with the following source test case:\n\n**Inputs**\n\n| Input                 | Value            |\n|-----------------------|------------------|\n| Selected price range  | $200-$300        |\n| 3D camera             | Don't care       |\n| Screen size           | mid to large     |\n| OS                    | Android or iOS   |\n| Battery Life          | Don't care       |\n\n**Outputs**\n\nRecommended Phones:\n\n- SnapHappy_X1\n- SnapHappy_M2\n- SnapHappy_M3\n- ClickNow_1000x\n- ClickNow_1000xs\n\nAnd this test data for two corresponding follow-up test cases:\n\n**Input T1**\n\n| Input                 | Value            |\n|-----------------------|------------------|\n| Selected price range  | $200-$300        |\n| 3D camera             | yes              |\n| Screen size           | mid to large     |\n| OS                    | Android or iOS   |\n| Battery Life          | Don't care       |\n\n**Input T2**\n\n| Input                 | Value            |\n|-----------------------|------------------|\n| Selected price range  | $200-$300        |\n| 3D camera             | no               |\n| Screen size           | mid to large     |\n| OS                    | Android or iOS   |\n| Battery Life          | Don't care       |\n\nWhich of the following options is MOST likely to be a valid list of recommended phones for the follow-up test cases?\n\n- a) T1: SnapHappy_X1, SnapHappy_M2\n      T2: ClickNow_1000x, ClickNow_1000xs\n- b) T1: SnapHappy_M2, SnapHappy_M3, ClickNow_1000xs\n      T2: SnapHappy_X1, ClickNow_1000x\n- c) T1: SnapHappy_X1, SnapHappy_M2, SnapHappy_M3, ClickNow_1000x, ClickNow_1000xs\n      T2: SnapHappy_X1, SnapHappy_M2, SnapHappy_M3\n- d) T1: SnapHappy_X1, SnapHappy_M2, SnapHappy_M3, ClickNow_1000x, ClickNow_1000xs\n      T2: SnapHappy_X1, SnapHappy_M2, SnapHappy_M3, ClickNow_1000x, ClickNow_1000xs\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 34 — Correct answer: b\n\n**LO:** AI-6.1.5 | **K-Level:** K3 | **Points:** 2\n\nGiven the following follow-up test cases:\n\nTest case T1 differs from the source test case by the change in requirements for a 3D camera; it is now more specific. A 3D camera must be included. So, that means the follow-up expected results can only include the original test results at most (the previously recommended phones but with a 3D camera).\n\nTest case T2 also differs from the source test case by the change in requirements for a 3D camera; it is also more specific. No 3D camera should be included. So, that means the follow-up expected results can only include the original test results at most (the previously recommended phones but without a 3D camera).\n\nAs T1 lists phones with a 3D camera, the remaining phones from the source test case must be those without a 3D camera, and therefore, they should be in T2.\n\nTherefore, T1 and T2 combined should contain all the cameras from the source test case, but with no overlap between the two.\n\n- **a) Is not correct.** The camera SnapHappy M3 is missing in the combined outputs of T1 and T2\n- **b) Is correct.** There is no overlap between the outputs of T1 and T2, and no camera is missing.\n- **c) Is not correct.** The SnapHappy cameras are listed for both test cases.\n- **d) Is not correct.** The output of the two test cases is identical, despite the differing requirements for the 3D camera."
+}

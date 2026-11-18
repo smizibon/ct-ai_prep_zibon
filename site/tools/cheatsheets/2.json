@@ -1,0 +1,139 @@
+{
+ "chapter": 2,
+ "blocks": [
+  {
+   "type": "keyTerms",
+   "items": [
+    {
+     "term": "AI functional correctness",
+     "def": "(product quality) ISO/IEC 25059 evaluates functional correctness by considering both correct and incorrect outputs and by defining acceptable thresholds for incorrect results, reflecting the inherent variability in AI-based system outputs.",
+     "src": "2.1.1 L463"
+    },
+    {
+     "term": "Functional adaptability",
+     "def": "(product quality; new sub-characteristic of functional suitability) The ability of the AI-based system to autonomously adapt to changes in its operational environment after it is deployed.",
+     "src": "2.1.1 L464"
+    },
+    {
+     "term": "User controllability",
+     "def": "(product quality; new sub-characteristic of interaction capability) A property of an AI-based system such that a human or another external agent can intervene in its functioning in a timely manner.",
+     "src": "2.1.1 L465"
+    },
+    {
+     "term": "Transparency",
+     "def": "(product quality AND quality in use; new sub-characteristic of interaction capability and of satisfaction) Relates to the degree to which appropriate information about the AI-based system is communicated to stakeholders.",
+     "src": "2.1.1 L466"
+    },
+    {
+     "term": "AI robustness",
+     "def": "(product quality; new sub-characteristic of reliability) The ability to maintain its level of AI functional correctness regardless of circumstances (biased, adversarial, or invalid data inputs, external interference, adverse environmental conditions, operator misuse).",
+     "src": "2.1.1 L467"
+    },
+    {
+     "term": "Intervenability",
+     "def": "(product quality; new sub-characteristic of security) The degree to which an operator can intervene in an AI-based system's functioning in a timely manner to prevent harm or hazard.",
+     "src": "2.1.1 L468"
+    },
+    {
+     "term": "Societal and ethical risk mitigation",
+     "def": "(quality in use; new sub-characteristic of 'Freedom from risk') Considers accountability, fairness and non-discrimination, professional responsibility, promotion of human values, privacy, safety and security, human control of technology, … environmental sustainability, and labor practices.",
+     "src": "2.1.1 L469"
+    },
+    {
+     "term": "Safety (safety-related system)",
+     "def": "Safety-related systems have the potential to cause injury or harm to people, property or the environment.",
+     "src": "2.1.2 L473"
+    }
+   ]
+  },
+  {
+   "type": "mustKnow",
+   "title": "Framework & safety essentials",
+   "items": [
+    {
+     "text": "ISO/IEC 25059 extends the ISO/IEC 25010 quality model for AI and evaluates AI-based systems from two perspectives: product quality and quality in use.",
+     "src": "2.1.1 L461"
+    },
+    {
+     "text": "Of the seven new/modified characteristics, only Transparency appears in both perspectives; Societal and ethical risk mitigation is defined only for quality in use, the other six only for product quality.",
+     "src": "2.1.1 L463-L469"
+    },
+    {
+     "text": "Five extra challenges when AI is used in safety-related systems: Specifications (goals vague, implicitly provided via training data, inadequate requirements traceability), Non-determinism, Self-learning (behavior moves away from originally tested behavior; manage how the model learns and the data it uses, or add safety guards such as a content moderation component), Explainability and Transparency (XAI techniques such as LIME exist but are not widely available and may compromise system performance), Evolving Regulations (the EU AI Act classifies AI used as safety components — aviation, medical devices, automotive — as high-risk).",
+     "src": "2.1.2 L475-L479"
+    },
+    {
+     "text": "For AI-based systems, acceptance criteria often need to be statistical, probabilistic, or threshold-based rather than binary — an additional testing challenge.",
+     "src": "2.2 L483"
+    },
+    {
+     "text": "Quality characteristics directly influence how test objectives are defined, how acceptance criteria are formulated, and how test results are interpreted.",
+     "src": "2.1.1 L461"
+    }
+   ]
+  },
+  {
+   "type": "table",
+   "title": "Example acceptance criteria (ISO/IEC 25059 characteristics + safety)",
+   "columns": [
+    "Characteristic",
+    "Example acceptance criteria (abbreviated)"
+   ],
+   "rows": [
+    [
+     "AI functional correctness",
+     "Accuracy of 95% for image recognition; Recall of 90% for defect prediction"
+    ],
+    [
+     "Functional adaptability",
+     "Max 20 s to adapt at an altitude threshold; recommend ≥40% documentaries after three full documentaries"
+    ],
+    [
+     "User controllability",
+     "Supervisor takes control of an autonomous drone within 0.5 s of a distress signal; manual override at >30% sensor degradation, full deactivation at >50%"
+    ],
+    [
+     "Transparency",
+     "Third-party ML model and training-data provenance per company standard; API returns deployed model version + documentation link"
+    ],
+    [
+     "AI robustness",
+     "Response time <1 s during a 30 s vulnerabilities-database outage; lower-fidelity reduced-power mode above 85°C instead of crashing"
+    ],
+    [
+     "Intervenability",
+     "Production line shutdown within 0.5 s; 30-second window to veto AI-proposed 'critical' actions"
+    ],
+    [
+     "Societal and ethical risk mitigation",
+     "No racial discrimination on the specified fairness metric; chatbot passes red teaming at ≥95%"
+    ],
+    [
+     "Safety",
+     "Non-AI components compliant with ISO 26262-6 at ASIL C; input-output relationships mapped at ≥99.9% accuracy; out-of-limit signals regulated within 0.15 s"
+    ]
+   ],
+   "src": "2.2.1 L491-L500"
+  },
+  {
+   "type": "traps",
+   "items": [
+    {
+     "confusion": "User controllability vs Intervenability",
+     "text": "Both involve timely intervention. User controllability is a sub-characteristic of interaction capability and the intervener is \"a human or another external agent\"; intervenability is a sub-characteristic of security, the intervener is an operator, and the purpose is to prevent harm or hazard.",
+     "src": "2.1.1 L465-L468"
+    },
+    {
+     "confusion": "AI functional correctness ≠ perfect accuracy",
+     "text": "Probabilistic ML cannot guarantee perfect accuracy — a certain error rate is expected, so correctness is evaluated with acceptable thresholds for incorrect results. Exam options claiming an AI system can be 'fully correct' contradict this.",
+     "src": "2.1.1 L463"
+    },
+    {
+     "confusion": "Safety is not one of the seven ISO/IEC 25059 AI characteristics",
+     "text": "The acceptance-criteria table covers the 25059 characteristics AND safety (from 2.1.2) as a separate row; options listing 'safety' among the 25059 sub-characteristics are wrong.",
+     "src": "2.2.1 L489-L500"
+    }
+   ]
+  }
+ ]
+}

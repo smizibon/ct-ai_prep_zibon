@@ -1,0 +1,42 @@
+{
+  "id": "Q23",
+  "set": "main",
+  "heading_verbatim": "### Question 23 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "Which of the following statements about applying risk-based testing to ML systems is CORRECT?\n\n- a) Security and usability risks can apply to any system, while risks associated with data bias and ML model performance are specific to ML systems\n- b) Conventional systems handle risks related to data bias, whereas ML systems focus on risks related to algorithmic bias\n- c) Risk management in conventional systems is a static approach, while in a self-learning system risk needs to be adjusted dynamically\n- d) In conventional systems, functional correctness is the primary risk factor, whereas functional adaptability is the primary risk factor for an ML system\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {"key": "a", "text": "Security and usability risks can apply to any system, while risks associated with data bias and ML model performance are specific to ML systems"},
+    {"key": "b", "text": "Conventional systems handle risks related to data bias, whereas ML systems focus on risks related to algorithmic bias"},
+    {"key": "c", "text": "Risk management in conventional systems is a static approach, while in a self-learning system risk needs to be adjusted dynamically"},
+    {"key": "d", "text": "In conventional systems, functional correctness is the primary risk factor, whereas functional adaptability is the primary risk factor for an ML system"}
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 23 — Correct answer: a",
+    "key_correct": "a",
+    "correct_keys": ["a"],
+    "lo_key": "AI-4.3.2",
+    "lo_section": "AI-4.3.2",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {"key": "a", "verdict": "correct", "verdict_phrase": "Is correct.", "text": "Security and usability are generic quality characteristics and can apply to any system. Data bias and model performance are potential risks specific to ML systems."},
+      {"key": "b", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "Both data bias and algorithmic bias are risks associated explicitly with an ML system and, therefore, do not apply to conventional systems."},
+      {"key": "c", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "Risk management for both non-AI systems and AI systems (including self-learning ML systems) should be dynamic in nature."},
+      {"key": "d", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "Functional correctness may be the primary risk factor for conventional systems and for ML systems, but this is context dependent."}
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 23 (1 Point)\n\nWhich of the following statements about applying risk-based testing to ML systems is CORRECT?\n\n- a) Security and usability risks can apply to any system, while risks associated with data bias and ML model performance are specific to ML systems\n- b) Conventional systems handle risks related to data bias, whereas ML systems focus on risks related to algorithmic bias\n- c) Risk management in conventional systems is a static approach, while in a self-learning system risk needs to be adjusted dynamically\n- d) In conventional systems, functional correctness is the primary risk factor, whereas functional adaptability is the primary risk factor for an ML system\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 23 — Correct answer: a\n\n**LO:** AI-4.3.2 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is correct.** Security and usability are generic quality characteristics and can apply to any system. Data bias and model performance are potential risks specific to ML systems.\n- **b) Is not correct.** Both data bias and algorithmic bias are risks associated explicitly with an ML system and, therefore, do not apply to conventional systems.\n- **c) Is not correct.** Risk management for both non-AI systems and AI systems (including self-learning ML systems) should be dynamic in nature.\n- **d) Is not correct.** Functional correctness may be the primary risk factor for conventional systems and for ML systems, but this is context dependent."
+}

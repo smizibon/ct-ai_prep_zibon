@@ -1,0 +1,76 @@
+{
+  "id": "Q12",
+  "set": "main",
+  "heading_verbatim": "### Question 12 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "Which of the following statements about the use of pre-trained models is CORRECT?\n\n- a) When applied to a neural network, the RAG approach works by adding additional layers that hold documentation specifically related to the prompt\n- b) Fine-tuning a biased LLM with high-quality, task-specific data prevents unfair outputs based on sensitive attributes\n- c) To successfully adapt a pre-trained neural network, fine-tuning requires that additional training with new data is applied to all layers of the network\n- d) The RAG approach requires the identification and acquisition of data relevant to the task up front, but requires no changes to the pre-trained model\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {
+      "key": "a",
+      "text": "When applied to a neural network, the RAG approach works by adding additional layers that hold documentation specifically related to the prompt"
+    },
+    {
+      "key": "b",
+      "text": "Fine-tuning a biased LLM with high-quality, task-specific data prevents unfair outputs based on sensitive attributes"
+    },
+    {
+      "key": "c",
+      "text": "To successfully adapt a pre-trained neural network, fine-tuning requires that additional training with new data is applied to all layers of the network"
+    },
+    {
+      "key": "d",
+      "text": "The RAG approach requires the identification and acquisition of data relevant to the task up front, but requires no changes to the pre-trained model"
+    }
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 12 — Correct answer: d",
+    "key_correct": "d",
+    "correct_keys": [
+      "d"
+    ],
+    "lo_key": "AI-3.1.4",
+    "lo_section": "AI-3.1.4",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {
+        "key": "a",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "The RAG approach does not add new layers to the neural network to store documentation; instead, it retrieves relevant external data at inference time and augments the model's input with this information."
+      },
+      {
+        "key": "b",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "While fine-tuning with high-quality data can reduce bias, it does not guarantee the prevention of unfair outputs, as bias can persist or even be introduced during the fine-tuning process."
+      },
+      {
+        "key": "c",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "Fine-tuning can be performed on all layers or just a subset. Often, only some layers are updated while others are kept frozen, depending on the task and available data."
+      },
+      {
+        "key": "d",
+        "verdict": "correct",
+        "verdict_phrase": "Is correct.",
+        "text": "RAG relies on curating and indexing relevant external data before use, but it does not require modifying the architecture or parameters of the pre-trained model itself; instead, it augments the model's inputs with retrieved information at runtime."
+      }
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 12 (1 Point)\n\nWhich of the following statements about the use of pre-trained models is CORRECT?\n\n- a) When applied to a neural network, the RAG approach works by adding additional layers that hold documentation specifically related to the prompt\n- b) Fine-tuning a biased LLM with high-quality, task-specific data prevents unfair outputs based on sensitive attributes\n- c) To successfully adapt a pre-trained neural network, fine-tuning requires that additional training with new data is applied to all layers of the network\n- d) The RAG approach requires the identification and acquisition of data relevant to the task up front, but requires no changes to the pre-trained model\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 12 — Correct answer: d\n\n**LO:** AI-3.1.4 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is not correct.** The RAG approach does not add new layers to the neural network to store documentation; instead, it retrieves relevant external data at inference time and augments the model's input with this information.\n- **b) Is not correct.** While fine-tuning with high-quality data can reduce bias, it does not guarantee the prevention of unfair outputs, as bias can persist or even be introduced during the fine-tuning process.\n- **c) Is not correct.** Fine-tuning can be performed on all layers or just a subset. Often, only some layers are updated while others are kept frozen, depending on the task and available data.\n- **d) Is correct.** RAG relies on curating and indexing relevant external data before use, but it does not require modifying the architecture or parameters of the pre-trained model itself; instead, it augments the model's inputs with retrieved information at runtime."
+}

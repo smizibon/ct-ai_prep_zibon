@@ -1,0 +1,76 @@
+{
+  "id": "Q36",
+  "set": "main",
+  "heading_verbatim": "### Question 36 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "When testing a trained ML model, the development team found that the model was highly accurate when evaluated using validation data but performed poorly with independent test data.\n\nWhich of the following options is MOST likely to cause this situation?\n\n- a) Underfitting\n- b) Concept drift\n- c) Overfitting\n- d) Low acceptance criteria\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {
+      "key": "a",
+      "text": "Underfitting"
+    },
+    {
+      "key": "b",
+      "text": "Concept drift"
+    },
+    {
+      "key": "c",
+      "text": "Overfitting"
+    },
+    {
+      "key": "d",
+      "text": "Low acceptance criteria"
+    }
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 36 — Correct answer: c",
+    "key_correct": "c",
+    "correct_keys": [
+      "c"
+    ],
+    "lo_key": "AI-6.1.8",
+    "lo_section": "AI-6.1.8",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {
+        "key": "a",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "The ML model performs well on validation data, so it is unlikely to be a case of underfitting."
+      },
+      {
+        "key": "b",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "Concept drift refers to changes that occur after the training of the ML model and the validation stages."
+      },
+      {
+        "key": "c",
+        "verdict": "correct",
+        "verdict_phrase": "Is correct.",
+        "text": "The poor performance on test data and good performance on validation data suggest overfitting."
+      },
+      {
+        "key": "d",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "Acceptance criteria should be consistent with different sets of data, so low acceptance criteria are unlikely to lead to a difference between the test results with validation data and independent test data."
+      }
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 36 (1 Point)\n\nWhen testing a trained ML model, the development team found that the model was highly accurate when evaluated using validation data but performed poorly with independent test data.\n\nWhich of the following options is MOST likely to cause this situation?\n\n- a) Underfitting\n- b) Concept drift\n- c) Overfitting\n- d) Low acceptance criteria\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 36 — Correct answer: c\n\n**LO:** AI-6.1.8 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is not correct.** The ML model performs well on validation data, so it is unlikely to be a case of underfitting.\n- **b) Is not correct.** Concept drift refers to changes that occur after the training of the ML model and the validation stages.\n- **c) Is correct.** The poor performance on test data and good performance on validation data suggest overfitting.\n- **d) Is not correct.** Acceptance criteria should be consistent with different sets of data, so low acceptance criteria are unlikely to lead to a difference between the test results with validation data and independent test data."
+}

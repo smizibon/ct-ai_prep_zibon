@@ -1,0 +1,78 @@
+{
+  "id": "Q5",
+  "set": "main",
+  "heading_verbatim": "### Question 5 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer*",
+  "stem_markdown": "Which of the following statements BEST compares the hardware options available for implementing machine learning systems?\n\n- a) GPUs are well-suited for training and running ML models due to their ability to handle massively parallel processing, while CPUs are better for general-purpose computing\n- b) CPUs are more efficient than GPUs for ML tasks because they have faster clock speeds and can handle complex operations\n- c) AI-specific hardware, such as ASICs, is primarily used for training ML models, while GPUs are better suited for edge computing\n- d) Neuromorphic processors are a form of AI hardware specifically optimized for running on the von Neumann architecture\n\n*Select ONE answer*",
+  "item_sets": [],
+  "options": [
+    {
+      "key": "a",
+      "text": "GPUs are well-suited for training and running ML models due to their ability to handle massively parallel processing, while CPUs are better for general-purpose computing"
+    },
+    {
+      "key": "b",
+      "text": "CPUs are more efficient than GPUs for ML tasks because they have faster clock speeds and can handle complex operations"
+    },
+    {
+      "key": "c",
+      "text": "AI-specific hardware, such as ASICs, is primarily used for training ML models, while GPUs are better suited for edge computing"
+    },
+    {
+      "key": "d",
+      "text": "Neuromorphic processors are a form of AI hardware specifically optimized for running on the von Neumann architecture"
+    }
+  ],
+  "figures": [],
+  "quirks": [
+    "select-instruction-no-period"
+  ],
+  "answer": {
+    "heading_verbatim": "### Question 5 — Correct answer: a",
+    "key_correct": "a",
+    "correct_keys": [
+      "a"
+    ],
+    "lo_key": "AI-1.1.5",
+    "lo_section": "AI-1.1.5",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {
+        "key": "a",
+        "verdict": "correct",
+        "verdict_phrase": "Is correct.",
+        "text": "This comparison accurately highlights the advantages of GPUs over CPUs for machine learning tasks, due to their parallel processing capabilities, while CPUs excel in general-purpose computing."
+      },
+      {
+        "key": "b",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "While CPUs have faster clock speeds, they are less efficient than GPUs for ML tasks because they lack the massive parallel processing capabilities required for data handling tasks such as matrix multiplication."
+      },
+      {
+        "key": "c",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "AI-specific hardware like ASICs is better suited for edge computing rather than training ML models, which is typically done in the cloud."
+      },
+      {
+        "key": "d",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "Neuromorphic processors are designed to mimic brain structure and do not rely on the von Neumann architecture; therefore, this statement is inaccurate."
+      }
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 5 (1 Point)\n\nWhich of the following statements BEST compares the hardware options available for implementing machine learning systems?\n\n- a) GPUs are well-suited for training and running ML models due to their ability to handle massively parallel processing, while CPUs are better for general-purpose computing\n- b) CPUs are more efficient than GPUs for ML tasks because they have faster clock speeds and can handle complex operations\n- c) AI-specific hardware, such as ASICs, is primarily used for training ML models, while GPUs are better suited for edge computing\n- d) Neuromorphic processors are a form of AI hardware specifically optimized for running on the von Neumann architecture\n\n*Select ONE answer*",
+  "raw_answer_markdown": "### Question 5 — Correct answer: a\n\n**LO:** AI-1.1.5 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is correct.** This comparison accurately highlights the advantages of GPUs over CPUs for machine learning tasks, due to their parallel processing capabilities, while CPUs excel in general-purpose computing.\n- **b) Is not correct.** While CPUs have faster clock speeds, they are less efficient than GPUs for ML tasks because they lack the massive parallel processing capabilities required for data handling tasks such as matrix multiplication.\n- **c) Is not correct.** AI-specific hardware like ASICs is better suited for edge computing rather than training ML models, which is typically done in the cloud.\n- **d) Is not correct.** Neuromorphic processors are designed to mimic brain structure and do not rely on the von Neumann architecture; therefore, this statement is inaccurate."
+}

@@ -1,0 +1,87 @@
+{
+  "id": "Q39",
+  "set": "main",
+  "heading_verbatim": "### Question 39 (1 Point)",
+  "points": 1,
+  "selection_mode": "two",
+  "select_instruction_verbatim": "*Select TWO answers.*",
+  "stem_markdown": "Which TWO of the following scenarios describe ML development risks that can be EFFECTIVELY mitigated by performing ML functional performance testing?\n\n- a) A team notices that their ML development framework becomes slow and even unresponsive when processing large batches of data\n- b) A new version of a core library used by the ML development framework appears to be causing the ML model to produce unexpected and inaccurate results\n- c) After a new installation, the development team needs a quick test to determine if the ML development framework's essential services are running correctly\n- d) A single test result is difficult to reproduce during evaluation, showing slight variations in ML functional performance with each execution\n- e) A project leader needs to decide between two potential algorithms based on their suitability for the project's goals\n\n*Select TWO answers.*",
+  "item_sets": [],
+  "options": [
+    {
+      "key": "a",
+      "text": "A team notices that their ML development framework becomes slow and even unresponsive when processing large batches of data"
+    },
+    {
+      "key": "b",
+      "text": "A new version of a core library used by the ML development framework appears to be causing the ML model to produce unexpected and inaccurate results"
+    },
+    {
+      "key": "c",
+      "text": "After a new installation, the development team needs a quick test to determine if the ML development framework's essential services are running correctly"
+    },
+    {
+      "key": "d",
+      "text": "A single test result is difficult to reproduce during evaluation, showing slight variations in ML functional performance with each execution"
+    },
+    {
+      "key": "e",
+      "text": "A project leader needs to decide between two potential algorithms based on their suitability for the project's goals"
+    }
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 39 — Correct answer: b, d",
+    "key_correct": "b, d",
+    "correct_keys": [
+      "b",
+      "d"
+    ],
+    "lo_key": "AI-7.1.1",
+    "lo_section": "AI-7.1.1",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {
+        "key": "a",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "This describes a risk of poor performance efficiency. The correct mitigation is performance (efficiency) testing, which is distinct from ML functional performance testing (which evaluates functional correctness)."
+      },
+      {
+        "key": "b",
+        "verdict": "correct",
+        "verdict_phrase": "Is correct.",
+        "text": "This describes a potential used library defect. ML functional performance testing can evaluate model behavior and expose anomalies stemming from the use of a new library that is defective and causing a change in test results."
+      },
+      {
+        "key": "c",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "This describes the need to mitigate the risk of a defective ML framework installation. The appropriate mitigation for this is smoke testing, not full ML functional performance testing."
+      },
+      {
+        "key": "d",
+        "verdict": "correct",
+        "verdict_phrase": "Is correct.",
+        "text": "This describes the risk of poor interpretation of test results due to the stochastic nature of the learning process. ML functional performance testing, using multiple runs and statistical analysis, is the mitigation for this."
+      },
+      {
+        "key": "e",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "This describes sub-optimal algorithm selection. The appropriate mitigation is an algorithm suitability review or A/B testing, not ML functional performance testing of a single algorithm that has not been selected yet."
+      }
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 39 (1 Point)\n\nWhich TWO of the following scenarios describe ML development risks that can be EFFECTIVELY mitigated by performing ML functional performance testing?\n\n- a) A team notices that their ML development framework becomes slow and even unresponsive when processing large batches of data\n- b) A new version of a core library used by the ML development framework appears to be causing the ML model to produce unexpected and inaccurate results\n- c) After a new installation, the development team needs a quick test to determine if the ML development framework's essential services are running correctly\n- d) A single test result is difficult to reproduce during evaluation, showing slight variations in ML functional performance with each execution\n- e) A project leader needs to decide between two potential algorithms based on their suitability for the project's goals\n\n*Select TWO answers.*",
+  "raw_answer_markdown": "### Question 39 — Correct answer: b, d\n\n**LO:** AI-7.1.1 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is not correct.** This describes a risk of poor performance efficiency. The correct mitigation is performance (efficiency) testing, which is distinct from ML functional performance testing (which evaluates functional correctness).\n- **b) Is correct.** This describes a potential used library defect. ML functional performance testing can evaluate model behavior and expose anomalies stemming from the use of a new library that is defective and causing a change in test results.\n- **c) Is not correct.** This describes the need to mitigate the risk of a defective ML framework installation. The appropriate mitigation for this is smoke testing, not full ML functional performance testing.\n- **d) Is correct.** This describes the risk of poor interpretation of test results due to the stochastic nature of the learning process. ML functional performance testing, using multiple runs and statistical analysis, is the mitigation for this.\n- **e) Is not correct.** This describes sub-optimal algorithm selection. The appropriate mitigation is an algorithm suitability review or A/B testing, not ML functional performance testing of a single algorithm that has not been selected yet."
+}

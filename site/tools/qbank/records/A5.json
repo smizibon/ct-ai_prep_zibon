@@ -1,0 +1,99 @@
+{
+  "id": "A5",
+  "set": "appendix",
+  "heading_verbatim": "### Question A5 (1 Point)",
+  "points": 1,
+  "selection_mode": "order_sequence",
+  "select_instruction_verbatim": null,
+  "stem_markdown": "Given the following activities *(from figure on PDF page 28)*:\n\n![Question A5 figure: the five activities stacked between an EARLIER/LATER arrow axis, in the shuffled order shown in the exam](figures/questions_p28_A5.png)\n\n- Prepare & Test Data\n- Test the Model\n- Monitor & Tune the Model\n- Evaluate the Model\n- Deploy the Model\n\nOrder these activities in a logical sequence from earliest to latest in the ML workflow.",
+  "item_sets": [
+    {
+      "role": "order_items",
+      "key_style": "none",
+      "items": [
+        {
+          "key": "",
+          "text": "Prepare & Test Data"
+        },
+        {
+          "key": "",
+          "text": "Test the Model"
+        },
+        {
+          "key": "",
+          "text": "Monitor & Tune the Model"
+        },
+        {
+          "key": "",
+          "text": "Evaluate the Model"
+        },
+        {
+          "key": "",
+          "text": "Deploy the Model"
+        }
+      ]
+    }
+  ],
+  "options": null,
+  "figures": [
+    {
+      "path": "figures/questions_p28_A5.png",
+      "alt": "Question A5 figure: the five activities stacked between an EARLIER/LATER arrow axis, in the shuffled order shown in the exam",
+      "note": "(from figure on PDF page 28)",
+      "transcription": "- Prepare & Test Data\n- Test the Model\n- Monitor & Tune the Model\n- Evaluate the Model\n- Deploy the Model"
+    }
+  ],
+  "quirks": [
+    "New question type: correct answer AND explanation are given only as figures in the answers document (PDF pages 36 and 37)",
+    "Explanation figure's Model Generation cycle (Train the Model, Tune the Model, Realize the Model) differs from Figure 1 in the syllabus (Train the Model → Evaluate the Model → Tune the Model; no 'Realize the Model' box)",
+    "LO AI-3.1.2 is shared with Q11 in the answer key"
+  ],
+  "answer": {
+    "heading_verbatim": "#### Question A5 — New question type",
+    "key_correct": "New question type",
+    "correct_keys": [],
+    "lo_key": "AI-3.1.2",
+    "lo_section": "AI-3.1.2",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "points": 1,
+    "rationale_style": "figure_only",
+    "preamble_markdown": null,
+    "rationale_units": [],
+    "conclusion_markdown": null,
+    "answer_figures": [
+      {
+        "kind": "answer",
+        "path": "figures/answers_p36.png",
+        "alt": "Question A5 answer figure: the five activities in correct order on the EARLIER/LATER axis",
+        "context_note": "Correct answer *(given as a figure in the source document, PDF page 36)*:",
+        "transcription": "*(Transcription of the answer figure, top to bottom: EARLIER → Prepare & Test Data → Evaluate the Model → Test the Model → Deploy the Model → Monitor & Tune the Model → LATER. Note: these cells contain figures rather than text in the PDF, which is why text extraction shows them as empty.)*"
+      },
+      {
+        "kind": "explanation",
+        "path": "figures/answers_p37.png",
+        "alt": "Question A5 explanation figure: ML workflow diagram showing where the five activities fit",
+        "context_note": "Explanation/Rationale *(given as a figure in the source document, PDF page 37)*:",
+        "transcription": "*(Transcription of the explanation figure — an ML workflow diagram with a dashed \"Model Development\" container holding Understand the Objectives, Select a Framework, Select & Build the Algorithm, and Prepare & Test Data; flowing into a dashed \"Model Generation & Test\" container whose inner \"Model Generation\" cycle iterates over Train the Model, Tune the Model, and Realize the Model, followed by Test the Model; then Deploy the Model, after which Monitor & Tune the Model and Use the Model operate side by side, with monitoring feeding back into Model Development. Note: this figure differs from Figure 1 in the syllabus — the syllabus's iterative cycle is Train the Model → Evaluate the Model → Tune the Model and contains no \"Realize the Model\" box.)*"
+      }
+    ],
+    "new_type_answer": {
+      "type": "order_sequence",
+      "ordered": [
+        "Prepare & Test Data",
+        "Evaluate the Model",
+        "Test the Model",
+        "Deploy the Model",
+        "Monitor & Tune the Model"
+      ]
+    },
+    "restatement_drift": [],
+    "quirks": [
+      "key_correct cell in the appendix answer-key table reads 'New question type' rather than a letter",
+      "Answer figure cells contain figures rather than text in the PDF (text extraction shows them empty) — noted in the transcription",
+      "Label reads 'Explanation/Rationale' (no spaces around the slash), unlike A1/A4's 'Explanation / Rationale'"
+    ]
+  },
+  "raw_question_markdown": "### Question A5 (1 Point)\n\nGiven the following activities *(from figure on PDF page 28)*:\n\n![Question A5 figure: the five activities stacked between an EARLIER/LATER arrow axis, in the shuffled order shown in the exam](figures/questions_p28_A5.png)\n\n- Prepare & Test Data\n- Test the Model\n- Monitor & Tune the Model\n- Evaluate the Model\n- Deploy the Model\n\nOrder these activities in a logical sequence from earliest to latest in the ML workflow.",
+  "raw_answer_markdown": "#### Question A5 — New question type\n\n**LO:** AI-3.1.2 | **K-Level:** K2 | **Points:** 1\n\nCorrect answer *(given as a figure in the source document, PDF page 36)*:\n\n![Question A5 answer figure: the five activities in correct order on the EARLIER/LATER axis](figures/answers_p36.png)\n\n*(Transcription of the answer figure, top to bottom: EARLIER → Prepare & Test Data → Evaluate the Model → Test the Model → Deploy the Model → Monitor & Tune the Model → LATER. Note: these cells contain figures rather than text in the PDF, which is why text extraction shows them as empty.)*\n\nExplanation/Rationale *(given as a figure in the source document, PDF page 37)*:\n\n![Question A5 explanation figure: ML workflow diagram showing where the five activities fit](figures/answers_p37.png)\n\n*(Transcription of the explanation figure — an ML workflow diagram with a dashed \"Model Development\" container holding Understand the Objectives, Select a Framework, Select & Build the Algorithm, and Prepare & Test Data; flowing into a dashed \"Model Generation & Test\" container whose inner \"Model Generation\" cycle iterates over Train the Model, Tune the Model, and Realize the Model, followed by Test the Model; then Deploy the Model, after which Monitor & Tune the Model and Use the Model operate side by side, with monitoring feeding back into Model Development. Note: this figure differs from Figure 1 in the syllabus — the syllabus's iterative cycle is Train the Model → Evaluate the Model → Tune the Model and contains no \"Realize the Model\" box.)*"
+}

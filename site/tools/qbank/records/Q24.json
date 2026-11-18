@@ -1,0 +1,42 @@
+{
+  "id": "Q24",
+  "set": "main",
+  "heading_verbatim": "### Question 24 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "The team developing a new machine learning model has received a dataset from a new, unverified third-party vendor. They are uncertain about the origin of this dataset and concerned that the raw data may have been tampered with.\n\nWhich of the following test approaches is MOST suitable for addressing this specific risk?\n\n- a) Data provenance testing\n- b) Data representativeness testing\n- c) Feature testing\n- d) Dataset constraint testing\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {"key": "a", "text": "Data provenance testing"},
+    {"key": "b", "text": "Data representativeness testing"},
+    {"key": "c", "text": "Feature testing"},
+    {"key": "d", "text": "Dataset constraint testing"}
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 24 — Correct answer: a",
+    "key_correct": "a",
+    "correct_keys": ["a"],
+    "lo_key": "AI-5.1.1",
+    "lo_section": "AI-5.1.1",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {"key": "a", "verdict": "correct", "verdict_phrase": "Is correct.", "text": "The scenario describes a need to verify the data's origin and to determine that it hasn't been tampered with. This maps to data provenance testing."},
+      {"key": "b", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "While the team would likely perform data representativeness testing on a new dataset, this activity addresses whether the data's characteristics match those of the real world, not whether its documented origin is accurate, or whether it is valid raw data."},
+      {"key": "c", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "Feature testing evaluates the predictive power of the features, which is a different concern from verifying the source and integrity of the dataset itself."},
+      {"key": "d", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "Dataset constraint testing checks for internal consistency of the dataset (e.g., ranges, types), but it cannot verify where the data came from or if it was illegitimately altered."}
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 24 (1 Point)\n\nThe team developing a new machine learning model has received a dataset from a new, unverified third-party vendor. They are uncertain about the origin of this dataset and concerned that the raw data may have been tampered with.\n\nWhich of the following test approaches is MOST suitable for addressing this specific risk?\n\n- a) Data provenance testing\n- b) Data representativeness testing\n- c) Feature testing\n- d) Dataset constraint testing\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 24 — Correct answer: a\n\n**LO:** AI-5.1.1 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is correct.** The scenario describes a need to verify the data's origin and to determine that it hasn't been tampered with. This maps to data provenance testing.\n- **b) Is not correct.** While the team would likely perform data representativeness testing on a new dataset, this activity addresses whether the data's characteristics match those of the real world, not whether its documented origin is accurate, or whether it is valid raw data.\n- **c) Is not correct.** Feature testing evaluates the predictive power of the features, which is a different concern from verifying the source and integrity of the dataset itself.\n- **d) Is not correct.** Dataset constraint testing checks for internal consistency of the dataset (e.g., ranges, types), but it cannot verify where the data came from or if it was illegitimately altered."
+}

@@ -1,0 +1,76 @@
+{
+  "id": "Q8",
+  "set": "main",
+  "heading_verbatim": "### Question 8 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "Which of the following statements BEST describes a key challenge when AI is used in safety-related systems?\n\n- a) When the requirements are too detailed, it leaves little room for the ML system to learn from the implicit goals contained within the training data\n- b) The potential for non-determinism and self-learning makes some AI-based systems unpredictable as they diverge from their original tested state\n- c) Because self-learning safety-related systems stop adapting after deployment, safety is often compromised by the need for manual updates of the operational AI-based system\n- d) The mature safety-related standards tend to be out-of-date and require the use of outdated AI technologies, which hinders innovative AI solutions in AI-based systems\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {
+      "key": "a",
+      "text": "When the requirements are too detailed, it leaves little room for the ML system to learn from the implicit goals contained within the training data"
+    },
+    {
+      "key": "b",
+      "text": "The potential for non-determinism and self-learning makes some AI-based systems unpredictable as they diverge from their original tested state"
+    },
+    {
+      "key": "c",
+      "text": "Because self-learning safety-related systems stop adapting after deployment, safety is often compromised by the need for manual updates of the operational AI-based system"
+    },
+    {
+      "key": "d",
+      "text": "The mature safety-related standards tend to be out-of-date and require the use of outdated AI technologies, which hinders innovative AI solutions in AI-based systems"
+    }
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 8 — Correct answer: b",
+    "key_correct": "b",
+    "correct_keys": [
+      "b"
+    ],
+    "lo_key": "AI-2.1.2",
+    "lo_section": "AI-2.1.2",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {
+        "key": "a",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "The actual problem is the opposite: requirements are generally too vague and are often only implicitly provided by data, leading to poor traceability."
+      },
+      {
+        "key": "b",
+        "verdict": "correct",
+        "verdict_phrase": "Is correct.",
+        "text": "This unpredictability is a core safety challenge when deploying AI in safety-related systems, as it complicates verification, validation, and ongoing assurance of safe operation."
+      },
+      {
+        "key": "c",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "The problem is that self-learning systems do not stop adapting after deployment and so move away from their original tested behavior."
+      },
+      {
+        "key": "d",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "Mature safety-related standards currently lack any provisions for AI, and some explicitly restrict its use."
+      }
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 8 (1 Point)\n\nWhich of the following statements BEST describes a key challenge when AI is used in safety-related systems?\n\n- a) When the requirements are too detailed, it leaves little room for the ML system to learn from the implicit goals contained within the training data\n- b) The potential for non-determinism and self-learning makes some AI-based systems unpredictable as they diverge from their original tested state\n- c) Because self-learning safety-related systems stop adapting after deployment, safety is often compromised by the need for manual updates of the operational AI-based system\n- d) The mature safety-related standards tend to be out-of-date and require the use of outdated AI technologies, which hinders innovative AI solutions in AI-based systems\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 8 — Correct answer: b\n\n**LO:** AI-2.1.2 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is not correct.** The actual problem is the opposite: requirements are generally too vague and are often only implicitly provided by data, leading to poor traceability.\n- **b) Is correct.** This unpredictability is a core safety challenge when deploying AI in safety-related systems, as it complicates verification, validation, and ongoing assurance of safe operation.\n- **c) Is not correct.** The problem is that self-learning systems do not stop adapting after deployment and so move away from their original tested behavior.\n- **d) Is not correct.** Mature safety-related standards currently lack any provisions for AI, and some explicitly restrict its use."
+}

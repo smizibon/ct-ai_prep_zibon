@@ -1,0 +1,88 @@
+{
+  "id": "Q15",
+  "set": "main",
+  "heading_verbatim": "### Question 15 (2 Points)",
+  "points": 2,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "Consider the following confusion matrix for an image classifier:\n\n| Confusion Matrix    | Predicted Positive | Predicted Negative |\n|-------------------- |--------------------|--------------------|\n| **Actual Positive** | 78                 | 6                  |\n| **Actual Negative** | 22                 | 14                 |\n\n*(from figure on PDF page 14)*\n\n![Confusion matrix figure for Question 15: 2×2 matrix with rows Actual Positive / Actual Negative and columns Predicted Positive / Predicted Negative, values 78, 6, 22, 14](figures/questions_p14_Q15.png)\n\nWhich of the following options represents the CORRECT formula for calculating the precision of the classifier?\n\n- a) (20/120) *100\n- b) (78/120) *100\n- c) (78/100) *100\n- d) (22/100) *100\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {
+      "key": "a",
+      "text": "(20/120) *100"
+    },
+    {
+      "key": "b",
+      "text": "(78/120) *100"
+    },
+    {
+      "key": "c",
+      "text": "(78/100) *100"
+    },
+    {
+      "key": "d",
+      "text": "(22/100) *100"
+    }
+  ],
+  "figures": [
+    {
+      "path": "figures/questions_p14_Q15.png",
+      "alt": "Confusion matrix figure for Question 15: 2×2 matrix with rows Actual Positive / Actual Negative and columns Predicted Positive / Predicted Negative, values 78, 6, 22, 14",
+      "note": "*(from figure on PDF page 14)*",
+      "transcription": "Confusion matrix, 2x2 (transcribed as the markdown table in the question body): Actual Positive / Predicted Positive = 78; Actual Positive / Predicted Negative = 6; Actual Negative / Predicted Positive = 22; Actual Negative / Predicted Negative = 14."
+    }
+  ],
+  "quirks": [
+    "Confusion matrix is transcribed as a markdown table in the question body, followed by the note '*(from figure on PDF page 14)*' and an image embed of the original PDF figure",
+    "Asterisks in the question's option formulas are unescaped (e.g. '(78/100) *100')"
+  ],
+  "answer": {
+    "heading_verbatim": "### Question 15 — Correct answer: c",
+    "key_correct": "c",
+    "correct_keys": [
+      "c"
+    ],
+    "lo_key": "AI-3.3.1",
+    "lo_section": "AI-3.3.1",
+    "lo_conflict": false,
+    "k_level": "K3",
+    "rationale_style": "per_option_crossref",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {
+        "key": "a",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "See option c for the correct formula and calculation."
+      },
+      {
+        "key": "b",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "See option c for the correct formula and calculation."
+      },
+      {
+        "key": "c",
+        "verdict": "correct",
+        "verdict_phrase": "Is correct.",
+        "text": "The formula for Precision = TP/(TP+FP) \\* 100 = 78/(78+22) = 78/100 \\* 100"
+      },
+      {
+        "key": "d",
+        "verdict": "not_correct",
+        "verdict_phrase": "Is not correct.",
+        "text": "See option c for the correct formula and calculation."
+      }
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": [
+      "Correct option c carries the formula with escaped asterisks ('\\* 100') as they appear in the answers document; options a/b/d are one-line cross-references: 'See option c for the correct formula and calculation.'"
+    ]
+  },
+  "raw_question_markdown": "### Question 15 (2 Points)\n\nConsider the following confusion matrix for an image classifier:\n\n| Confusion Matrix    | Predicted Positive | Predicted Negative |\n|-------------------- |--------------------|--------------------|\n| **Actual Positive** | 78                 | 6                  |\n| **Actual Negative** | 22                 | 14                 |\n\n*(from figure on PDF page 14)*\n\n![Confusion matrix figure for Question 15: 2×2 matrix with rows Actual Positive / Actual Negative and columns Predicted Positive / Predicted Negative, values 78, 6, 22, 14](figures/questions_p14_Q15.png)\n\nWhich of the following options represents the CORRECT formula for calculating the precision of the classifier?\n\n- a) (20/120) *100\n- b) (78/120) *100\n- c) (78/100) *100\n- d) (22/100) *100\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 15 — Correct answer: c\n\n**LO:** AI-3.3.1 | **K-Level:** K3 | **Points:** 2\n\n- **a) Is not correct.** See option c for the correct formula and calculation.\n- **b) Is not correct.** See option c for the correct formula and calculation.\n- **c) Is correct.** The formula for Precision = TP/(TP+FP) \\* 100 = 78/(78+22) = 78/100 \\* 100\n- **d) Is not correct.** See option c for the correct formula and calculation."
+}

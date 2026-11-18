@@ -1,0 +1,46 @@
+/* widgets.css — A1 assign, A4 pair, A5 order */
+.assign-row { display: flex; gap: var(--sp-4); align-items: center; padding: var(--sp-3) var(--sp-4); border: 1px solid var(--line-2); border-radius: var(--r-md); margin-bottom: var(--sp-3); border-left: 4px solid var(--line-2); }
+.assign-row.is-assigned { border-left-color: var(--primary); }
+.assign-row.is-warn { border-left-color: var(--warn); }
+.assign-row.is-ok { border-color: var(--success); border-left-color: var(--success); background: var(--success-soft); }
+.assign-row.is-bad { border-color: var(--danger); border-left-color: var(--danger); background: var(--danger-soft); }
+.assign-row__text { flex: 1; font-size: 0.9375rem; line-height: 1.6; }
+.assign-seg { display: flex; border: 1px solid var(--line-2); border-radius: var(--r-md); overflow: hidden; flex: none; }
+.assign-seg button { height: 36px; padding: 0 var(--sp-3); font-size: 0.8125rem; font-weight: 600; color: var(--ink-2); border-right: 1px solid var(--line-2); }
+.assign-seg button:last-child { border-right: 0; }
+.assign-seg button:hover { background: var(--bg-2); }
+.assign-seg button[aria-checked="true"] { background: var(--primary); color: var(--ink-on-primary); }
+.assign-note { font-size: 0.8125rem; color: var(--warn); margin-top: var(--sp-2); }
+
+.pair-wrap { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-16); margin-top: var(--sp-4); }
+.pair-col { display: flex; flex-direction: column; gap: var(--sp-3); }
+.pair-item {
+  position: relative; z-index: 1; border: 1px solid var(--line-2); border-radius: var(--r-md);
+  background: var(--bg-1); padding: var(--sp-3) var(--sp-4); min-height: 48px; font-size: 0.875rem;
+  text-align: left; line-height: 1.5; transition: border-color var(--dur-1), background var(--dur-1);
+}
+.pair-item:hover { border-color: var(--line-3); }
+.pair-item.is-armed { border: 2px solid var(--primary); background: var(--primary-soft); padding: calc(var(--sp-3) - 1px) calc(var(--sp-4) - 1px); }
+.pair-item.is-paired { border-color: var(--primary); }
+.pair-item__badge { position: absolute; top: -8px; left: -8px; width: 22px; height: 22px; border-radius: 50%; background: var(--primary); color: var(--ink-on-primary); font-family: var(--font-mono); font-size: 0.6875rem; font-weight: 700; display: grid; place-items: center; }
+.pair-svg { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: visible; }
+.pair-svg line { stroke: var(--primary); stroke-width: 2; }
+.pair-svg line.is-wrong { stroke: var(--danger); stroke-dasharray: 6 4; }
+.pair-svg line.is-right { stroke: var(--success); }
+@media (max-width: 767px) { .pair-wrap { grid-template-columns: 1fr; gap: var(--sp-6); } .pair-svg { display: none; } }
+
+.order-pool, .order-lane { display: flex; flex-wrap: wrap; gap: var(--sp-3); margin-top: var(--sp-4); }
+.order-lane { min-height: 64px; padding: var(--sp-3); border: 1px dashed var(--line-3); border-radius: var(--r-lg); background: color-mix(in srgb, var(--bg-2) 50%, transparent); }
+.order-chip {
+  position: relative; display: inline-flex; align-items: center; gap: var(--sp-2);
+  border: 1px solid var(--line-2); border-radius: var(--r-md); background: var(--bg-1);
+  padding: var(--sp-2) var(--sp-4); font-size: 0.875rem; font-weight: 550; box-shadow: var(--shadow-1);
+}
+.order-chip:hover { border-color: var(--line-3); }
+.order-chip__n { font-family: var(--font-mono); font-size: 0.6875rem; font-weight: 700; color: var(--ink-on-primary); background: var(--primary); border-radius: 50%; width: 18px; height: 18px; display: grid; place-items: center; }
+.order-chip__mv { display: inline-flex; flex-direction: column; gap: 0; margin-left: var(--sp-1); color: var(--ink-3); }
+.order-chip__mv .icon { width: 14px; height: 14px; }
+.order-chip.is-ok { border-color: var(--success); background: var(--success-soft); }
+.order-chip.is-bad { border-color: var(--danger); background: var(--danger-soft); }
+.order-axis { display: flex; justify-content: space-between; margin-top: var(--sp-5); font-family: var(--font-mono); font-size: 0.6875rem; letter-spacing: 0.1em; color: var(--ink-3); }
+.order-hint { font-size: 0.8125rem; color: var(--ink-3); margin-top: var(--sp-2); }

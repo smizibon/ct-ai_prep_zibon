@@ -1,0 +1,42 @@
+{
+  "id": "Q27",
+  "set": "main",
+  "heading_verbatim": "### Question 27 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "What is the purpose of creating a 'reference dataset' during data representativeness testing?\n\n- a) It serves as a universally applicable dataset derived from trusted industry benchmarks\n- b) It functions as a quantitative baseline for formally comparing the statistical properties of the training data\n- c) It is used to apply stratified sampling directly to the training data to verify that all subgroups are covered\n- d) It serves as the primary dataset for performing the final model validation and testing with high independence\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {"key": "a", "text": "It serves as a universally applicable dataset derived from trusted industry benchmarks"},
+    {"key": "b", "text": "It functions as a quantitative baseline for formally comparing the statistical properties of the training data"},
+    {"key": "c", "text": "It is used to apply stratified sampling directly to the training data to verify that all subgroups are covered"},
+    {"key": "d", "text": "It serves as the primary dataset for performing the final model validation and testing with high independence"}
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 27 — Correct answer: b",
+    "key_correct": "b",
+    "correct_keys": ["b"],
+    "lo_key": "AI-5.1.4",
+    "lo_section": "AI-5.1.4",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {"key": "a", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "A reference dataset does not need to be universally applicable or solely derived from industry benchmarks. It is typically tailored to match the operational and contextual characteristics of the AI system's target population."},
+      {"key": "b", "verdict": "correct", "verdict_phrase": "Is correct.", "text": "The reference dataset's core purpose is to provide a statistical baseline, allowing practitioners to objectively compare the distributions, feature correlations, and coverage of the training data against what is expected in real-world operational environments."},
+      {"key": "c", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "Stratified sampling is typically applied to the reference dataset to create a comprehensive baseline, rather than directly to the training data itself. The reference dataset aims that all relevant subgroups are represented, serving as a standard for evaluating the representativeness of the other datasets."},
+      {"key": "d", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "The reference dataset is not intended as the main source for final ML model testing or testing with high independence. It exists to evaluate the representativeness of data before model training."}
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 27 (1 Point)\n\nWhat is the purpose of creating a 'reference dataset' during data representativeness testing?\n\n- a) It serves as a universally applicable dataset derived from trusted industry benchmarks\n- b) It functions as a quantitative baseline for formally comparing the statistical properties of the training data\n- c) It is used to apply stratified sampling directly to the training data to verify that all subgroups are covered\n- d) It serves as the primary dataset for performing the final model validation and testing with high independence\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 27 — Correct answer: b\n\n**LO:** AI-5.1.4 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is not correct.** A reference dataset does not need to be universally applicable or solely derived from industry benchmarks. It is typically tailored to match the operational and contextual characteristics of the AI system's target population.\n- **b) Is correct.** The reference dataset's core purpose is to provide a statistical baseline, allowing practitioners to objectively compare the distributions, feature correlations, and coverage of the training data against what is expected in real-world operational environments.\n- **c) Is not correct.** Stratified sampling is typically applied to the reference dataset to create a comprehensive baseline, rather than directly to the training data itself. The reference dataset aims that all relevant subgroups are represented, serving as a standard for evaluating the representativeness of the other datasets.\n- **d) Is not correct.** The reference dataset is not intended as the main source for final ML model testing or testing with high independence. It exists to evaluate the representativeness of data before model training."
+}

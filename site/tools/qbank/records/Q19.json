@@ -1,0 +1,42 @@
+{
+  "id": "Q19",
+  "set": "main",
+  "heading_verbatim": "### Question 19 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "Which of the following BEST describes why self-learning AI systems can suffer from the test oracle problem?\n\n- a) The exploratory nature of the development of these AI systems means that the system requirements often change during development\n- b) The expected behavior of these AI systems changes after the initial release with no corresponding changes to the system specification\n- c) Each of these AI systems can learn in different ways, making the correctness of these systems a matter of subjective judgment\n- d) The complexity of these AI systems means that manually determining their expected outputs can be especially difficult\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {"key": "a", "text": "The exploratory nature of the development of these AI systems means that the system requirements often change during development"},
+    {"key": "b", "text": "The expected behavior of these AI systems changes after the initial release with no corresponding changes to the system specification"},
+    {"key": "c", "text": "Each of these AI systems can learn in different ways, making the correctness of these systems a matter of subjective judgment"},
+    {"key": "d", "text": "The complexity of these AI systems means that manually determining their expected outputs can be especially difficult"}
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 19 — Correct answer: b",
+    "key_correct": "b",
+    "correct_keys": ["b"],
+    "lo_key": "AI-4.1.3",
+    "lo_section": "AI-4.1.3",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {"key": "a", "verdict": "not_correct", "verdict_phrase": "Is incorrect.", "text": "Exploratory development of AI systems can often mean that the system requirements change during development, however self-learning AI systems do not have to be developed using an exploratory development approach."},
+      {"key": "b", "verdict": "correct", "verdict_phrase": "Is correct.", "text": "Self-learning AI-based systems continuously update their internal models post-deployment. This causes the AI-based system's 'correct' behavior to change as the system evolves – and this behavior is not reflected in updated specifications."},
+      {"key": "c", "verdict": "not_correct", "verdict_phrase": "Is incorrect.", "text": "Each self-learning AI system can learn in different ways as each will encounter different operational experiences, however this normally means that they will have slightly different expected behaviors – it does not mean that determining these expected behaviors requires subjective judgment."},
+      {"key": "d", "verdict": "not_correct", "verdict_phrase": "Is incorrect.", "text": "Some self-learning AI systems can be complex, but that is not their defining attribute – some may be relatively simple in terms of learned behavior. Thus, there is no systemic reason that their expected outputs cannot be determined by human testers."}
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": ["verdict-phrase-is-incorrect"]
+  },
+  "raw_question_markdown": "### Question 19 (1 Point)\n\nWhich of the following BEST describes why self-learning AI systems can suffer from the test oracle problem?\n\n- a) The exploratory nature of the development of these AI systems means that the system requirements often change during development\n- b) The expected behavior of these AI systems changes after the initial release with no corresponding changes to the system specification\n- c) Each of these AI systems can learn in different ways, making the correctness of these systems a matter of subjective judgment\n- d) The complexity of these AI systems means that manually determining their expected outputs can be especially difficult\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 19 — Correct answer: b\n\n**LO:** AI-4.1.3 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is incorrect.** Exploratory development of AI systems can often mean that the system requirements change during development, however self-learning AI systems do not have to be developed using an exploratory development approach.\n- **b) Is correct.** Self-learning AI-based systems continuously update their internal models post-deployment. This causes the AI-based system's 'correct' behavior to change as the system evolves – and this behavior is not reflected in updated specifications.\n- **c) Is incorrect.** Each self-learning AI system can learn in different ways as each will encounter different operational experiences, however this normally means that they will have slightly different expected behaviors – it does not mean that determining these expected behaviors requires subjective judgment.\n- **d) Is incorrect.** Some self-learning AI systems can be complex, but that is not their defining attribute – some may be relatively simple in terms of learned behavior. Thus, there is no systemic reason that their expected outputs cannot be determined by human testers."
+}

@@ -1,0 +1,42 @@
+{
+  "id": "Q25",
+  "set": "main",
+  "heading_verbatim": "### Question 25 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "A financial services company has developed an ML system for loan approval. A tester responsible for testing this system wants to determine if there is potential bias in the system related to factors such as gender and age attributes.\n\nWhich of the following approaches would be MOST suitable for detecting bias in the training data early?\n\n- a) Conducting static analysis of the model's source code to identify how its operations on the age and gender related attributes could lead to bias\n- b) Testing using a dataset that is representative and analyzing the predictions for statistically significant differences in outcomes across age and gender\n- c) Reviewing the overall ML workflow and data preparation processes to identify potential sources of bias introduction\n- d) Performing disparate impact analysis using counterfactuals based on gender, age or both\n\n*Select ONE answer.*",
+  "item_sets": [],
+  "options": [
+    {"key": "a", "text": "Conducting static analysis of the model's source code to identify how its operations on the age and gender related attributes could lead to bias"},
+    {"key": "b", "text": "Testing using a dataset that is representative and analyzing the predictions for statistically significant differences in outcomes across age and gender"},
+    {"key": "c", "text": "Reviewing the overall ML workflow and data preparation processes to identify potential sources of bias introduction"},
+    {"key": "d", "text": "Performing disparate impact analysis using counterfactuals based on gender, age or both"}
+  ],
+  "figures": [],
+  "quirks": [],
+  "answer": {
+    "heading_verbatim": "### Question 25 — Correct answer: c",
+    "key_correct": "c",
+    "correct_keys": ["c"],
+    "lo_key": "AI-5.1.2",
+    "lo_section": "AI-5.1.2",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {"key": "a", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "This approach focuses on the model logic, not the characteristics of the training data. It does not directly uncover bias patterns present within the data."},
+      {"key": "b", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "This approach examines model outputs rather than the training data itself. It is valuable for identifying bias in predictions, but not for initial detection of bias in the data."},
+      {"key": "c", "verdict": "correct", "verdict_phrase": "Is correct.", "text": "This approach could help highlight where bias might be introduced, but it relies on process checks rather than actual evidence from the data."},
+      {"key": "d", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "This approach evaluates the outcomes or predictions under hypothetical changes, targeting outcome bias rather than directly assessing the training dataset."}
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 25 (1 Point)\n\nA financial services company has developed an ML system for loan approval. A tester responsible for testing this system wants to determine if there is potential bias in the system related to factors such as gender and age attributes.\n\nWhich of the following approaches would be MOST suitable for detecting bias in the training data early?\n\n- a) Conducting static analysis of the model's source code to identify how its operations on the age and gender related attributes could lead to bias\n- b) Testing using a dataset that is representative and analyzing the predictions for statistically significant differences in outcomes across age and gender\n- c) Reviewing the overall ML workflow and data preparation processes to identify potential sources of bias introduction\n- d) Performing disparate impact analysis using counterfactuals based on gender, age or both\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 25 — Correct answer: c\n\n**LO:** AI-5.1.2 | **K-Level:** K2 | **Points:** 1\n\n- **a) Is not correct.** This approach focuses on the model logic, not the characteristics of the training data. It does not directly uncover bias patterns present within the data.\n- **b) Is not correct.** This approach examines model outputs rather than the training data itself. It is valuable for identifying bias in predictions, but not for initial detection of bias in the data.\n- **c) Is correct.** This approach could help highlight where bias might be introduced, but it relies on process checks rather than actual evidence from the data.\n- **d) Is not correct.** This approach evaluates the outcomes or predictions under hypothetical changes, targeting outcome bias rather than directly assessing the training dataset."
+}

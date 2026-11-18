@@ -1,0 +1,65 @@
+{
+  "id": "Q28",
+  "set": "main",
+  "heading_verbatim": "### Question 28 (2 Points)",
+  "points": 2,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "You are testing an ML dataset for a banking loan approval system. The dataset contains the following attributes:\n\n- applicant_id (integer, unique)\n- annual_income (decimal, in USD)\n- loan_amount (decimal, in USD)\n- credit_score (integer, 300-850)\n- employment_years (integer, 0-50)\n- monthly_payment (decimal, in USD)\n\nThe following business rules apply:\n\n- Loan amount cannot exceed 5 times annual income\n- Monthly payment = loan_amount / 324 (for 30-year loans)\n- Credit scores must be within the standard range\n- All monetary values must be positive\n\nWhen applying dataset constraint testing to validate the 'monthly_payment' for 30-year loans, which type of constraint would be MOST appropriate?\n\n- a) Single-value range constraint\n- b) Multi-value count constraint\n- c) Comparison correlate constraint,\n- d) Multi-value duplicate constraint\n\n*Select ONE answer.*",
+  "item_sets": [
+    {
+      "role": "statements",
+      "key_style": "none",
+      "items": [
+        {"key": "", "text": "applicant_id (integer, unique)"},
+        {"key": "", "text": "annual_income (decimal, in USD)"},
+        {"key": "", "text": "loan_amount (decimal, in USD)"},
+        {"key": "", "text": "credit_score (integer, 300-850)"},
+        {"key": "", "text": "employment_years (integer, 0-50)"},
+        {"key": "", "text": "monthly_payment (decimal, in USD)"}
+      ]
+    },
+    {
+      "role": "statements",
+      "key_style": "none",
+      "items": [
+        {"key": "", "text": "Loan amount cannot exceed 5 times annual income"},
+        {"key": "", "text": "Monthly payment = loan_amount / 324 (for 30-year loans)"},
+        {"key": "", "text": "Credit scores must be within the standard range"},
+        {"key": "", "text": "All monetary values must be positive"}
+      ]
+    }
+  ],
+  "options": [
+    {"key": "a", "text": "Single-value range constraint"},
+    {"key": "b", "text": "Multi-value count constraint"},
+    {"key": "c", "text": "Comparison correlate constraint,"},
+    {"key": "d", "text": "Multi-value duplicate constraint"}
+  ],
+  "figures": [],
+  "quirks": ["option-c-trailing-comma"],
+  "answer": {
+    "heading_verbatim": "### Question 28 — Correct answer: c",
+    "key_correct": "c",
+    "correct_keys": ["c"],
+    "lo_key": "AI-5.1.5",
+    "lo_section": "AI-5.1.5",
+    "lo_conflict": false,
+    "k_level": "K3",
+    "rationale_style": "per_option",
+    "preamble_markdown": null,
+    "rationale_units": [
+      {"key": "a", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "A range constraint only validates that a single attribute's values fall within specified bounds, but doesn't verify the mathematical relationship between monthly_payment and loan_amount."},
+      {"key": "b", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "A count constraint checks the quantity of non-null values, not the mathematical correctness of calculated fields."},
+      {"key": "c", "verdict": "correct", "verdict_phrase": "Is correct.", "text": "This scenario requires validating a mathematical relationship between two attributes (monthly_payment and loan_amount). The correlate constraint is specifically designed to check that values for one attribute correlate with values for another attribute according to a defined rule - in this case, that monthly_payment equals loan_amount/324."},
+      {"key": "d", "verdict": "not_correct", "verdict_phrase": "Is not correct.", "text": "A duplicate constraint identifies identical values but having duplicate monthly payments could be legitimate (different applicants might have the same payment amount)."}
+    ],
+    "conclusion_markdown": null,
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 28 (2 Points)\n\nYou are testing an ML dataset for a banking loan approval system. The dataset contains the following attributes:\n\n- applicant_id (integer, unique)\n- annual_income (decimal, in USD)\n- loan_amount (decimal, in USD)\n- credit_score (integer, 300-850)\n- employment_years (integer, 0-50)\n- monthly_payment (decimal, in USD)\n\nThe following business rules apply:\n\n- Loan amount cannot exceed 5 times annual income\n- Monthly payment = loan_amount / 324 (for 30-year loans)\n- Credit scores must be within the standard range\n- All monetary values must be positive\n\nWhen applying dataset constraint testing to validate the 'monthly_payment' for 30-year loans, which type of constraint would be MOST appropriate?\n\n- a) Single-value range constraint\n- b) Multi-value count constraint\n- c) Comparison correlate constraint,\n- d) Multi-value duplicate constraint\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 28 — Correct answer: c\n\n**LO:** AI-5.1.5 | **K-Level:** K3 | **Points:** 2\n\n- **a) Is not correct.** A range constraint only validates that a single attribute's values fall within specified bounds, but doesn't verify the mathematical relationship between monthly_payment and loan_amount.\n- **b) Is not correct.** A count constraint checks the quantity of non-null values, not the mathematical correctness of calculated fields.\n- **c) Is correct.** This scenario requires validating a mathematical relationship between two attributes (monthly_payment and loan_amount). The correlate constraint is specifically designed to check that values for one attribute correlate with values for another attribute according to a defined rule - in this case, that monthly_payment equals loan_amount/324.\n- **d) Is not correct.** A duplicate constraint identifies identical values but having duplicate monthly payments could be legitimate (different applicants might have the same payment amount)."
+}

@@ -1,0 +1,21 @@
+/* print.css — cheatsheets + study pages */
+@media print {
+  .sidebar, .topbar, .drawer-btn, .scrim, .btn, .toast-wrap, .palette,
+  .exam-bar, .reading-progress, .search-scrim, .understood-btn, .lo-acc__chev,
+  .study-toc, .panel-label .meta-chip, .fig-zoom { display: none !important; }
+  html[data-theme="dark"] { color-scheme: light; }
+  body { background: #fff; color: #1E293B; font-size: 11pt; line-height: 1.5; }
+  .content { padding: 0; }
+  .page { max-width: none; }
+  .measure { max-width: none; }
+  .card, .lo-acc { box-shadow: none; border-color: #D3D8E4; break-inside: avoid; }
+  .lo-acc__body { grid-template-rows: 1fr !important; }
+  .sheet-block { break-inside: avoid; }
+  .tbl th { background: #F1F3F9 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .k-chip, .meta-chip { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page::before {
+    content: "CT-AI Studio — ISTQB CT-AI v2.0 · syllabus v2.0";
+    display: block; font-size: 8pt; color: #5D6B84; margin-bottom: 8pt;
+  }
+  a { color: inherit; text-decoration: none; }
+}

@@ -1,0 +1,28 @@
+/* nav.css — nav items, tabs */
+.nav-item {
+  display: flex; align-items: center; gap: var(--sp-3); width: 100%;
+  height: 40px; padding: 0 var(--sp-3); border-radius: var(--r-md);
+  color: var(--ink-2); font-size: 0.875rem; font-weight: 500; text-decoration: none;
+  position: relative;
+}
+.nav-item:hover { background: var(--bg-2); color: var(--ink-1); text-decoration: none; }
+.nav-item[aria-current="page"] { background: var(--primary-soft); color: var(--primary-soft-ink); }
+.nav-item[aria-current="page"]::before {
+  content: ""; position: absolute; left: 0; top: 6px; bottom: 6px; width: 2px;
+  background: var(--primary); border-radius: 2px;
+}
+.nav-item__meta { margin-left: auto; font-size: 0.75rem; color: var(--ink-3); font-family: var(--font-mono); }
+.nav-item--sub { height: 36px; padding-left: var(--sp-6); font-size: 0.8125rem; font-weight: 400; }
+
+.tabs { display: flex; gap: var(--sp-2); border-bottom: 1px solid var(--line-1); margin-bottom: var(--sp-6); overflow-x: auto; }
+.tab {
+  padding: var(--sp-2) var(--sp-1) var(--sp-3); margin-right: var(--sp-4); position: relative;
+  color: var(--ink-3); font-size: 0.875rem; font-weight: 600; white-space: nowrap;
+}
+.tab:hover { color: var(--ink-1); }
+.tab[aria-selected="true"] { color: var(--ink-1); }
+.tab[aria-selected="true"]::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px;
+  background: var(--primary); border-radius: 2px; animation: tabIn var(--dur-2) var(--ease-out);
+}
+@keyframes tabIn { from { transform: scaleX(.4); opacity: 0; } to { transform: none; opacity: 1; } }

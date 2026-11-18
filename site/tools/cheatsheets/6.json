@@ -1,0 +1,144 @@
+{
+  "chapter": 6,
+  "blocks": [
+    {
+      "type": "keyTerms",
+      "items": [
+        {
+          "term": "adversarial example / attack",
+          "def": "Example: slightly modified versions of legitimate inputs (perturbations often imperceptible to humans) that cause the model to misclassify. Attack: the deliberate use of adversarial examples to cause an ML model to fail.",
+          "src": "6.1.4 L1238 + glossary"
+        },
+        {
+          "term": "metamorphic testing (MT) / relation (MR)",
+          "def": "MT: new (follow-up) test cases are derived from a previously passed source test case by changing it using a metamorphic relation. MR: based on a property of a required function, describes how a change in a test case's inputs is reflected in its expected results.",
+          "src": "6.1.5 L1250"
+        },
+        {
+          "term": "data drift",
+          "def": "A change in the distribution of input data over time, which can negatively impact the functional performance of an operational ML model (e.g., spam filter meets new phishing attack types).",
+          "src": "glossary + 6.1.7 L1279"
+        },
+        {
+          "term": "concept drift",
+          "def": "A change in the perceived functional performance of an ML model over time caused by changes in user expectations, behavior and the operational environment — the relationship between input and correct output changes (e.g., new regulations reclassify a transaction from low- to high-risk).",
+          "src": "glossary + 6.1.7 L1280"
+        },
+        {
+          "term": "overfitting",
+          "def": "The generation of an ML model that corresponds too closely to the training dataset, resulting in a model that finds it difficult to generalize to new data. Detected: performs significantly worse on the separate test dataset than on validation.",
+          "src": "glossary + 6.1.8 L1290-L1292"
+        },
+        {
+          "term": "underfitting",
+          "def": "The generation of an ML model that does not reflect the underlying trend of the training dataset, resulting in a model that makes inaccurate predictions. Detected: metrics consistently low on BOTH training and validation sets; learning-curve errors remain high and close together.",
+          "src": "glossary + 6.1.8 L1294-L1298"
+        },
+        {
+          "term": "A/B testing",
+          "def": "An approach where the response of two variants of the program (A and B) to the same inputs are compared to determine which variant is better; a statistical approach typically requiring multiple test runs.",
+          "src": "6.1.9 L1304"
+        },
+        {
+          "term": "back-to-back testing",
+          "def": "Uses an alternative version of the system as a reference point (a pseudo-oracle) and compares its outputs with the system being tested on the same inputs; only test inputs are needed, not expected results.",
+          "src": "6.1.10 L1326-L1330"
+        }
+      ]
+    },
+    {
+      "type": "mustKnow",
+      "title": "Documentation, statistics, adversarial, metamorphic, drift, fitting",
+      "items": [
+        {
+          "text": "Model documentation matters because machine-generated code has limited understandability and models are black-box, data-dependent, frequently updated — documentation is the main tool for developers, testers, regulators (EU AI Act transparency obligations; documentation audit often a deployment prerequisite for high-risk systems). Frameworks: Model Cards (intended uses, evaluation results, ethical considerations), Datasheets for Datasets (motivation, composition, collection, uses). Documentation checklists cover General / Design / Usage / Datasets / Testing / Functional / Non-Functional / Operational; review aims: find missing info, inaccuracies, inconsistencies; improve clarity and maintainability; inform test & deployment; verify regulatory compliance.",
+          "src": "6.1.2 L1192-L1215"
+        },
+        {
+          "text": "Statistical ML functional performance testing: precondition = statistical acceptance criteria, e.g. \"98% accuracy with MoE ±4% at 95% CL\" (601 test cases; ≥589 pass; sequential testing can stop early ~170 cases if accuracy stays ≥98%; safety-critical example: 99% reliability at 95% confidence → 299 cases all passing). Fix CL → MoE shrinks with more tests; fix MoE → CL grows. Requires a large test dataset completely independent of training/validation and representative of the operational input domain; results reported as e.g. \"accuracy of 94% ±4% at the 95% CL\", not a passed/failed ratio. (Formulae not examinable — illustration only.)",
+          "src": "6.1.3 L1223-L1234"
+        },
+        {
+          "text": "Adversarial testing: craft perturbed inputs to force misclassification (adversarial examples); enables safeguards. Black-box route: build an equivalent model with known internals, craft inputs there, rely on transferability (equivalent models share classification boundaries) — or brute force random tests. White-box: knowing internals (architecture, parameters, training process) makes crafting easier. Manual crafting or automated generation of large numbers of variations.",
+          "src": "6.1.4 L1238-L1246"
+        },
+        {
+          "text": "Metamorphic testing: verify objectives like consistency, monotonicity, invariance — relationships between outputs instead of absolute values; chosen when no reliable expected outputs exist, system is a black box, or relational properties suffice. MRs come from domain knowledge, requirements, or domain properties (e.g., laws of physics); validate by expert review, reference models, edge-case coverage. Limits: wrong/incomplete MRs → false confidence; MT detects relational flaws, not all absolute errors — combine with other techniques. Example: age-at-death prediction should decrease as cigarettes smoked increase (monotonicity).",
+          "src": "6.1.5 L1250-L1264"
+        },
+        {
+          "text": "Drift testing: dynamic = needs user feedback as current ground truth (direct: user rates a recommendation; indirect: data on films actually watched), compare ground truth vs model output against a threshold; static = no ground truth needed, compares statistical properties of input and predicted-output distributions (e.g., Kolmogorov-Smirnov) — significant difference signals drift.",
+          "src": "6.1.7 L1282-L1284"
+        },
+        {
+          "text": "Overfitting vs underfitting detection (during training, evaluation, tuning): overfitting = good training/validation performance but significantly worse on separate test data including less common examples; underfitting = poor metrics on BOTH training and validation; learning curves: high, close-together, non-improving errors indicate underfitting. Summary: evaluate on validation data, analyze performance metrics, examine learning curves.",
+          "src": "6.1.8 L1288-L1300"
+        },
+        {
+          "text": "A/B testing for MLS: compare two variants on the same inputs to decide which is better (existing system as partial oracle; generates no test cases; operational inputs often incorporated); used for updates with agreed acceptance criteria (updated variant must perform ≥ previous), self-learning systems (accept change or revert). Popular statistical techniques: t-test, z-test, chi-squared, Mann-Whitney U.",
+          "src": "6.1.9 L1304-L1317"
+        },
+        {
+          "text": "Back-to-back testing: pseudo-oracle ideally shares no common software components with the SUT (same defect in both → matching wrong outputs; risky with reusable open-source AI components), ideally built by an independent team with different frameworks/algorithms/settings; conventional software can serve if it solves the same problem; pseudo-oracle needs to match only functional behavior (cheaper). Value: environment migration (dev→prod), comparing results across environments, subtle defects on edge cases. A/B compares variants of the SAME system using performance metrics; back-to-back detects defects.",
+          "src": "6.1.10 L1326-L1332"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "title": "ML model risks → mitigations (abbreviated)",
+      "columns": ["Potential risk", "Mitigation"],
+      "rows": [
+        ["Biased or unfair ML model", "Testing for bias (5.1.2)"],
+        ["Adversarial examples", "Adversarial testing (6.1.4)"],
+        ["Overfitted / underfitted model", "Testing for over/underfitting (6.1.8)"],
+        ["Unacceptable data drift or concept drift", "Drift testing (6.1.7)"],
+        ["Failure to achieve required performance measures (accuracy, recall)", "ML functional performance testing (6.1.3)"],
+        ["Functional incorrectness; non-functional defects", "Metamorphic testing (6.1.5)"],
+        ["Test oracle problem", "Metamorphic testing; Back-to-back testing; A/B testing"],
+        ["Poor system requirements", "Requirements review; Red teaming; Exploratory testing"],
+        ["Lack of AI robustness to unexpected inputs", "Adversarial testing; Fuzz testing"],
+        ["Poor model documentation", "Model documentation review (6.1.2)"],
+        ["Model updates introduce defects / decrease performance", "Back-to-back testing / A/B testing"],
+        ["Updated model deployment causes immediate failure / regression", "Smoke testing / Regression testing"],
+        ["Security, safety, privacy violations; harmful outputs", "Red teaming (4.2.2)"]
+      ],
+      "src": "6.1.1 L1166-L1188"
+    },
+    {
+      "type": "traps",
+      "items": [
+        {
+          "confusion": "A/B vs back-to-back vs metamorphic",
+          "text": "A/B: two variants of the SAME system, statistical performance comparison, decides which is better. Back-to-back: alternative system version as pseudo-oracle, same inputs, detects defects; needs no expected results. Metamorphic: follow-up cases from a source case via an MR; checks relationships between outputs. All three address the test oracle problem.",
+          "src": "6.1.5 L1250 + 6.1.9 L1304-L1308 + 6.1.10 L1326-L1332"
+        },
+        {
+          "confusion": "Data drift vs concept drift",
+          "text": "Data drift = input distribution changes (user behavior shifts, seasonality, new phishing patterns). Concept drift = the input→output relationship changes (meaning of data changes; decision boundaries outdated, e.g., regulation reclassifies transactions).",
+          "src": "6.1.7 L1279-L1280"
+        },
+        {
+          "confusion": "Dynamic vs static drift testing",
+          "text": "Dynamic needs user feedback as current ground truth (direct ratings or indirect behavior), compared to model output against a threshold. Static needs no ground truth — compares statistical properties of input and predicted-output distributions (Kolmogorov-Smirnov).",
+          "src": "6.1.7 L1282-L1284"
+        },
+        {
+          "confusion": "Overfitting vs underfitting signatures",
+          "text": "Overfit: training/validation good, test set significantly worse. Underfit: poor on BOTH training and validation; learning curves high and close together without improvement. Third outcome: right-fitting.",
+          "src": "6.1.8 L1290-L1298"
+        },
+        {
+          "confusion": "Fixing CL vs fixing MoE",
+          "text": "As test count grows: fix the confidence level → margin of error decreases (more precise); fix the MoE → confidence level increases (more certain).",
+          "src": "6.1.3 L1225-L1226"
+        },
+        {
+          "confusion": "Transferability in adversarial testing",
+          "text": "Black-box adversarial testing crafts inputs on an equivalent model with known internals and applies them to the original model on the assumption that equivalent models share classification boundaries — that assumption is transferability.",
+          "src": "6.1.4 L1242"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,692 @@
+{
+ "chapters": [
+  {
+   "n": 1,
+   "title": "Introduction to Artificial Intelligence",
+   "minutes": 120,
+   "order": [
+    "Q1",
+    "Q2",
+    "A1",
+    "Q3",
+    "Q4",
+    "Q5",
+    "Q6",
+    "A2",
+    "A3"
+   ],
+   "count": 9,
+   "points": 9,
+   "los": [
+    "AI-1.1.1",
+    "AI-1.1.2",
+    "AI-1.1.3",
+    "AI-1.1.4",
+    "AI-1.1.5",
+    "AI-1.1.6",
+    "AI-1.1.7",
+    "AI-1.1.8"
+   ],
+   "rows": [
+    {
+     "q": "Q1",
+     "answer": "a",
+     "lo": "AI-1.1.1",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q2",
+     "answer": "c, e",
+     "lo": "AI-1.1.2",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "A1",
+     "answer": "New question type",
+     "lo": "AI-1.1.2",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q3",
+     "answer": "a",
+     "lo": "AI-1.1.3",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q4",
+     "answer": "b",
+     "lo": "AI-1.1.4",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q5",
+     "answer": "a",
+     "lo": "AI-1.1.5",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q6",
+     "answer": "b",
+     "lo": "AI-1.1.6",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "A2",
+     "answer": "a",
+     "lo": "AI-1.1.7",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "A3",
+     "answer": "c",
+     "lo": "AI-1.1.8",
+     "k": "K2",
+     "pts": 1
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "title": "Quality Characteristics for AI-Based Systems",
+   "minutes": 45,
+   "order": [
+    "Q7",
+    "Q8",
+    "Q9"
+   ],
+   "count": 3,
+   "points": 3,
+   "los": [
+    "AI-2.1.1",
+    "AI-2.1.2",
+    "AI-2.2.1"
+   ],
+   "rows": [
+    {
+     "q": "Q7",
+     "answer": "c",
+     "lo": "AI-2.1.1",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q8",
+     "answer": "b",
+     "lo": "AI-2.1.2",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q9",
+     "answer": "c",
+     "lo": "AI-2.2.1",
+     "k": "K2",
+     "pts": 1
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "title": "Machine Learning",
+   "minutes": 375,
+   "order": [
+    "Q10",
+    "A4",
+    "Q11",
+    "A5",
+    "Q12",
+    "Q13",
+    "Q14",
+    "Q15",
+    "Q16",
+    "A6"
+   ],
+   "count": 10,
+   "points": 11,
+   "los": [
+    "AI-3.1.1",
+    "AI-3.1.2",
+    "AI-3.1.4",
+    "AI-3.2.1",
+    "AI-3.2.3",
+    "AI-3.3.1",
+    "AI-3.4.1",
+    "AI-3.4.3"
+   ],
+   "rows": [
+    {
+     "q": "Q10",
+     "answer": "c",
+     "lo": "AI-3.1.1",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "A4",
+     "answer": "New question type",
+     "lo": "AI-3.1.1",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q11",
+     "answer": "d",
+     "lo": "AI-3.1.2",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "A5",
+     "answer": "New question type",
+     "lo": "AI-3.1.2",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q12",
+     "answer": "d",
+     "lo": "AI-3.1.4",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q13",
+     "answer": "c",
+     "lo": "AI-3.2.1",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q14",
+     "answer": "b",
+     "lo": "AI-3.2.3",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q15",
+     "answer": "c",
+     "lo": "AI-3.3.1",
+     "k": "K3",
+     "pts": 2
+    },
+    {
+     "q": "Q16",
+     "answer": "a",
+     "lo": "AI-3.4.1",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "A6",
+     "answer": "c",
+     "lo": "AI-3.4.3",
+     "k": "K2",
+     "pts": 1
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "title": "Testing AI-Based Systems",
+   "minutes": 195,
+   "order": [
+    "Q17",
+    "Q18",
+    "Q19",
+    "Q20",
+    "Q21",
+    "Q22",
+    "Q23"
+   ],
+   "count": 7,
+   "points": 8,
+   "los": [
+    "AI-4.1.1",
+    "AI-4.1.2",
+    "AI-4.1.3",
+    "AI-4.2.1",
+    "AI-4.2.2",
+    "AI-4.3.1",
+    "AI-4.3.2"
+   ],
+   "rows": [
+    {
+     "q": "Q17",
+     "answer": "a",
+     "lo": "AI-4.1.1",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q18",
+     "answer": "b",
+     "lo": "AI-4.1.2",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q19",
+     "answer": "b",
+     "lo": "AI-4.1.3",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q20",
+     "answer": "b",
+     "lo": "AI-4.2.1",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q21",
+     "answer": "d",
+     "lo": "AI-4.2.2",
+     "k": "K3",
+     "pts": 2
+    },
+    {
+     "q": "Q22",
+     "answer": "b",
+     "lo": "AI-4.3.1",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q23",
+     "answer": "a",
+     "lo": "AI-4.3.2",
+     "k": "K2",
+     "pts": 1
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "title": "Input Data Testing for Machine Learning Systems",
+   "minutes": 180,
+   "order": [
+    "Q24",
+    "Q25",
+    "Q26",
+    "Q27",
+    "Q28",
+    "Q29"
+   ],
+   "count": 6,
+   "points": 7,
+   "los": [
+    "AI-5.1.1",
+    "AI-5.1.2",
+    "AI-5.1.3",
+    "AI-5.1.4",
+    "AI-5.1.5",
+    "AI-5.1.6"
+   ],
+   "rows": [
+    {
+     "q": "Q24",
+     "answer": "a",
+     "lo": "AI-5.1.1",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q25",
+     "answer": "c",
+     "lo": "AI-5.1.2",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q26",
+     "answer": "d",
+     "lo": "AI-5.1.3",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q27",
+     "answer": "b",
+     "lo": "AI-5.1.4",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q28",
+     "answer": "c",
+     "lo": "AI-5.1.5",
+     "k": "K3",
+     "pts": 2
+    },
+    {
+     "q": "Q29",
+     "answer": "b",
+     "lo": "AI-5.1.6",
+     "k": "K2",
+     "pts": 1
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "title": "Model Testing for Machine Learning Systems",
+   "minutes": 225,
+   "order": [
+    "Q30",
+    "Q31",
+    "Q32",
+    "Q33",
+    "Q34",
+    "Q35",
+    "Q36",
+    "Q37",
+    "Q38"
+   ],
+   "count": 9,
+   "points": 10,
+   "los": [
+    "AI-6.1.1",
+    "AI-6.1.10",
+    "AI-6.1.2",
+    "AI-6.1.3",
+    "AI-6.1.4",
+    "AI-6.1.5",
+    "AI-6.1.7",
+    "AI-6.1.8",
+    "AI-6.1.9"
+   ],
+   "rows": [
+    {
+     "q": "Q30",
+     "answer": "b",
+     "lo": "AI-6.1.1",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q31",
+     "answer": "a",
+     "lo": "AI-6.1.2",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q32",
+     "answer": "a",
+     "lo": "AI-6.1.3",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q33",
+     "answer": "c",
+     "lo": "AI-6.1.4",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q34",
+     "answer": "b",
+     "lo": "AI-6.1.5",
+     "k": "K3",
+     "pts": 2
+    },
+    {
+     "q": "Q35",
+     "answer": "b",
+     "lo": "AI-6.1.7",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q36",
+     "answer": "c",
+     "lo": "AI-6.1.8",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q37",
+     "answer": "c",
+     "lo": "AI-6.1.9",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q38",
+     "answer": "d",
+     "lo": "AI-6.1.10",
+     "k": "K2",
+     "pts": 1
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "title": "Machine Learning Development Testing",
+   "minutes": 30,
+   "order": [
+    "Q39",
+    "Q40"
+   ],
+   "count": 2,
+   "points": 2,
+   "los": [
+    "AI-7.1.1",
+    "AI-7.1.2"
+   ],
+   "rows": [
+    {
+     "q": "Q39",
+     "answer": "b, d",
+     "lo": "AI-7.1.1",
+     "k": "K2",
+     "pts": 1
+    },
+    {
+     "q": "Q40",
+     "answer": "b",
+     "lo": "AI-7.1.2",
+     "k": "K2",
+     "pts": 1
+    }
+   ]
+  }
+ ],
+ "entries": {
+  "Q1": {
+   "chapter": 1,
+   "template": "a"
+  },
+  "Q2": {
+   "chapter": 1,
+   "template": "b1"
+  },
+  "A1": {
+   "chapter": 1,
+   "template": "c"
+  },
+  "Q3": {
+   "chapter": 1,
+   "template": "a"
+  },
+  "Q4": {
+   "chapter": 1,
+   "template": "a"
+  },
+  "Q5": {
+   "chapter": 1,
+   "template": "a"
+  },
+  "Q6": {
+   "chapter": 1,
+   "template": "b2"
+  },
+  "A2": {
+   "chapter": 1,
+   "template": "a"
+  },
+  "A3": {
+   "chapter": 1,
+   "template": "a"
+  },
+  "Q7": {
+   "chapter": 2,
+   "template": "b2"
+  },
+  "Q8": {
+   "chapter": 2,
+   "template": "a"
+  },
+  "Q9": {
+   "chapter": 2,
+   "template": "a"
+  },
+  "Q10": {
+   "chapter": 3,
+   "template": "b2"
+  },
+  "A4": {
+   "chapter": 3,
+   "template": "c"
+  },
+  "Q11": {
+   "chapter": 3,
+   "template": "b2"
+  },
+  "A5": {
+   "chapter": 3,
+   "template": "c"
+  },
+  "Q12": {
+   "chapter": 3,
+   "template": "a"
+  },
+  "Q13": {
+   "chapter": 3,
+   "template": "a"
+  },
+  "Q14": {
+   "chapter": 3,
+   "template": "a"
+  },
+  "Q15": {
+   "chapter": 3,
+   "template": "a"
+  },
+  "Q16": {
+   "chapter": 3,
+   "template": "a"
+  },
+  "A6": {
+   "chapter": 3,
+   "template": "a"
+  },
+  "Q17": {
+   "chapter": 4,
+   "template": "b2"
+  },
+  "Q18": {
+   "chapter": 4,
+   "template": "a"
+  },
+  "Q19": {
+   "chapter": 4,
+   "template": "a"
+  },
+  "Q20": {
+   "chapter": 4,
+   "template": "a"
+  },
+  "Q21": {
+   "chapter": 4,
+   "template": "a"
+  },
+  "Q22": {
+   "chapter": 4,
+   "template": "a"
+  },
+  "Q23": {
+   "chapter": 4,
+   "template": "a"
+  },
+  "Q24": {
+   "chapter": 5,
+   "template": "a"
+  },
+  "Q25": {
+   "chapter": 5,
+   "template": "a"
+  },
+  "Q26": {
+   "chapter": 5,
+   "template": "a"
+  },
+  "Q27": {
+   "chapter": 5,
+   "template": "a"
+  },
+  "Q28": {
+   "chapter": 5,
+   "template": "a"
+  },
+  "Q29": {
+   "chapter": 5,
+   "template": "a"
+  },
+  "Q30": {
+   "chapter": 6,
+   "template": "b2"
+  },
+  "Q31": {
+   "chapter": 6,
+   "template": "a"
+  },
+  "Q32": {
+   "chapter": 6,
+   "template": "a"
+  },
+  "Q33": {
+   "chapter": 6,
+   "template": "a"
+  },
+  "Q34": {
+   "chapter": 6,
+   "template": "a"
+  },
+  "Q35": {
+   "chapter": 6,
+   "template": "a"
+  },
+  "Q36": {
+   "chapter": 6,
+   "template": "a"
+  },
+  "Q37": {
+   "chapter": 6,
+   "template": "a"
+  },
+  "Q38": {
+   "chapter": 6,
+   "template": "a"
+  },
+  "Q39": {
+   "chapter": 7,
+   "template": "b1"
+  },
+  "Q40": {
+   "chapter": 7,
+   "template": "a"
+  }
+ }
+}

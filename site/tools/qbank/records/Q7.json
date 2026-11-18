@@ -1,0 +1,123 @@
+{
+  "id": "Q7",
+  "set": "main",
+  "heading_verbatim": "### Question 7 (1 Point)",
+  "points": 1,
+  "selection_mode": "single",
+  "select_instruction_verbatim": "*Select ONE answer.*",
+  "stem_markdown": "Given the following ISO/IEC 25059 quality characteristics:\n\n1. AI Robustness\n2. User controllability\n3. Functional adaptability\n4. Intervenability\n\nAnd the following examples of quality characteristic measures:\n\n- A. The success rate of a remote operator in forcing a drone into the safe-landing protocol when its AI navigation system exhibits hazardous behavior\n- B. The average time required to successfully override a fraud management system's automated decision to block a customer's transaction\n- C. The F1-score of an object detection model in an autonomous car in heavy rain\n- D. The time required for an e-commerce recommendation engine to update its suggestions to reflect a new, rapidly emerging fashion trend\n\nWhich of the following BEST matches the quality characteristics with the example measures?\n\n- a) 1D – 2A – 3C – 4B\n- b) 1C – 2D – 3B – 4A\n- c) 1C – 2B – 3D – 4A\n- d) 1A – 2D – 3C – 4B\n\n*Select ONE answer.*",
+  "item_sets": [
+    {
+      "role": "match_left",
+      "key_style": "integer",
+      "items": [
+        {
+          "key": "1",
+          "text": "AI Robustness"
+        },
+        {
+          "key": "2",
+          "text": "User controllability"
+        },
+        {
+          "key": "3",
+          "text": "Functional adaptability"
+        },
+        {
+          "key": "4",
+          "text": "Intervenability"
+        }
+      ]
+    },
+    {
+      "role": "match_right",
+      "key_style": "upper_letter",
+      "items": [
+        {
+          "key": "A",
+          "text": "The success rate of a remote operator in forcing a drone into the safe-landing protocol when its AI navigation system exhibits hazardous behavior"
+        },
+        {
+          "key": "B",
+          "text": "The average time required to successfully override a fraud management system's automated decision to block a customer's transaction"
+        },
+        {
+          "key": "C",
+          "text": "The F1-score of an object detection model in an autonomous car in heavy rain"
+        },
+        {
+          "key": "D",
+          "text": "The time required for an e-commerce recommendation engine to update its suggestions to reflect a new, rapidly emerging fashion trend"
+        }
+      ]
+    }
+  ],
+  "options": [
+    {
+      "key": "a",
+      "text": "1D – 2A – 3C – 4B"
+    },
+    {
+      "key": "b",
+      "text": "1C – 2D – 3B – 4A"
+    },
+    {
+      "key": "c",
+      "text": "1C – 2B – 3D – 4A"
+    },
+    {
+      "key": "d",
+      "text": "1A – 2D – 3C – 4B"
+    }
+  ],
+  "figures": [],
+  "quirks": [
+    "Options are mapping codes with spaced en-dashes (e.g. '1D – 2A – 3C – 4B')"
+  ],
+  "answer": {
+    "heading_verbatim": "### Question 7 — Correct answer: c",
+    "key_correct": "c",
+    "correct_keys": [
+      "c"
+    ],
+    "lo_key": "AI-2.1.1",
+    "lo_section": "AI-2.1.1",
+    "lo_conflict": false,
+    "k_level": "K2",
+    "rationale_style": "per_letter",
+    "preamble_markdown": "Considering each of the examples in turn:",
+    "rationale_units": [
+      {
+        "key": "A",
+        "verdict": "neutral",
+        "verdict_phrase": null,
+        "text": "The success rate of a remote operator in forcing a drone into the safe-landing protocol when its AI navigation system exhibits hazardous behavior.\n  This measure assesses the effectiveness of human intervention in the system's operation during hazardous AI behavior, aligning with the definition of intervenability: the ability to permit external intervention in automated processes. This matches with intervenability (4)."
+      },
+      {
+        "key": "B",
+        "verdict": "neutral",
+        "verdict_phrase": null,
+        "text": "The average time required to successfully override a fraud management system's automated decision to block a customer's transaction.\n  This measure is concerned with how quickly a user can override an automated system's decision and the degree to which a user can control or influence the system's actions. This is a direct indicator of user controllability (2)."
+      },
+      {
+        "key": "C",
+        "verdict": "neutral",
+        "verdict_phrase": null,
+        "text": "The F1-score of an object detection model in an autonomous car in heavy rain.\n  The F1-score in adverse conditions (heavy rain) tests how well the model performs under challenging scenarios, which is a measure of AI robustness (1)."
+      },
+      {
+        "key": "D",
+        "verdict": "neutral",
+        "verdict_phrase": null,
+        "text": "The time required for an e-commerce recommendation engine to update its suggestions to reflect a new, rapidly emerging fashion trend.\n  The speed at which a system adapts its recommendations to new trends reflects its ability to adapt its functionality to changing requirements, which is functional adaptability (3)."
+      }
+    ],
+    "conclusion_markdown": "In which case, the correct combination is: 1C – 2B – 3D – 4A, which makes c) correct.",
+    "answer_figures": [],
+    "new_type_answer": null,
+    "restatement_drift": [],
+    "quirks": []
+  },
+  "raw_question_markdown": "### Question 7 (1 Point)\n\nGiven the following ISO/IEC 25059 quality characteristics:\n\n1. AI Robustness\n2. User controllability\n3. Functional adaptability\n4. Intervenability\n\nAnd the following examples of quality characteristic measures:\n\n- A. The success rate of a remote operator in forcing a drone into the safe-landing protocol when its AI navigation system exhibits hazardous behavior\n- B. The average time required to successfully override a fraud management system's automated decision to block a customer's transaction\n- C. The F1-score of an object detection model in an autonomous car in heavy rain\n- D. The time required for an e-commerce recommendation engine to update its suggestions to reflect a new, rapidly emerging fashion trend\n\nWhich of the following BEST matches the quality characteristics with the example measures?\n\n- a) 1D – 2A – 3C – 4B\n- b) 1C – 2D – 3B – 4A\n- c) 1C – 2B – 3D – 4A\n- d) 1A – 2D – 3C – 4B\n\n*Select ONE answer.*",
+  "raw_answer_markdown": "### Question 7 — Correct answer: c\n\n**LO:** AI-2.1.1 | **K-Level:** K2 | **Points:** 1\n\nConsidering each of the examples in turn:\n\n- **A.** The success rate of a remote operator in forcing a drone into the safe-landing protocol when its AI navigation system exhibits hazardous behavior.\n  This measure assesses the effectiveness of human intervention in the system's operation during hazardous AI behavior, aligning with the definition of intervenability: the ability to permit external intervention in automated processes. This matches with intervenability (4).\n- **B.** The average time required to successfully override a fraud management system's automated decision to block a customer's transaction.\n  This measure is concerned with how quickly a user can override an automated system's decision and the degree to which a user can control or influence the system's actions. This is a direct indicator of user controllability (2).\n- **C.** The F1-score of an object detection model in an autonomous car in heavy rain.\n  The F1-score in adverse conditions (heavy rain) tests how well the model performs under challenging scenarios, which is a measure of AI robustness (1).\n- **D.** The time required for an e-commerce recommendation engine to update its suggestions to reflect a new, rapidly emerging fashion trend.\n  The speed at which a system adapts its recommendations to new trends reflects its ability to adapt its functionality to changing requirements, which is functional adaptability (3).\n\nIn which case, the correct combination is: 1C – 2B – 3D – 4A, which makes c) correct."
+}

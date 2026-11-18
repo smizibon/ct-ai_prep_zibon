@@ -1,0 +1,119 @@
+{
+  "chapter": 1,
+  "blocks": [
+    {
+      "type": "keyTerms",
+      "items": [
+        {
+          "term": "AI-based system",
+          "def": "A system that incorporates one or more AI components.",
+          "src": "glossary"
+        },
+        {
+          "term": "artificial intelligence",
+          "def": "The capability of an engineered system to acquire, process, create and apply knowledge and skills.",
+          "src": "glossary"
+        },
+        {
+          "term": "narrow AI (weak AI)",
+          "def": "AI focused on a single well-defined task to address a specific problem. Represents all deployed AI systems in use today; lacks the ability to generalize beyond learned functions.",
+          "src": "1.1.2 L316"
+        },
+        {
+          "term": "general AI (strong AI)",
+          "def": "A type of AI that can match human cognitive abilities across most intellectual tasks. Would understand, learn, and apply knowledge across a broad range of tasks without retraining; no AI-based system today possesses general intelligence.",
+          "src": "1.1.2 L318"
+        },
+        {
+          "term": "super AI",
+          "def": "A type of AI that far exceeds human capabilities; an AI-based system that continuously improves itself without human intervention or control. The transition point from general AI to super AI is known as the technological singularity.",
+          "src": "1.1.2 L320"
+        },
+        {
+          "term": "frontier AI",
+          "def": "A subset of narrow AI representing the most advanced systems (e.g., GenAI models with highly autonomous decision-making); remains task-specific, without general AI's versatility.",
+          "src": "1.1.2 L316"
+        },
+        {
+          "term": "machine learning",
+          "def": "A core branch of AI which enables systems to learn from data and build models without explicit programming. Approaches: supervised (labeled data), unsupervised (unlabeled data, e.g., clustering), reinforcement (trial-and-error with environment).",
+          "src": "1.1.3 L324-L328"
+        },
+        {
+          "term": "generative AI",
+          "def": "A type of AI that creates new content by learning patterns from existing data (text, images, video, music, complex data); main technologies: GANs, diffusion models, transformers.",
+          "src": "1.1.4 L352-L354"
+        },
+        {
+          "term": "ML development framework",
+          "def": "A software platform that provides tools and libraries to build, train, and deploy ML models.",
+          "src": "glossary"
+        }
+      ]
+    },
+    {
+      "type": "mustKnow",
+      "title": "Conventional vs AI-based systems & the technology stack",
+      "items": [
+        {
+          "text": "Conventional systems: imperative programming, explicit step-by-step rules, deterministic, predictable, transparent; static — manual updates for new knowledge. AI-based systems: learn patterns from data, probabilistic reasoning/statistical inference/pattern recognition, outputs not always predictable, can be self-learning (adaptability requires continuous monitoring), and often hard to explain (\"black-box\" with billions of parameters).",
+          "src": "1.1.1 L306-L312"
+        },
+        {
+          "text": "AI technology stack: ML (supervised / unsupervised / reinforcement; key technologies include neural networks, Bayesian models, SVM, random forests) → Deep Learning, a subset of ML (CNN for images, RNN for sequences, transformers for long-range dependencies) → GenAI builds on these to create new content (LLM = DNN + NLP). Others: NLP, computer vision, fuzzy logic, search algorithms, expert systems; agentic AI extends these via autonomous agents that plan, reason, and act independently.",
+          "src": "1.1.3 L324-L348"
+        },
+        {
+          "text": "GenAI societal concerns: misuse (deepfakes, misinformation, fraud), employment impact (white-collar automation, reskilling), sustainability (high energy consumption and carbon footprint of training/running large models); most practical tools build on foundation models fine-tuned for specific applications, with multimodal models advancing.",
+          "src": "1.1.4 L356-L362"
+        },
+        {
+          "text": "ML hardware needs: large data structures, massively parallel processing (e.g., matrix multiplication), low-precision arithmetic/quantization (e.g., 4 instead of 32 bits → faster, lower power, smaller chips, less bandwidth). CPUs: few cores, high precision, less efficient for ML; GPUs: thousands of cores, massively parallel simple operations — best for small-scale ML; ASIC/SoC: AI-specific, in-memory processing, best for edge computing (training stays in the cloud); neuromorphic processors use brain-inspired non-von-Neumann designs.",
+          "src": "1.1.5 L368-L378"
+        },
+        {
+          "text": "Development & hosting options (decided separately): third-party pretrained models / AIaaS = faster deployment and time-to-market; private development = tailored but needs specialized skills. Local development = control and privacy (small models on PCs, large models need server clusters); public cloud = pre-configured, pay-as-you-go, scalable; private cloud = enhanced security/privacy at higher upfront cost; hybrid = prototype locally, keep sensitive data on-premises, burst compute to cloud.",
+          "src": "1.1.6 L382-L396"
+        },
+        {
+          "text": "ML framework functionality: data handling (load/preprocess/manage), model building (algorithm libraries, architecture design), training and optimization (incl. distributed training, fine-tuning pretrained models), evaluation (accuracy/precision/recall for classification, error rates for regression), deployment (conversion for web/mobile/edge/embedded). Abstraction level (low-level API = more control + more coding; high-level = simpler, fewer options) and domain focus (general vs specialized) differ; selection factors include application area, prototyping needs, configurability, user expertise, deployment constraints, support, ecosystem maturity.",
+          "src": "1.1.7 L400-L420"
+        },
+        {
+          "text": "Regulations & standards: OECD AI Principles and the UN Governing AI report = soft law; EU AI Act = risk-based regulation (minimal → unacceptable; high-risk systems face rigorous testing, data governance, human oversight; penalties based on percentage of global turnover); technical standards: ISO/IEC TR 29119-11 (testing AI-based systems), ISO/IEC 42119 series in development.",
+          "src": "1.1.8 L424-L430"
+        }
+      ]
+    },
+    {
+      "type": "traps",
+      "items": [
+        {
+          "confusion": "Narrow vs general vs super AI",
+          "text": "Narrow = task-specific, ALL deployed AI today (even frontier GenAI); general = human-level across most intellectual tasks, does not exist yet; super = surpasses humans, self-improving without human intervention. Frontier AI is a subset of narrow AI, not a step toward general AI in the syllabus's classification.",
+          "src": "1.1.2 L316-L320"
+        },
+        {
+          "confusion": "AI ⊃ ML ⊃ DL, GenAI builds on them",
+          "text": "ML is a branch of AI; DL is a subset of ML using deep neural networks; GenAI builds on these technologies (GANs, diffusion models, transformers) to create new content — GenAI is not a separate sibling of ML.",
+          "src": "1.1.3 L324-L338"
+        },
+        {
+          "confusion": "GPUs vs CPUs vs ASICs for ML",
+          "text": "GPUs outperform CPUs for ML despite lower clock speeds (thousands of parallel cores vs a few); CPUs offer high precision ML rarely needs; ASICs/SoCs are best at the edge with in-memory processing, while training runs in the cloud.",
+          "src": "1.1.5 L374-L376"
+        },
+        {
+          "confusion": "GANs vs diffusion models vs transformers",
+          "text": "GANs: two neural networks in competition → realistic synthetic data; diffusion models: add then remove noise → high-quality outputs; transformers: self-attention → coherent, contextually relevant text (underpin LLMs), increasingly multimodal.",
+          "src": "1.1.4 L354"
+        },
+        {
+          "confusion": "AIaaS speed vs private control",
+          "text": "Third-party/AIaaS: faster deployment, quicker time-to-market; private/on-premises: better tailored to specific requirements but requires specialized skills — classic trade-off wording in exam options.",
+          "src": "1.1.6 L382"
+        }
+      ]
+    }
+  ]
+}

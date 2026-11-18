@@ -1,0 +1,32 @@
+/* feedback.css — modal, toast */
+.modal-scrim {
+  position: fixed; inset: 0; z-index: var(--z-modal); background: var(--scrim);
+  backdrop-filter: blur(4px); display: grid; place-items: center; padding: var(--sp-4);
+  animation: fade var(--dur-2) var(--ease-out);
+}
+@keyframes fade { from { opacity: 0; } }
+.modal {
+  width: min(448px, 100%); max-height: 85vh; overflow-y: auto; background: var(--bg-1);
+  border-radius: var(--r-2xl); box-shadow: var(--shadow-4); padding: var(--sp-6);
+  animation: modalIn var(--dur-2) var(--ease-out);
+}
+.modal--wide { width: min(560px, 100%); }
+.modal--fig { width: min(720px, 100%); }
+@keyframes modalIn { from { opacity: 0; transform: scale(.96); } }
+.modal h3 { margin-bottom: var(--sp-3); }
+.modal__body { font-size: 0.9375rem; color: var(--ink-2); }
+.modal__body ul { list-style: disc; padding-left: var(--sp-5); margin-top: var(--sp-2); }
+.modal__foot { display: flex; justify-content: flex-end; gap: var(--sp-3); margin-top: var(--sp-6); }
+
+.toast-wrap { position: fixed; right: var(--sp-5); bottom: var(--sp-5); z-index: var(--z-toast); display: flex; flex-direction: column; gap: var(--sp-2); }
+@media (max-width: 639px) { .toast-wrap { left: var(--sp-4); right: var(--sp-4); bottom: calc(var(--sp-4) + env(safe-area-inset-bottom)); } }
+.toast {
+  position: relative; display: flex; align-items: center; gap: var(--sp-3); overflow: hidden;
+  background: var(--bg-1); border: 1px solid var(--line-2); border-radius: var(--r-lg);
+  box-shadow: var(--shadow-3); padding: var(--sp-3) var(--sp-4); font-size: 0.875rem;
+  animation: toastIn var(--dur-2) var(--ease-out);
+}
+@keyframes toastIn { from { opacity: 0; transform: translateY(8px); } }
+.toast::after { content: ""; position: absolute; left: 0; bottom: 0; height: 4px; width: 100%; background: var(--primary); animation: toastLife 4s linear forwards; }
+@keyframes toastLife { to { width: 0; } }
+.toast .icon { color: var(--primary); }
