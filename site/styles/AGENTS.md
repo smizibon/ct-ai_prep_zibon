@@ -19,9 +19,9 @@ If this disagrees with ../AGENTS.md, ../AGENTS.md wins. Counts live only in the 
 | nav.css | sidebar nav items + drawer |
 | cards.css | .card family, chapter cards, advice cards, buttons (.btn variants), empty state |
 | chips.css | meta-chip variants, k-chips, [data-tip] tooltips (pseudo-element — beware scrollWidth) |
-| pages.css | dashboard hero/grid, study layout+TOC, lo-accordion, glossary az-rail |
+| pages.css | dashboard hero/grid, study layout+TOC, lo-accordion, glossary az-rail, exam-hub mode cards + toggle switches (switch on-state = --accent, same story as option selection) |
 | widgets.css | exam option rows, assign/pair/order widgets, palette |
-| exam.css | exam shell: cockpit, exam-bar, palette sheet, question frame |
+| exam.css | exam shell: cockpit, exam-bar, palette sheet, question frame; option-row SELECTION uses --accent (teal light / cyan dark) by design — deliberately not --primary (user pick ≠ app chrome; correct=success, wrong=danger) |
 | feedback.css | modals (sizes: base 448 / wide 560 / fig 720 / player 1024), toasts, verdict states |
 | progress.css | rings, progress bars, reading-progress |
 | charts.css | dash charts |

@@ -28,4 +28,4 @@ below say which document answers which question; do not open these to bootstrap 
 
 ## Pointers (not copies)
 workspace context-file plan → ../../../PLAN-context-files.md · session context → ../../AGENTS.md
-<!-- ctx:v1 SPEC.md=270;design-D1-content.md=456;design-D2-engine.md=461;design-D3-uiux.md=1216;history-archive-2026-11.md=132;plan-videos.md=254;research-advice.md=216;research-patterns.md=172;review-SPEC.md=181 -->
+<!-- ctx:v1 SPEC.md=270;design-D1-content.md=456;design-D2-engine.md=461;design-D3-uiux.md=1223;history-archive-2026-11.md=132;plan-videos.md=254;research-advice.md=216;research-patterns.md=172;review-SPEC.md=181 -->

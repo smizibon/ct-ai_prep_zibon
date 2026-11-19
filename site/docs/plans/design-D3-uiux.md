@@ -1213,3 +1213,10 @@ Amends specific values above; everything not mentioned stands unchanged (see SPE
   2px inset), active segment bg-1 + primary icon + shadow-1. It writes `settings.theme`
   ("auto"|"light"|"dark"); `applyTheme()` resolves auto via `prefers-color-scheme` and re-resolves
   live on OS change. The existing sun/moon icon button remains the light↔dark quick flip.
+- **Selection-accent split (2026-11-19, user request):** user-driven "on/selected" states now
+  use `--accent`, not `--primary`: exam option rows (`.opt.is-selected` border, ctrl fill, key
+  badge, row tint) and exam-hub toggle switches (`.switch[aria-checked="true"]`). New token
+  `--ink-on-accent` (light #FFFFFF on #0E7490; dark #0B1220 on #22D3EE). Rationale: user pick
+  (accent) ≠ app chrome (primary/indigo); correct = success, wrong = danger — the three
+  Learning-mode states become visually unambiguous. Verified WCAG-strong in both themes;
+  recorded in styles/AGENTS.md (exam.css + pages.css rows).

@@ -2,7 +2,7 @@
 
 Read this instead of re-deriving the project. Project root: `/Users/zibon-mac/Desktop/Certifications/CT-AI`.
 Parent rules live in `../AGENTS.md` (markdown/ is source of truth; multi-agent fan-out within limits).
-Last updated: 2026-11-19 (context-file layer: 5 folder AGENTS.md + Gate D drift guard + history
+Last updated: 2026-11-19 (selection-accent split: options+switches = --accent both themes; context-file layer: 5 folder AGENTS.md + Gate D drift guard + history
 archived to docs/plans/history-archive-2026-11.md; filesystem map dissolved into folder files —
 see ../PLAN-context-files.md. Prior: videos v2 29/29, videos page, layout pass).
 
@@ -30,6 +30,9 @@ All content is machine-verified against the sources (verbatim syllabus slices, b
 - ✅ Phase C UI verification + **Gate C PASS** — scripted, not manual: `js/selftest.js` (in-page suite,
   29 scenarios) driven by `tools/tests/ui.test.mjs` (headless Chrome via raw CDP, zero deps).
   Green on **http:// AND file://** (`node tools/tests/ui.test.mjs file:///…/site`).
+- ✅ Selection-accent split (2026-11-19): exam option rows + hub switches on-state moved from
+  --primary (indigo) to --accent (teal light / cyan dark) + new --ink-on-accent token — user
+  pick ≠ app chrome; correct/wrong unchanged (design-D3 addendum; verified both themes).
 - ✅ Context-file layer (2026-11-19, ../PLAN-context-files.md): 5 folder AGENTS.md (task→reading-list
   dossiers), site/AGENTS.md slimmed 246→~130 lines (filesystem map dissolved; history archived),
   `tools/check_context.py` = **Gate D** (dossier freshness, runs first).
