@@ -1,5 +1,11 @@
 # Working Agreements — CT-AI Workspace
 
+## How to work here (reading + writing loop)
+
+**Reading — context files first, always:** before opening ANY source file, read the AGENTS.md chain in order — this file → `site/AGENTS.md` → the target folder's `AGENTS.md`. The folder dossiers' task→reading-list tables say exactly which files/functions a task needs; open only those. Do not browse folders or re-derive what a dossier already answers. If a dossier disagrees with the code, trust the code, fix the dossier (`site/tools/check_context.py --update`), and note why.
+
+**Writing — the context files are the FIRST docs to update, not the last:** they are the entry point for every future session, so a stale dossier poisons all subsequent work (worse than no dossier). After any change that adds/removes/renames files, edits a covered file's contents meaningfully, or rebuilds `site/data/`: refresh the touched folder's AGENTS.md (roles/invariants if behavior changed; ctx block via `--update`) and end with Gate D (`python3 site/tools/check_context.py`) at 0. A task is not done while Gate D is red.
+
 ## Source of truth
 
 The canonical sources for ALL work in this workspace are the Markdown files in `markdown/` — NOT the PDFs in the root folder. The PDFs are archival references only; do not extract from them unless explicitly asked or unless verifying the markdown itself.
@@ -26,12 +32,15 @@ When planning any non-trivial task, plan for parallel agent fan-out from the sta
 
 ## "Update docs" — standing definition (site work)
 
-When the user says **"update docs"**, they mean keeping these five artifacts current (not the markdown set above):
+When the user says **"update docs"**, they mean keeping these six artifact groups current (not the markdown set above) — and the folder context files (item 2) come FIRST in priority, because every session starts by reading them:
 
-1. `site/docs/plans/` — the seven kept plan files (SPEC, design-D1/D2/D3, research-advice, research-patterns, review-SPEC). Historical records: amend via addenda, don't rewrite history.
-2. `site/AGENTS.md` — session context: phase/gate status, filesystem map, binding facts, rebuild + verify commands, remaining checklist, known issues.
-3. `site/ARCHITECTURE.md` — system architecture and key decisions.
-4. `site/USERGUIDE.md` — end-user guide (modes, shortcuts, printing).
-5. `site/README.md` — entry point (open/verify/docs pointers), plus the site's registration in `markdown/README.md`.
+1. `site/docs/plans/` — the kept plan files (SPEC, design-D1/D2/D3, research-advice, research-patterns, review-SPEC; feature plans like plan-videos.md). Historical records: amend via addenda, don't rewrite history.
+2. **Folder context files** — `AGENTS.md` in site/js, site/styles, site/data, site/tools, site/docs/plans: task→reading-list dossiers with generated `ctx` line-count blocks. Any task that adds/removes/renames files, rebuilds `site/data/`, or edits a covered file past drift tolerance must end with `python3 site/tools/check_context.py` exiting 0 (Gate D; `--update` refreshes the blocks). A task may not claim done while Gate D is red.
+3. `site/AGENTS.md` — session context: phase/gate status, binding facts, rebuild + verify commands (ladder D→A→B→C), known issues.
+4. `site/ARCHITECTURE.md` — system architecture and key decisions.
+5. `site/USERGUIDE.md` — end-user guide (modes, shortcuts, printing).
+6. `site/README.md` — entry point (open/verify/docs pointers), plus the site's registration in `markdown/README.md`.
 
-Rule: after any meaningful change to the site (feature, fix, data rebuild, status change), refresh whichever of these five it touches — status/known-issues go to AGENTS.md, behavior to USERGUIDE.md, structure to ARCHITECTURE.md.
+Rule: after any meaningful change to the site (feature, fix, data rebuild, status change), refresh whichever of these it touches — status/known-issues go to site/AGENTS.md, behavior to USERGUIDE.md, structure to ARCHITECTURE.md, folder contents to that folder's AGENTS.md. Design of the context layer: `PLAN-context-files.md`.
+
+**Context economy rule:** before reading source files in any folder, read that folder's `AGENTS.md` (and `site/AGENTS.md` first for cross-folder contracts) — the task→reading-list tables say exactly which files/functions a task needs. Do not re-read whole folders when the dossier answers the question; if a dossier disagrees with reality, trust the code and fix the dossier (`check_context.py --update`).
